@@ -1,0 +1,2123 @@
+{
+	"id": "cat",
+	"name": "CAT",
+	"fullName": "Common Admission Test",
+	"researchedOn": "2026-07",
+	"meta": {
+		"conductedBy": "IIMs (rotational; convening IIM announced yearly)",
+		"officialSite": "https://iimcat.ac.in",
+		"purpose": "MBA/PGDM admission to 21 IIMs and 1200+ B-schools in India",
+		"mode": "Computer-Based Test at test centers",
+		"frequency": "Once a year, a Sunday in late November",
+		"slots": 3,
+		"testCities": "170+ (choose up to 6)",
+		"applicationFee": {
+			"general": 2600,
+			"reserved": 1300,
+			"currency": "INR"
+		},
+		"eligibility": {
+			"degree": "Bachelor's degree",
+			"minMarks": {
+				"general": 50,
+				"reserved": 45
+			},
+			"finalYearAllowed": true,
+			"ageLimit": null,
+			"attemptLimit": null
+		},
+		"cycle": {
+			"notification": "Late July",
+			"registration": "Early August to mid/late September",
+			"admitCard": "Early November",
+			"examDay": "Last Sunday of November",
+			"results": "First/second week of January",
+			"cat2026Date": "2026-11-29"
+		}
+	},
+	"pattern": {
+		"totalQuestions": 68,
+		"totalMarks": 204,
+		"durationMinutes": 120,
+		"sectionOrderLocked": true,
+		"sectionTimingLocked": true,
+		"marking": {
+			"mcq": {
+				"correct": 3,
+				"wrong": -1,
+				"unattempted": 0
+			},
+			"tita": {
+				"correct": 3,
+				"wrong": 0,
+				"unattempted": 0
+			}
+		},
+		"pwdDurationMinutes": 160
+	},
+	"sections": [
+		{
+			"id": "varc",
+			"name": "Verbal Ability & Reading Comprehension",
+			"short": "VARC",
+			"questions": 24,
+			"marks": 72,
+			"timeMinutes": 40,
+			"topics": [
+				{
+					"id": "varc-rc",
+					"name": "Reading Comprehension",
+					"approxQuestions": 16,
+					"weightPct": 70,
+					"subtopics": [
+						{
+							"name": "Main idea / central theme",
+							"frequency": "high",
+							"summary": "Tests whether you can identify the single controlling idea the whole passage is built to support, phrased as 'the central idea', 'the primary purpose of the passage', or 'which option best captures the main point'. In CAT it is usually the broadest question in a set and is best answered after reading the entire passage.",
+							"keyIdeas": [
+								"Separate the main idea (the claim the whole passage defends) from the topic (merely what it is about) and from a supporting detail that is true but too narrow.",
+								"Eliminate options that are too broad (extend beyond the passage's scope), too narrow (cover only one paragraph or example), or that distort the author's actual stance.",
+								"Locate the thesis where the author pivots — often a 'but / however / yet' that follows a commonly held view; the correct answer echoes that pivot, not the view being challenged.",
+								"Choose the option that accounts for the whole passage rather than just its opening line or a single striking example."
+							],
+							"example": {
+								"q": "Passage: The author first sketches the popular belief that cities grow chiefly because of economic opportunity, then argues over several paragraphs that migration is driven more by pre-existing social networks that lower the psychological cost of moving. Q: Which of the following best captures the central idea of the passage?",
+								"solution": "The answer must reflect the author's own claim — that social networks, more than raw economic opportunity, drive migration — not the popular view the author sets up to reject. Discard options that restate the 'economic opportunity' belief or that are confined to a single supporting example, since the whole passage builds toward the networks thesis."
+							},
+							"traps": [
+								"Picking a statement that is true but is only a supporting detail rather than the idea the whole passage defends.",
+								"Choosing the conventional view the author introduces precisely in order to challenge it.",
+								"Selecting an option that claims more than the passage actually establishes (too broad in scope)."
+							]
+						},
+						{
+							"name": "Inference-based questions",
+							"frequency": "high",
+							"summary": "Asks for a conclusion that must be true given the passage but is not stated word-for-word — phrased as 'which of the following can be inferred', 'the author would most likely agree with', or 'the passage implies'. This is the single most frequently tested RC question type in current CAT.",
+							"keyIdeas": [
+								"A valid inference is a small logical step the text guarantees, not new information; if you must import an outside assumption to reach it, the option is wrong.",
+								"Distrust options with extreme quantifiers (all / never / only / must) unless the passage itself is that categorical — CAT inference answers are usually hedged and modest.",
+								"For 'the author would agree' questions, reason from the author's demonstrated stance and the direction of the argument, not from what is generally reasonable in the real world.",
+								"When two options survive, prefer the weaker, better-qualified one; it is harder to falsify against the text."
+							],
+							"example": {
+								"q": "Passage: 'Although the reform reduced reported crime, critics note that reporting itself fell as public trust in the police declined.' Q: Which of the following can most reasonably be inferred?",
+								"solution": "Because reported crime fell but the willingness to report also fell, the supported inference is that the observed drop in reported crime may not reflect a genuine drop in actual crime. Reject the stronger option asserting that crime definitely did not fall — the passage does not guarantee that."
+							},
+							"traps": [
+								"Choosing an option that is reasonable in the real world but not actually supported by the passage.",
+								"Selecting an overstated inference that goes further than the text licenses.",
+								"Mistaking a near-verbatim restatement of an explicit line for the 'inference' when a distinct logical step is the intended answer."
+							]
+						},
+						{
+							"name": "Specific detail / fact identification",
+							"frequency": "medium",
+							"summary": "Asks what the passage explicitly states, phrased as 'according to the passage', 'the author mentions X as an example of', or 'which of the following is stated'. The answer is on the page, but CAT hides it by paraphrasing and by surrounding it with options that swap or exaggerate details.",
+							"keyIdeas": [
+								"Return to the exact lines that discuss the keyword in the question rather than answering from memory of the passage.",
+								"The correct option is usually a paraphrase, not a copy, of the text — match meaning, not vocabulary.",
+								"Check the scope and qualifiers of each option: distractors often keep the passage's words but change 'some' to 'all', reverse cause and effect, or attribute a view to the wrong party.",
+								"Confirm the option is stated, not merely plausible or implied; for detail questions, explicit textual support is required."
+							],
+							"example": {
+								"q": "Passage states that a species survived a drought 'not by conserving water but by shortening its life cycle to reproduce before the dry season'. Q: According to the passage, the species survived the drought by:",
+								"solution": "The line explicitly attributes survival to compressing the life cycle to reproduce early, and explicitly denies water conservation. The correct option paraphrases 'reproduced before the dry season began'; reject the water-conservation option, which the passage directly rules out."
+							},
+							"traps": [
+								"Answering from a general impression of the passage instead of relocating the specific line.",
+								"Falling for an option that repeats the passage's exact words but alters a qualifier or the direction of the claim.",
+								"Selecting a detail that is true and in the passage but does not answer the specific thing asked."
+							]
+						},
+						{
+							"name": "Author's tone, attitude, purpose",
+							"frequency": "medium",
+							"summary": "Asks how the author feels about the subject or why they wrote a passage or paragraph, phrased as 'the author's attitude is best described as', 'the tone of the passage is', or 'the primary purpose of the author is to'. In CAT the answer options are calibrated by degree, so precision about intensity matters as much as direction.",
+							"keyIdeas": [
+								"Read the author's own adjectives, adverbs and evaluative words (loaded vs. neutral) — they signal approval, skepticism, ambivalence or critique more reliably than the topic does.",
+								"Calibrate intensity: CAT distinguishes 'critical' from 'dismissive/contemptuous' and 'appreciative' from 'laudatory'; pick the degree the text actually supports, not the strongest word.",
+								"Separate the author's tone from the tone of a view the author is merely reporting or quoting — do not attribute a cited opponent's hostility to the author.",
+								"For purpose questions, answer with the right verb (to argue, to critique, to describe, to reconcile, to trace) that matches what the passage does overall."
+							],
+							"example": {
+								"q": "Passage: The author reviews a new economic theory, praising its ambition but repeatedly noting 'it rests on assumptions that its own data undercut'. Q: The author's attitude toward the theory is best described as:",
+								"solution": "The author credits the theory's ambition yet flags a serious internal flaw, so the attitude is qualified/skeptical appreciation, not outright rejection or unreserved praise. Choose 'cautiously critical' or 'appreciative but reserved' over the extreme options 'dismissive' or 'enthusiastic'."
+							},
+							"traps": [
+								"Over-reading intensity — labelling measured criticism as 'contempt' or mild approval as 'admiration'.",
+								"Attributing the tone of a quoted or opposing viewpoint to the author.",
+								"Choosing 'neutral/objective' for a passage that in fact carries a discernible evaluative slant."
+							]
+						},
+						{
+							"name": "Logical structure of passage",
+							"frequency": "medium",
+							"summary": "Asks how the passage is organized or what role a part plays, phrased as 'the passage proceeds by', 'the primary function of the second paragraph is', or 'the author mentions X in order to'. CAT tests whether you can see the architecture of the argument, not just its content.",
+							"keyIdeas": [
+								"Build a one-line map of each paragraph's job (claim, counter-view, evidence, concession, resolution) as you read, so 'function' questions become lookups.",
+								"Use signpost words — 'however', 'for instance', 'consequently', 'granted', 'in contrast' — to detect shifts between assertion, example, objection and conclusion.",
+								"For 'the author mentions X in order to' items, ask what the sentence does for the argument (support, illustrate, qualify, rebut), not what it says.",
+								"Match the whole answer: a structure option is wrong if even one clause misdescribes a step (e.g. calls an example a rebuttal)."
+							],
+							"example": {
+								"q": "Passage: Paragraph 1 states a widely accepted claim; paragraph 2 presents an anomaly the claim cannot explain; paragraph 3 offers a revised explanation. Q: The passage is best described as:",
+								"solution": "The sequence is: present an accepted position, introduce evidence that undercuts it, then propose a modified account — i.e. 'stating a view, raising a difficulty for it, and advancing a revised explanation'. Reject options that omit the anomaly step or that call paragraph 3 a mere restatement of paragraph 1."
+							},
+							"traps": [
+								"Choosing an option whose overall shape is right but which mislabels one component (calling an illustration a counterargument).",
+								"Confusing what a paragraph says with the function it serves in the argument.",
+								"Missing a mid-passage pivot signalled by 'but/however' and so misreading a two-part structure as one-directional."
+							]
+						},
+						{
+							"name": "Vocabulary-in-context",
+							"frequency": "low",
+							"summary": "Asks what a specific word or phrase means as it is used in the passage, phrased as 'the word X in the passage most nearly means' or 'by Y, the author refers to'. Less common in current CAT RC than inference or main-idea items, but it appears occasionally, and the answer is fixed by context, not by the dictionary's primary sense.",
+							"keyIdeas": [
+								"Cover the target word, read the sentence, and predict a substitute from the surrounding logic before looking at the options.",
+								"Choose the sense the context demands even when the word has a more common everyday meaning — CAT often tests a secondary or figurative sense.",
+								"Respect connotation: pick a synonym whose positive/negative colour matches the author's stance in that sentence.",
+								"Plug your chosen option back into the sentence to confirm it preserves the exact intended meaning."
+							],
+							"example": {
+								"q": "Passage: 'The committee's arguments were specious — polished on the surface yet collapsing under scrutiny.' Q: The word 'specious' most nearly means:",
+								"solution": "The clause 'polished on the surface yet collapsing under scrutiny' defines the word in place: superficially convincing but actually false. Choose 'plausible but wrong / deceptively attractive', not a purely positive synonym like 'persuasive' or a neutral one like 'detailed'."
+							},
+							"traps": [
+								"Picking the word's most common dictionary meaning when the context calls for a secondary sense.",
+								"Ignoring the positive or negative colouring the sentence gives the word.",
+								"Selecting a synonym that fits the word in isolation but not the specific sentence it appears in."
+							]
+						},
+						{
+							"name": "Application / extrapolation",
+							"frequency": "medium",
+							"summary": "Asks you to carry the passage's idea beyond the text, phrased as 'which of the following situations best illustrates the author's argument', 'which finding would most strengthen/weaken the claim', or 'the author would most likely predict'. CAT uses these to test whether you have grasped the underlying principle, not just the surface details.",
+							"keyIdeas": [
+								"First abstract the passage's claim into a general principle (cause-effect, criterion, or rule), then test each option against that principle rather than against the passage's specific examples.",
+								"For strengthen/weaken items, identify the exact link the argument depends on and ask which option adds support to, or breaks, that specific link.",
+								"For 'analogous situation' items, match the structural relationship (the pattern of roles and outcomes), not the surface subject matter.",
+								"Stay inside the author's logic — the correct extrapolation is what the passage's reasoning commits the author to, not what you personally find likely."
+							],
+							"example": {
+								"q": "Passage argues that species which specialize narrowly thrive in stable environments but are the first to die out when conditions change suddenly. Q: Which scenario best illustrates the author's argument?",
+								"solution": "Abstract the principle: narrow specialization = advantage under stability, fragility under sudden change. The best illustration is a highly specialized organism that flourishes for years and then is wiped out by an abrupt environmental shift; reject scenarios about generalists surviving or about gradual change, which do not exercise both halves of the claim."
+							},
+							"traps": [
+								"Matching an option by surface topic (same subject area) rather than by the underlying structural relationship.",
+								"For strengthen/weaken, choosing an option that is merely relevant to the topic instead of one that acts on the argument's actual load-bearing link.",
+								"Extrapolating using your own outside knowledge instead of staying within the author's stated reasoning."
+							]
+						},
+						{
+							"name": "Passage types: argumentative, analytical, descriptive, narrative, abstract",
+							"frequency": "high",
+							"summary": "Not a single question type but the classification of the passage itself; every CAT RC passage is one of these, and naming the type on the first read sets your reading strategy and speeds up every question that follows. CAT (2022-2025) leans heavily on argumentative, analytical and abstract passages drawn from economics, philosophy, science and the humanities.",
+							"keyIdeas": [
+								"Argumentative: the author defends a position — track the central claim, the evidence, the counter-view and the rebuttal; most main-idea and strengthen/weaken questions live here.",
+								"Analytical: the author examines a phenomenon and weighs factors or causes — map the relationships and comparisons rather than hunting for a single thesis.",
+								"Descriptive / narrative: information or a story is presented with a lighter authorial stance — read for the dominant impression, sequence and implied point, since tone and inference questions often hinge on what is left unstated.",
+								"Abstract / philosophical: dense and low on concrete examples — slow down, paraphrase each sentence into plain language, and anchor abstract terms to any example the author does give."
+							],
+							"example": {
+								"q": "A passage opens by rejecting the received explanation of a historical event, then marshals three pieces of evidence for an alternative account and dismisses a likely objection. Q: The passage is best classified as, and should be read as:",
+								"solution": "The claim-evidence-rebuttal structure marks it as an argumentative passage; read it by pinning down the author's thesis and how each paragraph supports or defends it, which pre-loads the answers to the main-idea, structure and strengthen/weaken questions in the set."
+							},
+							"traps": [
+								"Reading an argumentative passage as if it were neutral description and so missing the author's position on tone and main-idea questions.",
+								"Rushing an abstract passage at the same pace as a narrative one instead of slowing down to decode each dense sentence.",
+								"Forcing a single thesis onto an analytical passage that is genuinely weighing several factors without endorsing one."
+							]
+						}
+					],
+					"priority": "highest"
+				},
+				{
+					"id": "varc-va",
+					"name": "Verbal Ability",
+					"approxQuestions": 8,
+					"weightPct": 30,
+					"subtopics": [
+						{
+							"name": "Para-jumbles",
+							"frequency": "high",
+							"summary": "Reorder four or five scrambled sentences into a coherent paragraph. A staple of current CAT VA and usually asked in TITA format (you type the sequence, e.g. 3142), so there is no negative marking.",
+							"keyIdeas": [
+								"Find the opening sentence first: it introduces a subject with a full noun and has no back-reference (no 'this', 'these', 'such', 'however', 'therefore', or dangling pronoun).",
+								"Lock mandatory pairs using connectors and links: pronouns must follow their nouns, and words like 'but', 'however', 'for example', 'as a result' bind a sentence to a specific predecessor.",
+								"Trace the logical/chronological chain (general to specific, cause to effect, claim to evidence to conclusion) and let transition words fix the order.",
+								"Because it is TITA with no penalty, always type an answer even when unsure and verify by reading the full assembled paragraph end to end."
+							],
+							"example": {
+								"q": "Arrange sentences 1-4 into a coherent paragraph. 1) However, this consensus began to erode as new archaeological evidence surfaced. 2) For decades, historians agreed that the city had been abandoned soon after the great flood. 3) Excavations in the 1990s uncovered pottery dating to well after the supposed abandonment. 4) Today most scholars accept that settlement there continued for at least another century.",
+								"solution": "Sentence 2 is the opener: it states the old view with a full subject and no back-reference. 'However, this consensus' in 1 refers straight back to the consensus in 2, so 2-1. Sentence 3 supplies the 'new archaeological evidence' that 1 mentions, so 1-3. Sentence 4, signalled by 'Today', delivers the conclusion. Correct order: 2-1-3-4."
+							},
+							"traps": [
+								"Starting with a sentence that contains a pronoun or a connector ('However', 'This') that actually needs an antecedent before it.",
+								"Fixing a mandatory pair in the wrong direction (placing the pronoun sentence before the noun it refers to).",
+								"Choosing an order that sounds fluent locally but breaks the paragraph's overall cause-effect or time sequence."
+							]
+						},
+						{
+							"name": "Para-summary",
+							"frequency": "high",
+							"summary": "Read a short dense paragraph and pick the option that best captures its central point. Regularly tested in current CAT VA, typically as a four-option MCQ (so it carries negative marking).",
+							"keyIdeas": [
+								"Identify the author's main claim and its qualifier, then keep only the option that preserves both scope and stance without adding, dropping, or exaggerating.",
+								"Eliminate distractors: reject options with extreme words ('always', 'never', 'only', 'must'), options that are factually true but cover just one detail, and options that smuggle in information not in the passage.",
+								"Prefer the choice that restates the conclusion, not merely the setup or a single example the author used.",
+								"Since it is usually MCQ with a penalty, commit only after two options survive elimination and one is clearly closer to the paragraph's thesis."
+							],
+							"example": {
+								"q": "Best summary: 'While technological forecasting fixates on breakthroughs, the more consequential changes are usually incremental - small refinements that accumulate unnoticed until, in aggregate, they reshape how we live. The smartphone was less a single invention than the convergence of modest gains in batteries, displays, and networks.' (A) Breakthroughs matter less than the marketing around them. (B) The smartphone proves convergence is the only route to innovation. (C) Transformative change tends to arise from accumulated incremental improvements rather than singular breakthroughs. (D) Forecasters should stop predicting breakthroughs because they never occur.",
+								"solution": "C states the author's actual thesis (incremental accumulation over breakthroughs) with correct scope. A introduces 'marketing', never mentioned. B overgeneralizes with 'only route'. D is extreme and prescriptive ('never occur', 'should stop'). Answer: C."
+							},
+							"traps": [
+								"Picking an option that is accurate but too narrow, echoing only the example (the smartphone) rather than the general point.",
+								"Falling for an overstated option that inflates a measured claim into an absolute one.",
+								"Selecting a choice that adds an outside idea or a prescriptive 'should' the author never asserted."
+							]
+						},
+						{
+							"name": "Odd-sentence-out",
+							"frequency": "medium",
+							"summary": "Given four or five sentences, spot the one that does NOT fit the coherent paragraph the others form (the 'misfit'). Appears in current CAT VA and is usually TITA, so there is no negative marking.",
+							"keyIdeas": [
+								"First build the paragraph from the sentences that clearly link (shared subject, connectors, pronoun references); the sentence left over that cannot join the chain is the odd one.",
+								"The misfit is typically on a related topic but a different angle - it shifts theme, scope, or purpose (e.g. from mechanism to economics) rather than being off-topic entirely.",
+								"Watch structural cues: the odd sentence often lacks a link word or antecedent that would tie it to the rest, or introduces an idea nothing else develops.",
+								"Since it is TITA with no penalty, confirm by reading the remaining sentences together to ensure they form one uninterrupted flow."
+							],
+							"example": {
+								"q": "Pick the odd sentence. 1) Coral reefs support roughly a quarter of all marine species despite covering under one percent of the ocean floor. 2) Rising sea temperatures make corals expel their symbiotic algae, a process called bleaching. 3) Repeated bleaching can leave reefs unable to recover, collapsing the ecosystems they sustain. 4) Marine tourism generates billions in revenue for coastal economies each year.",
+								"solution": "Sentences 1, 2 and 3 form a tight ecological argument: reefs' biodiversity value (1), the bleaching mechanism that threatens them (2), and its consequence (3). Sentence 4 switches to economics (tourism revenue), a different theme the others neither set up nor develop. The odd sentence is 4."
+							},
+							"traps": [
+								"Assuming the most general or the most specific sentence must be the misfit, when it may actually anchor the paragraph.",
+								"Choosing by keyword overlap (a shared word) instead of by whether the sentence advances the same line of thought.",
+								"Removing a sentence that is genuinely part of the chain and thereby breaking the logical flow of the remainder."
+							]
+						},
+						{
+							"name": "Para-completion",
+							"frequency": "medium",
+							"summary": "Choose the sentence that best completes or concludes a given paragraph, usually filling the final blank. Tested in current CAT VA, typically as a four-option MCQ.",
+							"keyIdeas": [
+								"Nail the paragraph's direction and tone in the last sentence before the blank; the completion must continue that same line, not pivot to a new topic.",
+								"The best ending usually resolves or generalizes the point already being made rather than opening a fresh idea, so reject options that introduce something requiring further explanation.",
+								"Eliminate choices that are off-topic, merely a narrow factual aside, or that clash with the author's register and stance.",
+								"Test the winner by reading the paragraph with it appended - it should feel like a natural close, echoing a key phrase or idea from the passage."
+							],
+							"example": {
+								"q": "Complete the paragraph. 'Early maps were as much works of imagination as of measurement. Cartographers filled unknown regions with sea monsters and speculative coastlines, not to deceive but because blank space was intolerable. ______' (A) Modern GPS has made paper maps entirely obsolete. (B) The oceans, after all, were far more dangerous than the land. (C) The impulse to fill in the gaps, even with fiction, reveals how deeply we resist admitting our ignorance. (D) Sea monsters were often based on distant sightings of whales and giant squid.",
+								"solution": "The paragraph builds toward why blank space was 'intolerable', a psychological point, so the close should generalize that insight. C does exactly this, picking up 'blank space was intolerable' and elevating it. A jumps to modern GPS (new topic), B is a tangent about oceans, and D is a narrow factual aside that does not conclude the thought. Answer: C."
+							},
+							"traps": [
+								"Selecting a factually true but tangential sentence that does not follow the paragraph's argumentative direction.",
+								"Choosing an option that opens a new idea (needing more sentences) instead of closing the existing one.",
+								"Ignoring tone or register - picking a completion whose style or stance jars with the rest of the passage."
+							]
+						},
+						{
+							"name": "Sentence correction / grammar",
+							"frequency": "rare",
+							"summary": "Identify the grammatically correct sentence or fix errors in subject-verb agreement, tense, parallelism, modifiers, and usage. This was dropped from CAT around 2014 and is legacy for CAT - it is still tested in XAT, SNAP, IIFT, CMAT and similar exams, but not in current CAT VA.",
+							"keyIdeas": [
+								"Check subject-verb agreement first, mentally stripping intervening phrases so the verb matches the true subject, and apply the proximity rule for 'either/or' and 'neither/nor'.",
+								"Test parallelism in lists and comparisons - items joined by 'and', 'or', 'not only...but also' must share the same grammatical form.",
+								"Scan for misplaced or dangling modifiers: the opening modifier must attach to the noun immediately following it.",
+								"Verify tense consistency and idiomatic prepositions/usage, then eliminate options with double errors before deciding."
+							],
+							"example": {
+								"q": "Choose the grammatically correct sentence. (A) Neither the manager nor the employees was aware of the change. (B) Neither the manager nor the employees were aware of the change. (C) Neither the manager nor the employees is aware of the change. (D) Neither the manager or the employees were aware of the change.",
+								"solution": "With 'neither...nor', the verb agrees with the nearer subject, here 'employees' (plural), so it must be 'were'. That rules out the singular 'was' in A and 'is' in C. D wrongly pairs 'neither' with 'or' instead of 'nor'. Answer: B."
+							},
+							"traps": [
+								"Applying the proximity rule to the wrong (farther) subject in 'either/or' and 'neither/nor' constructions.",
+								"Pairing 'neither' with 'or' or 'either' with 'nor'.",
+								"Correcting on the basis of what sounds familiar rather than testing agreement, parallelism, and modifier placement systematically."
+							]
+						},
+						{
+							"name": "Analogies / word relationships",
+							"frequency": "rare",
+							"summary": "Given a pair of words, pick the pair that shares the same relationship (A : B :: C : ?). This last appeared in CAT around 2016 and is legacy for CAT - useful for vocabulary but not part of current CAT VA.",
+							"keyIdeas": [
+								"State the relationship of the given pair in a precise sentence (a 'defining bridge'), then find the option whose pair fits the same sentence.",
+								"Match the relationship type - synonym, antonym, degree/intensity, cause-effect, part-whole, worker-tool, function - not merely words from the same topic.",
+								"Preserve direction and order: if the first word acts on or lessens/worsens the second, the answer pair must do so in the same direction.",
+								"If two options survive, prefer the one whose intensity and precision most closely mirror the original pair."
+							],
+							"example": {
+								"q": "ASSUAGE : GRIEF :: ? (A) exacerbate : problem (B) mitigate : suffering (C) provoke : anger (D) amplify : sound",
+								"solution": "To assuage grief is to lessen a painful state, so the bridge is 'to reduce a negative condition'. B, mitigate : suffering, fits exactly (to lessen suffering). A (exacerbate) and C (provoke) and D (amplify) all increase their nouns, the opposite direction. Answer: B."
+							},
+							"traps": [
+								"Matching on topical similarity (words about the same subject) instead of on the logical relationship.",
+								"Ignoring direction - choosing a 'worsen/increase' pair when the original is a 'lessen/decrease' pair.",
+								"Overlooking degree, so a mild-intensity pair is matched with an extreme one."
+							]
+						}
+					],
+					"priority": "high"
+				}
+			]
+		},
+		{
+			"id": "dilr",
+			"name": "Data Interpretation & Logical Reasoning",
+			"short": "DILR",
+			"questions": 22,
+			"marks": 66,
+			"timeMinutes": 40,
+			"format": "4 sets of 5-6 questions; set selection is the core skill",
+			"topics": [
+				{
+					"id": "dilr-di",
+					"name": "Data Interpretation",
+					"subtopics": [
+						{
+							"name": "Tables",
+							"frequency": "high",
+							"summary": "Data arranged in rows and columns, often with some cells blank or derivable. Tables are CAT DILR's most common backbone, usually driving reasoning-heavy sets where you deduce missing values from row/column totals and given constraints.",
+							"formulas": [
+								"% change = (new − old)/old × 100",
+								"average = sum / count",
+								"% of total = part/total × 100",
+								"growth over n years, CAGR ≈ ((end/start)^(1/n) − 1) × 100"
+							],
+							"keyIdeas": [
+								"Prefer sets with fewer blanks or a fully-known row/column to anchor deductions.",
+								"Read the question before computing — you rarely need every cell.",
+								"Use row totals and column totals as cross-checks on any value you deduce.",
+								"Absolute change and percentage change rank differently; note which the question wants."
+							],
+							"example": {
+								"q": "A store's revenue (₹ lakh) for three products: Product A 40 (2022) → 50 (2023); B 60 → 54; C 25 → 40. Which product had the highest percentage growth from 2022 to 2023?",
+								"solution": "A: (50−40)/40 = 25%. B: (54−60)/60 = −10%. C: (40−25)/25 = 60%. C has the highest growth at 60%."
+							},
+							"traps": [
+								"Confusing absolute increase with percentage increase (A grew ₹10L, C grew ₹15L, yet C's percentage is far higher).",
+								"Mixing up a row total with a column total when the table has both."
+							]
+						},
+						{
+							"name": "Bar graphs & line graphs",
+							"frequency": "medium",
+							"summary": "Bars compare categories (grouped or stacked); lines show a trend over time. CAT uses them to test value extraction plus growth/ratio computation, occasionally as stacked bars where a segment must be separated from cumulative height.",
+							"formulas": [
+								"% change = (new − old)/old × 100",
+								"stacked-bar segment value = cumulative top − cumulative below",
+								"segment share = segment/total × 100"
+							],
+							"keyIdeas": [
+								"Check the axis scale and units first (₹ vs %, thousands vs lakhs).",
+								"In a stacked bar, a segment's value is the gap between gridlines, not the height of its top.",
+								"Estimate off gridlines rather than reading exact values when comparisons only need magnitude.",
+								"Confirm whether a line plots an absolute value or an index/percentage."
+							],
+							"example": {
+								"q": "A line graph shows a company's profit (₹ cr): 2020 = 20, 2021 = 25, 2022 = 20, 2023 = 30. In which year was the year-on-year percentage change largest in magnitude?",
+								"solution": "2021: (25−20)/20 = +25%. 2022: (20−25)/25 = −20%. 2023: (30−20)/20 = +50%. Largest magnitude is 2023 at 50%."
+							},
+							"traps": [
+								"Reading the top of a stacked-bar segment as the segment's own value.",
+								"Comparing percentage changes without noticing the denominators (base years) differ."
+							]
+						},
+						{
+							"name": "Pie charts",
+							"frequency": "low",
+							"summary": "A circle split into sectors showing proportional shares by angle or percentage. Standalone pies are uncommon in recent CAT; when they appear they are usually paired with a total so you recover absolute values, or with a second pie for two-period comparison.",
+							"formulas": [
+								"value = (angle/360) × total",
+								"angle = (value/total) × 360",
+								"sector % = (angle/360) × 100",
+								"1% = 3.6°"
+							],
+							"keyIdeas": [
+								"Convert angle ↔ value early using the given total, then work in absolute numbers.",
+								"With two pies of different totals, never compare sectors by angle or percentage alone — convert both to absolute values.",
+								"For two-year pies, combine the share with a percentage-change step to answer growth questions."
+							],
+							"example": {
+								"q": "A pie chart of a family's ₹60,000 monthly budget: Rent 30%, Food 25%, Transport 15%, Savings 20%, Other 10%. What sector angle represents Food, and how much is spent on Rent?",
+								"solution": "Food angle = 25% × 360 = 90°. Rent = 30% × 60,000 = ₹18,000."
+							},
+							"traps": [
+								"Comparing sector sizes across two pies that have different totals.",
+								"Mixing the 360° base (angle) with the 100 base (percentage)."
+							]
+						},
+						{
+							"name": "Venn diagrams",
+							"frequency": "medium",
+							"summary": "Overlapping regions represent set memberships across two or three attributes. A DILR staple for counting problems, often posed as a reasoning caselet in words rather than a drawn diagram.",
+							"formulas": [
+								"|A∪B| = |A| + |B| − |A∩B|",
+								"|A∪B∪C| = ΣA − Σ(pairwise ∩) + |A∩B∩C|",
+								"exactly-two = Σ(pairwise ∩) − 3 × |A∩B∩C|",
+								"only-A = |A| − |A∩B| − |A∩C| + |A∩B∩C|"
+							],
+							"keyIdeas": [
+								"Fill the innermost (all-three) region first, then work outward region by region.",
+								"Translate phrases like 'at least two', 'exactly two', 'only X' into specific region sums.",
+								"Total = sum of all disjoint regions + the 'none' region; use it as a check."
+							],
+							"example": {
+								"q": "In a class of 100, 60 study Maths, 45 study Physics, and 30 study both. How many study neither subject?",
+								"solution": "|M∪P| = 60 + 45 − 30 = 75. Neither = 100 − 75 = 25 students."
+							},
+							"traps": [
+								"Double-counting the intersection when adding set sizes.",
+								"Confusing 'exactly two' with 'at least two', or forgetting the 'none/neither' region."
+							]
+						},
+						{
+							"name": "Scatter plots & radar charts",
+							"frequency": "low",
+							"summary": "Scatter plots map two variables as points to reveal correlation, ranking, or outliers; radar (spider) charts plot several metrics on axes radiating from a center. CAT uses scatter occasionally for threshold/ratio reads; radar is rare.",
+							"formulas": [
+								"region count via thresholds: x > a AND y > b",
+								"ratio metric from coordinates, e.g. margin = y/x",
+								"no correlation formula needed — read trend/outliers visually"
+							],
+							"keyIdeas": [
+								"For scatter, draw mental threshold lines and count points in the required quadrant instead of computing everything.",
+								"Rankings often depend on a ratio (y/x), not raw position — compute the ratio the question implies.",
+								"For radar, compare each spoke on its own scale; overall shape/area indicates the stronger entity."
+							],
+							"example": {
+								"q": "A scatter plot places six firms by (Revenue ₹cr on x, Profit ₹cr on y). Firm K is at (50, 10) and Firm L at (20, 8). Which firm has the higher profit margin (profit/revenue)?",
+								"solution": "K: 10/50 = 20%. L: 8/20 = 40%. Firm L has the higher margin, even though K's revenue and profit are larger in absolute terms."
+							},
+							"traps": [
+								"Judging performance by raw position when the question needs a ratio.",
+								"Misreading which axis is which, or comparing radar spokes that use different scales."
+							]
+						},
+						{
+							"name": "Caselets (data in text)",
+							"frequency": "high",
+							"summary": "Data embedded in a paragraph with conditions and constraints, and no chart to read from. A dominant modern-CAT format that fuses DI arithmetic with logical deduction and rewards careful organization over speed.",
+							"formulas": [
+								"translate each sentence into an equation or constraint",
+								"standard tools still apply: % change, ratio, average, weighted average"
+							],
+							"keyIdeas": [
+								"Convert every sentence into a small table or set of equations before solving.",
+								"Identify the key unknown and set up linear relations tying the rest to it.",
+								"Watch for implicit constraints buried in words ('no two equal', 'each at least one')."
+							],
+							"example": {
+								"q": "Three friends A, B, and C shared ₹1,200. A received twice what B received, and C received ₹200 more than B. How much did each receive?",
+								"solution": "Let B = x. Then A = 2x and C = x + 200. So 2x + x + (x + 200) = 1200 → 4x = 1000 → x = 250. B = ₹250, A = ₹500, C = ₹450."
+							},
+							"traps": [
+								"Missing a qualifier stated only in words that eliminates cases.",
+								"Setting up variables inconsistently across sentences."
+							]
+						},
+						{
+							"name": "Mixed / multi-chart sets",
+							"frequency": "medium",
+							"summary": "A single set combines two or more data forms — e.g. a table plus a bar chart, or a pie plus a line — that must be cross-referenced. CAT uses these to force integration across sources rather than a single lookup.",
+							"formulas": [
+								"value = (angle/360) × total (to bridge a pie into absolutes)",
+								"% change = (new − old)/old × 100",
+								"weighted average = Σ(wᵢxᵢ) / Σwᵢ"
+							],
+							"keyIdeas": [
+								"Map which chart supplies which variable before you start.",
+								"Find the linking quantity — a shared total or common category — that bridges the charts.",
+								"Answer each sub-question with the minimum charts needed; avoid over-reading one source."
+							],
+							"example": {
+								"q": "A pie chart splits a company's ₹200 cr revenue by division: Retail 40%, Wholesale 35%, Online 25%. A table gives each division's profit margin: Retail 10%, Wholesale 8%, Online 20%. Which division earns the most profit?",
+								"solution": "Revenues: Retail 80cr, Wholesale 70cr, Online 50cr. Profits: Retail 80×10% = 8cr, Wholesale 70×8% = 5.6cr, Online 50×20% = 10cr. Online earns the most at ₹10 cr."
+							},
+							"traps": [
+								"Applying a value from the wrong chart to a question.",
+								"Forgetting to convert a share into an absolute before applying a margin or rate."
+							]
+						},
+						{
+							"name": "Data-sufficiency-style calculation sets",
+							"frequency": "rare",
+							"summary": "Questions ask whether the given statements or data are sufficient to answer, not the value itself. Classic in older CAT and in XAT/GMAT; current CAT DILR rarely uses pure DS, though it occasionally asks what minimum additional information is needed.",
+							"formulas": [
+								"test solvability, not the value: a unique answer exists when independent equations = unknowns",
+								"a statement is insufficient if it permits more than one valid value"
+							],
+							"keyIdeas": [
+								"Decide sufficiency without fully solving — stop once a unique answer is guaranteed.",
+								"Evaluate each statement alone before considering them together.",
+								"Beware statements that yield a value but not a unique one (e.g., a quadratic with two roots)."
+							],
+							"example": {
+								"q": "Is the two-digit number N even? Statement (1): the sum of its digits is odd. Statement (2): its units digit is 4. Which statement(s) suffice?",
+								"solution": "(1) Sum of digits odd fixes nothing about the units digit's parity — 12 is even but 21 is odd, both with digit-sum 3 — so not sufficient. (2) Units digit 4 makes N even — sufficient alone. Answer: statement (2) alone is sufficient."
+							},
+							"traps": [
+								"Fully solving for the value when only sufficiency is asked.",
+								"Declaring a statement insufficient without testing it on its own, or overlooking that it allows two valid values."
+							]
+						}
+					],
+					"weightPct": 50,
+					"priority": "high"
+				},
+				{
+					"id": "dilr-lr",
+					"name": "Logical Reasoning",
+					"subtopics": [
+						{
+							"name": "Seating arrangements (linear, circular)",
+							"frequency": "high",
+							"summary": "Placing people or objects in a row or around a circle subject to position and adjacency clues, often layered with a second attribute. One of the most frequent CAT DILR set formats.",
+							"formulas": [
+								"Linear arrangements of n distinct objects = n!",
+								"Distinct circular arrangements of n objects = (n-1)!",
+								"Circular where clockwise/anticlockwise are identical (e.g. beads on a ring) = (n-1)!/2"
+							],
+							"keyIdeas": [
+								"Fix a reference person to kill rotational symmetry, then place others relative to them.",
+								"Track facing direction: for people facing the centre (or facing you), their left/right is the mirror of yours, so left/right clues flip.",
+								"Convert clues to a visual sketch and use elimination; note when 'between' means strictly-adjacent vs somewhere-between.",
+								"Split into cases when a clue leaves two symmetric options, then prune with later clues."
+							],
+							"example": {
+								"q": "Five people A, B, C, D, E sit in a row of five chairs facing you. C is exactly in the middle. A is immediately to the left of C (from your view). B and D occupy the two ends. E is not seated next to B. Give the order left to right.",
+								"solution": "C is at seat 3. A immediately left of C (your view) is seat 2. Ends (seats 1 and 5) are B and D, so the only remaining seat 4 is E. E cannot be adjacent to B; seat 4 is adjacent to seat 5, so seat 5 is not B. Hence D=5 and B=1. Order left to right: B, A, C, E, D."
+							},
+							"traps": [
+								"Confusing left/right when the people face the centre or face you (directions invert).",
+								"Reading 'between' as strictly-adjacent when it only means somewhere in between.",
+								"Forgetting rotational symmetry, which creates duplicate circular cases."
+							]
+						},
+						{
+							"name": "Grid / matrix arrangements",
+							"frequency": "high",
+							"summary": "Matching two or more sets of attributes (person to city to salary to colour, etc.) via a yes/no elimination table. Very common in CAT DILR, often disguised inside a larger narrative set.",
+							"keyIdeas": [
+								"Build an elimination matrix; mark definite No cells from negative clues first.",
+								"Each row and column of a one-to-one attribute gets exactly one Yes; a Yes eliminates the rest of that row and column.",
+								"Chain positive clues (X likes P, P is in city M) to force placements.",
+								"When only two options remain for a cell, test each and discard the contradictory one."
+							],
+							"example": {
+								"q": "Ravi, Sita and Meena each like exactly one fruit (apple, banana, cherry) and live in exactly one city (Delhi, Mumbai, Pune). Ravi likes neither apple nor banana. The banana-lover lives in Mumbai. Sita lives in Delhi. Find each person's fruit and city.",
+								"solution": "Ravi likes neither apple nor banana, so Ravi likes cherry. Sita lives in Delhi, but the banana-lover lives in Mumbai, so Sita is not the banana-lover; Sita is not cherry (Ravi has it), so Sita likes apple. Meena therefore likes banana and lives in Mumbai. Ravi takes the remaining city, Pune. Result: Ravi-cherry-Pune, Sita-apple-Delhi, Meena-banana-Mumbai."
+							},
+							"traps": [
+								"Not recording every negative inference, so a forced cell is missed.",
+								"Assuming an attribute can repeat when the set is one-to-one.",
+								"Overlooking that a positive placement also removes options from other cells in that row and column."
+							]
+						},
+						{
+							"name": "Blood relations & family trees",
+							"frequency": "low",
+							"summary": "Decoding relationships from statements or coded notation and building a family tree. A staple of SNAP/NMAT/IIFT; in CAT it is rare as a full DILR set and usually appears only as an embedded clue.",
+							"keyIdeas": [
+								"Draw a tree using symbols: +/- for gender, = for spouse, a vertical link for parent-child, and keep generations on levels.",
+								"Resolve 'pointing' statements outward from the speaker, substituting each phrase step by step.",
+								"Watch generation levels and gender: many relations (cousin, in-law) are ambiguous unless stated."
+							],
+							"example": {
+								"q": "Pointing to a photograph, a man says, 'I have no brother or sister, but that man's father is my father's son.' Whose photograph is it?",
+								"solution": "'My father's son' must be the speaker himself, because he has no brothers. So 'that man's father' is the speaker. Therefore that man is the speaker's son. The photograph is of his son."
+							},
+							"traps": [
+								"Treating 'my father's son' as someone else when the speaker has no brothers (it is the speaker himself).",
+								"Assuming gender that is not actually stated.",
+								"Slipping a generation level while chaining relations."
+							]
+						},
+						{
+							"name": "Direction sense",
+							"frequency": "low",
+							"summary": "Tracking a sequence of movements and turns on a plane to find final displacement or bearing. Common as a warm-up type in SNAP/NMAT; rare as a standalone CAT DILR set.",
+							"formulas": [
+								"Straight-line distance from start to end = sqrt((net East-West)^2 + (net North-South)^2)",
+								"Left turn = 90 degrees anticlockwise; right turn = 90 degrees clockwise"
+							],
+							"keyIdeas": [
+								"Sketch on axes with +x = East and +y = North, and add each leg to the running coordinates.",
+								"Track the current facing direction, since each turn is relative to it, not to North.",
+								"Net displacement comes from the Pythagorean combination of the two axis sums."
+							],
+							"example": {
+								"q": "A man walks 4 km North, turns right and walks 3 km, then turns right again and walks 4 km. How far and in which direction is he from his starting point?",
+								"solution": "Start at (0,0). North 4 -> (0,4). Turn right, now facing East, walk 3 -> (3,4). Turn right, now facing South, walk 4 -> (3,0). Net North-South = 0, net East-West = +3. He is 3 km due East of the start."
+							},
+							"traps": [
+								"Mixing up left/right after the person turns to face South or West (turns look reversed on the page).",
+								"Treating turns as absolute compass directions rather than relative to current facing.",
+								"Sign errors when summing the East-West or North-South components."
+							]
+						},
+						{
+							"name": "Syllogisms",
+							"frequency": "rare",
+							"summary": "Deciding which conclusions necessarily follow from categorical premises such as 'All A are B' and 'Some B are C'. A core type in SNAP/NMAT-style reasoning; essentially absent as a CAT DILR set.",
+							"formulas": [
+								"Two particular premises yield no conclusion",
+								"Two negative premises yield no conclusion",
+								"A conclusion is negative only if a premise is negative; particular only if a premise is particular",
+								"'All A are B' validly converts to 'Some B are A'"
+							],
+							"keyIdeas": [
+								"Draw Venn diagrams and accept a conclusion only if it holds in every possible diagram.",
+								"Distinguish 'definitely follows' from 'possibly true'; CAT-style logic rewards the former.",
+								"Check complementary either-or pairs when neither single conclusion is certain."
+							],
+							"example": {
+								"q": "Premises: All pens are books. Some books are red. Conclusions: (I) Some pens are red. (II) Some books are pens. Which conclusion follows?",
+								"solution": "All pens are books puts pens entirely inside books. The red books need not overlap the pens region, so (I) is not guaranteed. But 'All pens are books' converts validly to 'Some books are pens', so (II) follows. Only conclusion II follows."
+							},
+							"traps": [
+								"Rejecting a valid particular conclusion obtained by converting a universal ('All A are B' gives 'Some B are A').",
+								"Assuming an overlap between two 'some' groups that is not guaranteed.",
+								"Ignoring complementary either-or conclusion pairs."
+							]
+						},
+						{
+							"name": "Coding-decoding",
+							"frequency": "rare",
+							"summary": "Inferring the rule that maps letters, words or numbers to a code and applying it. Frequent in SNAP/NMAT/IIFT; negligible in current CAT DILR.",
+							"formulas": [
+								"Letter positions: A=1, B=2, ... Z=26",
+								"Positional complement: a letter at position p maps to 27 - p (A<->Z, B<->Y)",
+								"Shift cipher: each letter moves by a fixed k positions forward or backward"
+							],
+							"keyIdeas": [
+								"Compare given code pairs letter by letter to detect a shift, complement or reversal.",
+								"Check for interleaving, reversal of order, or symbol substitution before assuming a simple shift.",
+								"Verify the hypothesised rule on a second given example before decoding the target."
+							],
+							"example": {
+								"q": "If CAT is coded as DBU, how is DOG coded in the same scheme?",
+								"solution": "Compare CAT and DBU letter by letter: C->D, A->B, T->U, i.e. each letter shifts forward by 1 position. Apply to DOG: D->E, O->P, G->H. So DOG is coded as EPH."
+							},
+							"traps": [
+								"Assuming a forward shift when the rule is a positional complement, or vice versa.",
+								"Not checking the rule against all letters of the example.",
+								"Missing rules based on word length or letter order (reversal, interleaving)."
+							]
+						},
+						{
+							"name": "Number & letter series",
+							"frequency": "rare",
+							"summary": "Identifying the pattern in a sequence to find the next or missing term. Common in SNAP/NMAT and in quantitative aptitude; rare as a CAT DILR set.",
+							"formulas": [
+								"Arithmetic: a_n = a_1 + (n-1)d",
+								"Geometric: a_n = a_1 * r^(n-1)",
+								"Common motifs: squares (1,4,9,16), cubes (1,8,27), Fibonacci-type (each term = sum of previous two)"
+							],
+							"keyIdeas": [
+								"Take first differences, then second differences, to expose arithmetic or quadratic patterns.",
+								"Check the ratio of consecutive terms for a geometric pattern.",
+								"Test for alternating or interleaved sub-series; map letters to positions 1-26 for letter series."
+							],
+							"example": {
+								"q": "Find the next term: 2, 6, 12, 20, 30, ?",
+								"solution": "First differences are 4, 6, 8, 10, increasing by 2 each time, so the next difference is 12, giving 30 + 12 = 42. (Equivalently the nth term is n(n+1): 1x2, 2x3, ..., 6x7 = 42.)"
+							},
+							"traps": [
+								"Stopping at first differences when a second-difference or interleaved pattern is at work.",
+								"Forcing a single rule onto an alternating (two interleaved) series.",
+								"Off-by-one errors when converting letters to position numbers."
+							]
+						},
+						{
+							"name": "Games & tournaments",
+							"frequency": "high",
+							"summary": "Reasoning over match results, points tables and scoring rules across rounds (round-robin or knockout) to deduce standings. A signature CAT DILR set type.",
+							"formulas": [
+								"Round-robin (each plays each once) total matches = C(n,2) = n(n-1)/2",
+								"Single-elimination knockout with n players needs n-1 matches to decide a winner",
+								"A team's maximum points = (games played) x (points for a win)"
+							],
+							"keyIdeas": [
+								"Compute total matches and total points to bound what each team can achieve.",
+								"Use win-loss-tie and point/goal-difference constraints to pin down results.",
+								"Attack from extreme cases: the most or fewest points a team can possibly have.",
+								"Build a results grid for round-robins and fill in forced outcomes."
+							],
+							"example": {
+								"q": "Four teams play a single round-robin (each pair plays once). A win = 2 points, a draw = 1, a loss = 0. How many matches are played in total, and if team A wins all of its games, how many points does A have?",
+								"solution": "Total matches = C(4,2) = 4x3/2 = 6. Each team plays 3 games; A wins all 3, earning 3 x 2 = 6 points."
+							},
+							"traps": [
+								"Miscounting matches by confusing single vs double round-robin.",
+								"Forgetting that a draw splits points between the two teams.",
+								"Assuming a unique final table when equal points allow multiple valid orderings."
+							]
+						},
+						{
+							"name": "Clocks & calendars",
+							"frequency": "low",
+							"summary": "Computing hand angles and overlaps on a clock, and days of the week via odd-day counting for calendars. A classic aptitude topic that is uncommon in current CAT DILR.",
+							"formulas": [
+								"Clock angle = |30H - 5.5M| degrees; take 360 minus this if it exceeds 180",
+								"Minute hand gains 5.5 degrees per minute over the hour hand; hands overlap every 12/11 hours (about 65 5/11 minutes)",
+								"Odd days: ordinary year = 1, leap year = 2; 100 years = 5, 400 years = 0",
+								"Leap year if divisible by 4, but a century year only if divisible by 400"
+							],
+							"keyIdeas": [
+								"For an angle, plug H and M into |30H - 5.5M|; this already accounts for the hour hand's drift.",
+								"Report the smaller (<=180 degrees) angle unless the reflex angle is asked.",
+								"For calendars, count odd days between the two dates and remember Feb 29 exists only in leap years."
+							],
+							"example": {
+								"q": "What is the angle between the hands of a clock at 3:30?",
+								"solution": "Angle = |30 x 3 - 5.5 x 30| = |90 - 165| = |-75| = 75 degrees. (The hour hand has moved halfway between 3 and 4, which the 5.5M term captures.)"
+							},
+							"traps": [
+								"Placing the hour hand exactly on the hour and ignoring its drift within the hour (the 5.5M term handles it).",
+								"Reporting the reflex angle instead of the smaller angle.",
+								"Miscounting leap years at century boundaries (1900 is not a leap year; 2000 is)."
+							]
+						},
+						{
+							"name": "Routes & networks",
+							"frequency": "medium",
+							"summary": "Reasoning over nodes and edges: shortest paths, connectivity, flow, or counting routes, often framed as cities, pipelines or a metro map. Appears periodically in CAT DILR.",
+							"formulas": [
+								"Monotonic lattice paths on an m-by-n grid (only right/up) = C(m+n, m)",
+								"Handshake lemma: sum of all vertex degrees = 2 x (number of edges)"
+							],
+							"keyIdeas": [
+								"Redraw the network as a clean graph and label edge weights or capacities.",
+								"Count routes stage by stage (multiply the number of choices at each junction).",
+								"Handle distance and capacity/flow constraints as separate layers.",
+								"Respect one-way edges and blocked nodes when enumerating paths."
+							],
+							"example": {
+								"q": "On a grid you may move only right or up from the bottom-left to the top-right corner of a rectangle that is 3 units wide and 2 units tall (so 3 rights and 2 ups). How many distinct shortest routes are there?",
+								"solution": "A shortest route is any arrangement of 3 R-moves and 2 U-moves, i.e. choose which of the 5 steps are 'up': C(5,2) = 10 routes."
+							},
+							"traps": [
+								"Double-counting or missing routes when enumerating paths by hand instead of using the combination.",
+								"Ignoring one-way edges or blocked nodes.",
+								"Confusing shortest distance with the number of shortest paths."
+							]
+						},
+						{
+							"name": "Cubes",
+							"frequency": "low",
+							"summary": "A painted cube cut into smaller cubes, counting sub-cubes by number of painted faces, plus dice and paper-folding variants. A niche reasoning type, infrequent in current CAT DILR.",
+							"formulas": [
+								"A cube cut into n x n x n small cubes: 3 painted faces = 8 (corners); 2 painted = 12(n-2) (edges); 1 painted = 6(n-2)^2 (faces); 0 painted = (n-2)^3 (interior); total = n^3"
+							],
+							"keyIdeas": [
+								"Classify small cubes by position: corner (3 faces), edge (2), face-centre (1), interior (0).",
+								"For dice problems use opposite-face relationships and given face sums.",
+								"For folding a net, track which faces end up opposite versus adjacent."
+							],
+							"example": {
+								"q": "A cube painted on all six faces is cut into 3 x 3 x 3 = 27 identical small cubes. How many small cubes have exactly two painted faces?",
+								"solution": "Two-painted-face cubes lie along the edges (excluding corners): 12(n-2) = 12 x (3-2) = 12 cubes."
+							},
+							"traps": [
+								"Forgetting that 1-painted and 0-painted cubes exist only when n >= 3.",
+								"Miscounting when some outer faces of the big cube are left unpainted.",
+								"Assuming opposite dice faces without using the given sums."
+							]
+						},
+						{
+							"name": "Constraint-based puzzles",
+							"frequency": "high",
+							"summary": "General logic puzzles built on numeric, ordering, grouping or distribution constraints (scheduling, rankings, allocations) that fit no single template. The dominant flavour of modern CAT DILR.",
+							"keyIdeas": [
+								"List every constraint and translate it into an inequality, ordering or grouping.",
+								"Start from the most restrictive clue to shrink the search space fastest.",
+								"Enumerate the few remaining cases and prune each one against the constraints.",
+								"Maintain running totals for distribution or sum constraints as you place items."
+							],
+							"example": {
+								"q": "Five students scored distinct integer marks (out of 10). D scored the highest. A scored 8, E scored 7. A scored more than B, and B scored more than C. Rank all five from highest to lowest.",
+								"solution": "D is highest and marks are distinct integers, with A = 8, so D is 9 or 10. E = 7. B < A = 8, and B cannot be 7 (that is E), so B <= 6; C < B, so C <= 5. Ordering top to bottom: D > A(8) > E(7) > B > C. Ranking: D, A, E, B, C."
+							},
+							"traps": [
+								"Not ordering clues by restrictiveness, wasting time on weak constraints first.",
+								"Overlooking that 'distinct' forbids any ties.",
+								"Dropping a global constraint (such as a required total) partway through the casework."
+							]
+						}
+					],
+					"weightPct": 50,
+					"priority": "high"
+				}
+			]
+		},
+		{
+			"id": "qa",
+			"name": "Quantitative Aptitude",
+			"short": "QA",
+			"questions": 22,
+			"marks": 66,
+			"timeMinutes": 40,
+			"topics": [
+				{
+					"id": "qa-arithmetic",
+					"name": "Arithmetic",
+					"weightPct": 40,
+					"priority": "highest",
+					"subtopics": [
+						{
+							"name": "Percentages",
+							"frequency": "high",
+							"summary": "Expressing quantities as parts per hundred and tracking change. The backbone of almost every arithmetic question in CAT (profit, interest, data-based sets), so speed here pays off everywhere.",
+							"formulas": [
+								"x% of N = (x/100)·N",
+								"percentage change = (final − initial)/initial × 100",
+								"successive change a% then b%: net% = a + b + (ab/100)",
+								"price up x% ⇒ cut consumption by x/(100+x)×100% to keep spend fixed",
+								"A is x% more than B ⇒ B is x/(100+x)×100% less than A"
+							],
+							"keyIdeas": [
+								"Memorize fraction–percent conversions: 1/8=12.5%, 1/7≈14.28%, 1/6≈16.67%, 1/9≈11.11%, 1/11≈9.09% — turns 'x% of N' into instant division.",
+								"For A up p% then down p%, net is always a loss of (p^2/100)% — the two never cancel.",
+								"Treat a% increase as multiplier (1 + a/100); chain multipliers instead of adding percentages."
+							],
+							"example": {
+								"q": "The price of sugar rises by 25%. By what percentage must a household cut its consumption so that its monthly spending on sugar stays the same?",
+								"solution": "Spending = price × consumption must stay constant, so consumption must fall by 25/(100+25)×100 = 25/125×100 = 20%. Answer: 20%."
+							},
+							"traps": [
+								"Adding successive percentage changes directly (e.g. +20% then −20% = 0) instead of using net% = a + b + ab/100.",
+								"Confusing 'x% more' with 'x% less' — the base changes, so the reverse percentage is x/(100+x), not x/(100−x)."
+							]
+						},
+						{
+							"name": "Ratio & proportion",
+							"frequency": "high",
+							"summary": "Comparing quantities by division and equating two ratios (proportion). Underlies mixtures, partnerships, TSD and scaling problems, making it one of CAT's highest-leverage topics.",
+							"formulas": [
+								"a:b = c:d ⇔ ad = bc",
+								"if a/b = c/d = e/f = k then (a+c+e)/(b+d+f) = k",
+								"mean proportional of a and b = √(ab)",
+								"componendo–dividendo: a/b = c/d ⇒ (a+b)/(a−b) = (c+d)/(c−d)",
+								"to divide N in ratio p:q:r, value of one part = N/(p+q+r)"
+							],
+							"keyIdeas": [
+								"Convert a ratio to actual numbers by introducing a common multiplier x (e.g. 3x, 5x), then use the given condition to solve for x.",
+								"To combine a:b and b:c, scale so the common term b matches, giving a:b:c in one line.",
+								"If a quantity is split in ratio p:q:r, each share equals its part-fraction of the whole — no need to find x explicitly."
+							],
+							"example": {
+								"q": "Two numbers are in the ratio 3:5. If 9 is added to each, the ratio becomes 3:4. Find the numbers.",
+								"solution": "Let the numbers be 3x and 5x. Then (3x+9)/(5x+9) = 3/4 ⇒ 4(3x+9) = 3(5x+9) ⇒ 12x+36 = 15x+27 ⇒ 3x = 9 ⇒ x = 3. Numbers are 9 and 15 (check: 18/24 = 3/4). Answer: 9 and 15."
+							},
+							"traps": [
+								"Adding a constant to each term of a ratio and assuming the ratio is unchanged — ratios are not preserved under addition, only under multiplication.",
+								"Forgetting that a:b:c requires the shared middle term to be scaled equal before merging two two-term ratios."
+							]
+						},
+						{
+							"name": "Averages & mixtures / alligation",
+							"frequency": "high",
+							"summary": "Averages summarize a set by its mean; alligation is a fast rule for mixing two groups at different values. CAT loves mixture, replacement and weighted-average problems, so alligation is a core shortcut.",
+							"formulas": [
+								"average = (sum of all terms)/(number of terms)",
+								"weighted average = (n1·a1 + n2·a2)/(n1 + n2)",
+								"alligation: (cheaper qty)/(dearer qty) = (Cd − Cm)/(Cm − Cc)",
+								"repeated replacement: pure quantity left = V·(1 − x/V)^n after removing x and refilling n times"
+							],
+							"keyIdeas": [
+								"Alligation is just the weighted-average rearranged — use it whenever a final average sits between two known values to get the mixing ratio in seconds.",
+								"The mean of a mixture always lies between the two component values; the ratio favours the value nearer the mean.",
+								"For 'remove and replace with water' problems, apply the (1 − x/V)^n multiplier directly instead of tracking each step."
+							],
+							"example": {
+								"q": "A 40-litre vessel is full of pure milk. 4 litres are drawn out and replaced with water; this is done three times in all. How much pure milk remains?",
+								"solution": "Milk left = 40·(1 − 4/40)^3 = 40·(0.9)^3 = 40·0.729 = 29.16 litres. Answer: 29.16 litres."
+							},
+							"traps": [
+								"In alligation, mixing up which difference goes on top — the quantity of the cheaper item is proportional to (dearer − mean), not (mean − cheaper).",
+								"Using n = number of litres instead of n = number of replacements in the (1 − x/V)^n formula."
+							]
+						},
+						{
+							"name": "Profit, loss & discount",
+							"frequency": "high",
+							"summary": "Tracking gain/loss relative to cost price, and how marked price and discount interact with selling price. A steady CAT presence, often blended with percentages and ratios.",
+							"formulas": [
+								"profit% = (SP − CP)/CP × 100 ; loss% = (CP − SP)/CP × 100",
+								"SP = CP·(1 + profit%/100)",
+								"discount% = (MP − SP)/MP × 100",
+								"two successive discounts a%, b%: net% = a + b − ab/100",
+								"markup m% then discount d%: profit% = m − d − md/100"
+							],
+							"keyIdeas": [
+								"Profit and loss percentages are ALWAYS on cost price; discount percentage is ALWAYS on marked price — fix the base before computing.",
+								"Chain markup and discount as multipliers on CP: SP = CP·(1+m/100)·(1−d/100).",
+								"Selling two items at the same price with equal +x% and −x% always yields a net loss of (x^2/100)%."
+							],
+							"example": {
+								"q": "A shopkeeper marks his goods 40% above cost price and then allows a discount of 25% on the marked price. Find his profit or loss percentage.",
+								"solution": "Let CP = 100. MP = 140. SP = 140 × (1 − 0.25) = 140 × 0.75 = 105. Profit% = (105 − 100)/100 × 100 = 5%. Answer: 5% profit."
+							},
+							"traps": [
+								"Computing discount on cost price (or profit on marked price) — bases differ.",
+								"Adding two successive discounts directly instead of using a + b − ab/100."
+							]
+						},
+						{
+							"name": "Simple & compound interest",
+							"frequency": "medium",
+							"summary": "Interest earned on a principal — simple interest is on the original sum, compound interest is on the accumulating amount. CAT tests it moderately, usually via the CI–SI difference or growth-factor reasoning.",
+							"formulas": [
+								"SI = P·r·t/100",
+								"amount (CI) = P·(1 + r/100)^n ; CI = P·[(1 + r/100)^n − 1]",
+								"CI − SI over 2 years = P·(r/100)^2",
+								"CI − SI over 3 years = P·(r/100)^2·(3 + r/100)",
+								"compounded k times/year: amount = P·(1 + r/(100k))^(kn)"
+							],
+							"keyIdeas": [
+								"For 2 years, the CI–SI gap equals interest-on-the-first-year's-interest = P(r/100)^2 — a one-step shortcut.",
+								"CI amount is a geometric growth: multiply by (1 + r/100) once per period; half-yearly means halve the rate and double the periods.",
+								"At the same rate and time, CI ≥ SI, with equality only in the first year."
+							],
+							"example": {
+								"q": "The difference between the compound interest and the simple interest on a certain sum at 10% per annum for 2 years is Rs 50. Find the sum.",
+								"solution": "CI − SI (2 yrs) = P·(r/100)^2 = P·(10/100)^2 = P·(0.1)^2 = 0.01P. So 0.01P = 50 ⇒ P = 5000. Answer: Rs 5000."
+							},
+							"traps": [
+								"Applying the CI–SI difference = P(r/100)^2 formula to periods other than 2 years (the 3-year formula has an extra factor).",
+								"Forgetting to adjust rate and number of periods for half-yearly/quarterly compounding."
+							]
+						},
+						{
+							"name": "Time, speed & distance",
+							"frequency": "high",
+							"summary": "The relation distance = speed × time and its use in relative motion, average speed, and trains. A CAT staple, frequently combined with ratios and linear equations.",
+							"formulas": [
+								"distance = speed × time",
+								"km/h → m/s: ×5/18 ; m/s → km/h: ×18/5",
+								"average speed over equal distances at x and y = 2xy/(x+y)",
+								"relative speed: opposite directions = v1 + v2 ; same direction = |v1 − v2|",
+								"time for a train of length L to cross an object of length M = (L + M)/relative speed"
+							],
+							"keyIdeas": [
+								"For a fixed distance, speed and time are inversely proportional — a speed ratio of a:b gives a time ratio of b:a.",
+								"Average speed is the harmonic mean (2xy/(x+y)) for equal distances, NOT the simple average of the two speeds.",
+								"Always convert km/h to m/s (×5/18) before working with lengths in metres and times in seconds."
+							],
+							"example": {
+								"q": "A car travels from A to B at 60 km/h and returns from B to A along the same road at 40 km/h. Find its average speed for the whole journey.",
+								"solution": "Distances are equal, so average speed = 2xy/(x+y) = 2·60·40/(60+40) = 4800/100 = 48 km/h. Answer: 48 km/h."
+							},
+							"traps": [
+								"Taking the plain arithmetic mean (60+40)/2 = 50 for average speed over equal distances instead of the harmonic mean.",
+								"Mixing units — forgetting the 5/18 conversion when a train's length is in metres and speed in km/h."
+							]
+						},
+						{
+							"name": "Time & work",
+							"frequency": "high",
+							"summary": "Modelling work as a rate (fraction of job per unit time) and combining workers. Common in CAT, often via efficiency ratios or the LCM 'total-units' method.",
+							"formulas": [
+								"rate = 1/time ; work done = rate × time",
+								"A alone in a days, B alone in b days ⇒ together in ab/(a+b) days",
+								"combined rate = 1/a + 1/b + …",
+								"M1·D1·H1/W1 = M2·D2·H2/W2 (men × days × hours per unit work)",
+								"efficiency ∝ 1/time (A twice as fast as B ⇒ times in ratio 1:2)"
+							],
+							"keyIdeas": [
+								"Set total work = LCM of the individual times; each worker's rate becomes a whole number of units/day, making combinations arithmetic-only.",
+								"Rates add directly when people work together; subtract for one who undoes work (leak/opposing worker).",
+								"If A is k times as efficient as B, A takes 1/k of B's time — convert efficiency and time reciprocally."
+							],
+							"example": {
+								"q": "A can complete a piece of work in 12 days and B in 18 days. Working together, in how many days will they finish it?",
+								"solution": "Together time = ab/(a+b) = (12·18)/(12+18) = 216/30 = 7.2 days. Answer: 7.2 days (7 days and 4.8 hours)."
+							},
+							"traps": [
+								"Averaging the two times (e.g. (12+18)/2) instead of combining rates.",
+								"Adding times rather than rates when workers act together."
+							]
+						},
+						{
+							"name": "Pipes & cisterns",
+							"frequency": "low",
+							"summary": "Time-and-work applied to tanks — inlet pipes fill (positive rate) and outlet pipes drain (negative rate). Appears occasionally in CAT as a variant of work problems.",
+							"formulas": [
+								"fill rate = +1/(fill time) ; drain rate = −1/(empty time)",
+								"net rate (inlet a hrs, outlet b hrs) = 1/a − 1/b (fill − drain)",
+								"inlet a hrs with outlet b hrs, b > a ⇒ time to fill = ab/(b − a) hrs",
+								"time to fill/empty = 1/(net rate)"
+							],
+							"keyIdeas": [
+								"Treat an outlet exactly like a worker undoing work: give it a negative rate and add all rates algebraically.",
+								"If the net rate is negative, the tank empties rather than fills — check the sign before reporting a time.",
+								"The LCM-of-times 'total-units' trick works here too: set tank capacity = LCM of all pipe times."
+							],
+							"example": {
+								"q": "Pipe A can fill a tank in 6 hours and pipe B can empty the full tank in 8 hours. If both pipes are opened together on an empty tank, how long will it take to fill it?",
+								"solution": "Net rate = 1/6 − 1/8 = (4 − 3)/24 = 1/24 of the tank per hour. Time to fill = 1/(1/24) = 24 hours. Answer: 24 hours."
+							},
+							"traps": [
+								"Adding the outlet's rate instead of subtracting it.",
+								"Reporting a fill time when the outlet is faster than the inlet (net rate negative), meaning the tank can never fill."
+							]
+						},
+						{
+							"name": "Boats & streams",
+							"frequency": "low",
+							"summary": "TSD in flowing water: the current aids downstream travel and opposes upstream travel. A niche CAT topic, essentially two linear equations in boat speed and stream speed.",
+							"formulas": [
+								"downstream speed = boat speed + stream speed (b + s)",
+								"upstream speed = boat speed − stream speed (b − s)",
+								"boat speed in still water = (downstream + upstream)/2",
+								"stream speed = (downstream − upstream)/2"
+							],
+							"keyIdeas": [
+								"Compute downstream and upstream speeds from distance/time first, then average and half-difference give boat and stream speeds instantly.",
+								"The current helps one way and hurts the other by the SAME amount s, so it never nets to zero on a round trip — upstream always takes longer.",
+								"Time upstream : time downstream = (b+s) : (b−s) for a fixed distance."
+							],
+							"example": {
+								"q": "A boat covers 30 km downstream in 2 hours and takes 3 hours to return the same 30 km upstream. Find the speed of the boat in still water and the speed of the stream.",
+								"solution": "Downstream speed = 30/2 = 15 km/h; upstream speed = 30/3 = 10 km/h. Boat speed = (15 + 10)/2 = 12.5 km/h; stream speed = (15 − 10)/2 = 2.5 km/h. Answer: boat 12.5 km/h, stream 2.5 km/h."
+							},
+							"traps": [
+								"Averaging the two travel times or the two distances instead of the two speeds.",
+								"Swapping the formulas — boat speed is the SUM halved, stream speed is the DIFFERENCE halved."
+							]
+						},
+						{
+							"name": "Partnerships",
+							"frequency": "rare",
+							"summary": "Dividing profit among partners in proportion to capital × time invested. Rarely tested directly in current CAT, but appears as a ratio application.",
+							"formulas": [
+								"profit share ∝ (capital × time invested)",
+								"A : B share = (Ca·Ta) : (Cb·Tb)",
+								"A's profit = (Ca·Ta)/Σ(Ci·Ti) × total profit",
+								"equal investment time ⇒ profit ratio = capital ratio"
+							],
+							"keyIdeas": [
+								"Always weight each partner's capital by the number of months it stayed invested before forming the ratio.",
+								"If all partners invest for the same duration, time cancels and profit splits purely by capital.",
+								"A working partner's salary/commission is taken off the profit first; only the remainder is divided by the capital-time ratio."
+							],
+							"example": {
+								"q": "A invests Rs 5000 for 12 months and B invests Rs 6000 for 8 months in a business. At year end the total profit is Rs 3600. Find each partner's share.",
+								"solution": "Ratio = (5000·12) : (6000·8) = 60000 : 48000 = 5 : 4. Total parts = 9, each part = 3600/9 = 400. A's share = 5×400 = 2000; B's share = 4×400 = 1600. Answer: A gets Rs 2000, B gets Rs 1600."
+							},
+							"traps": [
+								"Splitting profit by capital alone when the investment periods differ — you must multiply capital by time.",
+								"Forgetting to deduct a working partner's salary/commission before applying the capital-time ratio."
+							]
+						}
+					]
+				},
+				{
+					"id": "qa-algebra",
+					"name": "Algebra",
+					"weightPct": 30,
+					"priority": "high",
+					"subtopics": [
+						{
+							"name": "Linear equations",
+							"frequency": "medium",
+							"summary": "Equations of the first degree in one or more variables, and systems of them. In CAT they mostly surface inside word problems, ages/mixtures, and integer-solution counting rather than as bare 'solve for x' questions.",
+							"formulas": [
+								"One variable: ax + b = 0 ⇒ x = −b/a (a≠0)",
+								"Two variables (line): ax + by = c",
+								"System a1x+b1y=c1, a2x+b2y=c2: unique solution if a1/a2 ≠ b1/b2",
+								"Infinitely many solutions if a1/a2 = b1/b2 = c1/c2",
+								"No solution (parallel) if a1/a2 = b1/b2 ≠ c1/c2",
+								"Positive-integer solutions of ax+by=c: count valid x with (c−ax) divisible by b and >0"
+							],
+							"keyIdeas": [
+								"For counting integer solutions of ax+by=c, fix the variable with the larger coefficient; solutions are spaced every LCM-based step (every b/gcd in x).",
+								"Compare coefficient ratios to instantly classify a 2x2 system as unique / infinite / no solution without solving.",
+								"Translate word problems variable-by-variable; 'sum', 'per', 'times as many' each map to one linear relation."
+							],
+							"example": {
+								"q": "How many pairs of positive integers (x, y) satisfy 3x + 4y = 100?",
+								"solution": "y = (100 − 3x)/4 must be a positive integer, so 100 − 3x ≡ 0 (mod 4) ⇒ 3x ≡ 0 (mod 4) ⇒ x ≡ 0 (mod 4). Also x > 0 and 3x < 100 ⇒ x ≤ 33. Multiples of 4 up to 33: 4, 8, 12, 16, 20, 24, 28, 32 — that is 8 values (each gives a valid positive y, e.g. x=32 ⇒ y=1). Answer: 8."
+							},
+							"traps": [
+								"Forgetting the 'positive' (or 'non-negative') constraint and over/under-counting boundary values like x=0.",
+								"Confusing 'no solution' (ratios of coefficients equal but constant differs) with 'infinite solutions'."
+							]
+						},
+						{
+							"name": "Quadratic equations",
+							"frequency": "high",
+							"summary": "Second-degree equations ax²+bx+c=0 and the relationships between their roots and coefficients. A staple of CAT QA, tested via nature-of-roots, symmetric functions of roots, and word problems.",
+							"formulas": [
+								"Roots: x = (−b ± √(b²−4ac))/(2a)",
+								"Sum of roots α+β = −b/a",
+								"Product of roots αβ = c/a",
+								"Discriminant D = b²−4ac: D>0 two distinct real, D=0 equal real, D<0 complex conjugate roots",
+								"Rebuild: x² − (α+β)x + αβ = 0",
+								"α²+β² = (α+β)² − 2αβ",
+								"|α−β| = √D / |a|"
+							],
+							"keyIdeas": [
+								"Attack root problems through sum and product (Vieta) instead of finding the roots explicitly.",
+								"For 'real and distinct/equal/no real' set D>0, =0, <0 respectively.",
+								"Rational roots require D to be a perfect square (when a,b,c are integers).",
+								"If roots are reciprocals then a=c; if roots are equal in magnitude opposite in sign then b=0."
+							],
+							"example": {
+								"q": "For what value(s) of k does x² + kx + (k + 3) = 0 have equal roots?",
+								"solution": "Equal roots ⇒ discriminant = 0: k² − 4·1·(k+3) = 0 ⇒ k² − 4k − 12 = 0 ⇒ (k − 6)(k + 2) = 0. Answer: k = 6 or k = −2."
+							},
+							"traps": [
+								"Dropping the ± and reporting only one root.",
+								"Assuming two roots always exist as real numbers — check the discriminant's sign first.",
+								"Mixing up the signs in Vieta: sum is −b/a (note the minus), product is +c/a."
+							]
+						},
+						{
+							"name": "Inequalities & modulus",
+							"frequency": "high",
+							"summary": "Solving linear/quadratic/rational inequalities and equations or inequalities involving absolute value. A CAT favourite because it rewards case-analysis and number-line reasoning, and often asks for a count of integer solutions.",
+							"formulas": [
+								"|x| < a ⇔ −a < x < a (a>0); |x| > a ⇔ x < −a or x > a",
+								"|x − a| = distance of x from a on the number line",
+								"Triangle inequality: |a+b| ≤ |a| + |b|; ||a|−|b|| ≤ |a−b|",
+								"AM ≥ GM ≥ HM (positive reals): (a+b)/2 ≥ √(ab) ≥ 2ab/(a+b)",
+								"a² + b² ≥ 2ab; a/b + b/a ≥ 2 for a,b same sign",
+								"Wavy-curve: for a rational/polynomial inequality, mark roots on the number line and alternate signs from the rightmost interval"
+							],
+							"keyIdeas": [
+								"|x−p|+|x−q| is minimized (= |p−q|) for all x between p and q — read modulus sums as total distance.",
+								"Multiplying/dividing an inequality by a negative flips the sign; never multiply by a variable of unknown sign.",
+								"Use the wavy-curve (sign-scheme) method for products/quotients of linear factors; watch odd vs even multiplicities.",
+								"AM-GM gives quick min/max bounds for symmetric positive expressions."
+							],
+							"example": {
+								"q": "How many integer values of x satisfy |x − 3| + |x + 2| ≤ 8?",
+								"solution": "|x−3|+|x+2| is the total distance from x to 3 and to −2; its minimum is the gap |3−(−2)| = 5 (for −2 ≤ x ≤ 3). For x>3: (x−3)+(x+2)=2x−1 ≤ 8 ⇒ x ≤ 4. For x<−2: (3−x)+(−x−2)=1−2x ≤ 8 ⇒ x ≥ −3. So −3 ≤ x ≤ 4, giving integers −3,−2,−1,0,1,2,3,4 = 8 values. Answer: 8."
+							},
+							"traps": [
+								"Forgetting to flip the inequality sign when multiplying/dividing by a negative quantity.",
+								"Squaring both sides of a modulus equation without checking for extraneous roots.",
+								"In wavy-curve, mishandling repeated (even-power) roots where the sign does not change."
+							]
+						},
+						{
+							"name": "Functions",
+							"frequency": "medium",
+							"summary": "Rules mapping inputs to outputs, with focus on composition, inverses, even/odd symmetry, and functional equations. CAT tests f(g(x)), self-inverse maps, and finding f from a defining relation.",
+							"formulas": [
+								"Composition: (f∘g)(x) = f(g(x))",
+								"Inverse: f(f⁻¹(x)) = f⁻¹(f(x)) = x; swap x,y and solve to find f⁻¹",
+								"Even function: f(−x) = f(x) (symmetric about y-axis)",
+								"Odd function: f(−x) = −f(x) (symmetric about origin)",
+								"Involution (self-inverse): f(f(x)) = x",
+								"Any function = even part [f(x)+f(−x)]/2 + odd part [f(x)−f(−x)]/2"
+							],
+							"keyIdeas": [
+								"To simplify f(f(x)), substitute the whole expression back in and cancel — many CAT maps turn out to be self-inverse (giving x) or cyclic with small period.",
+								"Plug in strategic values (x=0, 1, −1, x→1/x) into a functional equation to generate solvable simultaneous equations.",
+								"A function is invertible iff it is one-to-one (bijective on its range); monotonic functions are always invertible.",
+								"f(x)=x/(x−1), f(x)=1/x, f(x)=a−x are classic involutions."
+							],
+							"example": {
+								"q": "If f(x) = x/(x − 1) for x ≠ 1, find f(f(x)).",
+								"solution": "f(f(x)) = f(x/(x−1)) = [x/(x−1)] / [x/(x−1) − 1] = [x/(x−1)] / [(x − (x−1))/(x−1)] = [x/(x−1)] / [1/(x−1)] = x. So f is its own inverse. Answer: f(f(x)) = x."
+							},
+							"traps": [
+								"Reversing the order of composition — (f∘g) means f(g(x)), not g(f(x)).",
+								"Ignoring domain restrictions (e.g. x ≠ 1) that can invalidate an answer.",
+								"Assuming every function has an inverse; it must be one-to-one."
+							]
+						},
+						{
+							"name": "Logarithms",
+							"frequency": "high",
+							"summary": "The inverse of exponentiation; log_b(x) is the power to which b must be raised to get x. CAT uses log laws, change of base, and the digit-count/leading-digit trick with log10.",
+							"formulas": [
+								"Definition: log_b(x) = y ⇔ b^y = x (b>0, b≠1, x>0)",
+								"log_b(xy) = log_b x + log_b y",
+								"log_b(x/y) = log_b x − log_b y",
+								"log_b(xⁿ) = n·log_b x",
+								"Change of base: log_b x = (log_c x)/(log_c b); log_b x = 1/(log_x b)",
+								"b^(log_b x) = x; log_b b = 1; log_b 1 = 0",
+								"a^(log_c b) = b^(log_c a)",
+								"Number of digits of N (base 10) = ⌊log₁₀ N⌋ + 1"
+							],
+							"keyIdeas": [
+								"Number of digits in N equals floor(log10 N) + 1; use log10 2 ≈ 0.3010, log10 3 ≈ 0.4771 for powers of 2, 3, 6.",
+								"log is defined only for positive arguments and base ≠ 1 — always range-check candidate solutions.",
+								"Convert all logs to a common base to compare or combine; log_b x = 1/log_x b is a fast flip.",
+								"The fractional part of log10 N (the mantissa) fixes the leading digits of N."
+							],
+							"example": {
+								"q": "How many digits are there in 2^40? (Take log₁₀ 2 = 0.3010.)",
+								"solution": "Number of digits = ⌊log₁₀(2^40)⌋ + 1 = ⌊40 × 0.3010⌋ + 1 = ⌊12.04⌋ + 1 = 12 + 1 = 13. Answer: 13 digits."
+							},
+							"traps": [
+								"Writing log(x+y) as log x + log y — the product rule applies to log(xy), not to a sum.",
+								"Forgetting the domain: log of zero or a negative number is undefined, so reject such roots.",
+								"Off-by-one in digit count — it is floor(log) PLUS 1, not just floor(log)."
+							]
+						},
+						{
+							"name": "Progressions (AP, GP, HP)",
+							"frequency": "high",
+							"summary": "Sequences with a constant difference (AP), constant ratio (GP), or whose reciprocals form an AP (HP), plus their sums and means. Very frequently tested in CAT, both directly and inside word problems.",
+							"formulas": [
+								"AP: Tn = a + (n−1)d; Sn = n/2·(2a + (n−1)d) = n/2·(a + l)",
+								"GP: Tn = a·r^(n−1); Sn = a(rⁿ − 1)/(r − 1), r≠1; S∞ = a/(1 − r) for |r| < 1",
+								"HP: terms are reciprocals of an AP; Tn = 1/(a + (n−1)d)",
+								"AM of a,b = (a+b)/2; GM = √(ab); HM = 2ab/(a+b)",
+								"GM² = AM × HM (for two positive numbers); AM ≥ GM ≥ HM",
+								"Sum of n AMs inserted between a,b relates to n·(a+b)/2"
+							],
+							"keyIdeas": [
+								"For an AP, Sn = n × (average term) = n × (first + last)/2 — often faster than the 2a+(n−1)d form.",
+								"Choose symmetric unknowns: three terms in AP as (a−d, a, a+d), three in GP as (a/r, a, ar) to exploit the sum/product.",
+								"A convergent infinite GP needs |r|<1; then S∞ = a/(1−r).",
+								"If a term Tn is asked from Sn, use Tn = Sn − S(n−1)."
+							],
+							"example": {
+								"q": "The sum of the first n terms of a sequence is Sn = 3n² + 5n. Find its 10th term.",
+								"solution": "Tn = Sn − S(n−1) = (3n² + 5n) − [3(n−1)² + 5(n−1)] = 3(2n − 1) + 5 = 6n + 2 (an AP). So T₁₀ = 6(10) + 2 = 62. Answer: 62."
+							},
+							"traps": [
+								"Applying S∞ = a/(1−r) when |r| ≥ 1, where the series actually diverges.",
+								"Using n = number of terms incorrectly (off-by-one) in Tn = a + (n−1)d.",
+								"Assuming the mean of two numbers is the AM when the problem's structure (rates, resistances) calls for the HM."
+							]
+						},
+						{
+							"name": "Sequences & series",
+							"frequency": "medium",
+							"summary": "General sequences and the summation of standard, telescoping, and arithmetico-geometric series beyond plain AP/GP. CAT taps these for finite-sum evaluation and pattern-based term finding.",
+							"formulas": [
+								"Σ k (k=1..n) = n(n+1)/2",
+								"Σ k² = n(n+1)(2n+1)/6",
+								"Σ k³ = [n(n+1)/2]²",
+								"Telescoping: Σ 1/(k(k+1)) = 1 − 1/(n+1) = n/(n+1)",
+								"Partial fractions: 1/(k(k+1)) = 1/k − 1/(k+1); 1/(k(k+2)) = ½(1/k − 1/(k+2))",
+								"Arithmetico-geometric term: Tn = [a + (n−1)d]·r^(n−1)"
+							],
+							"keyIdeas": [
+								"When each term factors as a difference (partial fractions), the series telescopes — write two or three terms to see what survives.",
+								"Memorize Σn, Σn², Σn³; many series reduce to a linear combination of these.",
+								"For an arithmetico-geometric series, multiply the sum S by the ratio r and subtract (S − rS) to collapse it.",
+								"Identify the general term Tn first; the sum is then Σ Tn."
+							],
+							"example": {
+								"q": "Find the sum 1/(1·2) + 1/(2·3) + 1/(3·4) + ... + 1/(99·100).",
+								"solution": "Each term 1/(k(k+1)) = 1/k − 1/(k+1). The sum telescopes: (1 − 1/2) + (1/2 − 1/3) + ... + (1/99 − 1/100) = 1 − 1/100 = 99/100. Answer: 99/100."
+							},
+							"traps": [
+								"Confusing the number of terms with the last index (here 99 terms, up to 1/100).",
+								"Forgetting the ½ factor in 1/(k(k+2)) = ½(1/k − 1/(k+2)) partial fractions.",
+								"Misremembering Σk² as n(n+1)(2n+1)/6 (the /6, not /2)."
+							]
+						},
+						{
+							"name": "Maxima & minima",
+							"frequency": "medium",
+							"summary": "Finding the largest or smallest value of an algebraic expression without calculus, using completing-the-square, AM-GM, and boundary analysis. CAT tests optimization of quadratics, products, and constrained sums.",
+							"formulas": [
+								"Quadratic ax²+bx+c: extremum at x = −b/(2a); value = c − b²/(4a); minimum if a>0, maximum if a<0",
+								"Completing the square: ax²+bx+c = a(x + b/2a)² + (c − b²/4a)",
+								"AM-GM: for positive reals, sum fixed ⇒ product maxed when all equal; product fixed ⇒ sum minimized when all equal",
+								"x + k/x ≥ 2√k for x>0 (minimum 2√k at x = √k)",
+								"a·sinθ + b·cosθ ranges over [−√(a²+b²), √(a²+b²)]"
+							],
+							"keyIdeas": [
+								"For x + k/x type expressions with positive x, AM-GM gives the minimum 2√k instantly at x=√k.",
+								"A quadratic's vertex at x = −b/2a gives its single max or min — no calculus needed.",
+								"Equality in AM-GM holds only when all terms are equal; that condition locates the optimum.",
+								"For constrained problems check endpoints/boundaries too — the extremum can lie on the boundary of the domain."
+							],
+							"example": {
+								"q": "Find the minimum value of 3x + 27/x for x > 0.",
+								"solution": "By AM-GM, 3x + 27/x ≥ 2√(3x · 27/x) = 2√81 = 18, with equality when 3x = 27/x ⇒ x² = 9 ⇒ x = 3. Answer: minimum value 18 (at x = 3)."
+							},
+							"traps": [
+								"Applying AM-GM when terms can be negative — it requires positive reals.",
+								"Reporting the x-value (−b/2a) as the answer instead of the extreme value of the expression.",
+								"Ignoring domain boundaries where the true max/min may actually occur."
+							]
+						},
+						{
+							"name": "Polynomials",
+							"frequency": "medium",
+							"summary": "Expressions of the form aₙxⁿ+...+a₀, with emphasis on roots, factorization, and the remainder/factor theorems. CAT uses Vieta's relations for cubics and remainder-theorem evaluations.",
+							"formulas": [
+								"Remainder Theorem: remainder of P(x) ÷ (x − a) is P(a)",
+								"Factor Theorem: (x − a) is a factor ⇔ P(a) = 0",
+								"A degree-n polynomial has exactly n roots (counting multiplicity)",
+								"Cubic ax³+bx²+cx+d, roots α,β,γ: α+β+γ = −b/a; αβ+βγ+γα = c/a; αβγ = −d/a",
+								"Quadratic ax²+bx+c: α+β = −b/a; αβ = c/a",
+								"1/α + 1/β + 1/γ = (αβ+βγ+γα)/(αβγ)"
+							],
+							"keyIdeas": [
+								"Use Vieta's formulas to get symmetric functions of the roots (sum, product, sum of reciprocals) without solving.",
+								"To find a remainder on division by (x−a), just compute P(a) — no long division needed.",
+								"Rational-root candidates are ±(factor of constant term)/(factor of leading coefficient).",
+								"Sum of all coefficients = P(1); constant term = P(0)."
+							],
+							"example": {
+								"q": "If α, β, γ are the roots of x³ − 6x² + 11x − 6 = 0, find 1/α + 1/β + 1/γ.",
+								"solution": "By Vieta on x³ − 6x² + 11x − 6: αβ+βγ+γα = 11 and αβγ = 6. Then 1/α + 1/β + 1/γ = (αβ+βγ+γα)/(αβγ) = 11/6. Answer: 11/6."
+							},
+							"traps": [
+								"Sign errors in Vieta for a cubic: αβγ = −d/a (equals +6 here since d=−6), not −6.",
+								"Forgetting complex/repeated roots when counting 'number of roots' = degree.",
+								"Using long division for a remainder when the Remainder Theorem P(a) is far quicker."
+							]
+						}
+					]
+				},
+				{
+					"id": "qa-geometry",
+					"name": "Geometry & Mensuration",
+					"weightPct": 15,
+					"priority": "medium",
+					"subtopics": [
+						{
+							"name": "Lines & angles",
+							"frequency": "low",
+							"summary": "The foundational angle relationships formed by intersecting and parallel lines cut by a transversal. Rarely a standalone CAT question but underpins every triangle, circle, and polygon problem.",
+							"formulas": [
+								"angles on a straight line sum to 180°",
+								"angles around a point sum to 360°",
+								"vertically opposite angles are equal",
+								"complementary angles sum to 90°; supplementary angles sum to 180°",
+								"parallel lines + transversal: corresponding angles equal, alternate (interior/exterior) angles equal, co-interior (allied) angles sum to 180°"
+							],
+							"keyIdeas": [
+								"Alternate angles are EQUAL; co-interior (same-side) angles are SUPPLEMENTARY — don't swap them.",
+								"An exterior angle of a triangle equals the sum of the two remote interior angles.",
+								"Only apply parallel-line rules when the lines are actually stated/proved parallel, never inferred from a rough figure."
+							],
+							"example": {
+								"q": "Lines AB and CD are parallel, cut by a transversal. Two co-interior angles measure (2x+30)° and (3x−10)°. Find x.",
+								"solution": "Co-interior angles are supplementary: (2x+30)+(3x−10)=180 → 5x+20=180 → 5x=160 → x=32. (Check: 94°+86°=180°.)"
+							},
+							"traps": [
+								"Confusing co-interior angles (supplementary) with alternate angles (equal).",
+								"Assuming two lines are parallel just because a diagram looks like it."
+							]
+						},
+						{
+							"name": "Triangles & similarity",
+							"frequency": "high",
+							"summary": "Properties, area, and similarity/congruence of triangles — the single most tested geometry topic on CAT. Similar-triangle ratios and Pythagoras appear constantly.",
+							"formulas": [
+								"area = ½·base·height",
+								"Heron: s=(a+b+c)/2, area = √(s(s−a)(s−b)(s−c))",
+								"area = ½·a·b·sin C",
+								"Pythagoras (right triangle): a²+b² = c²",
+								"equilateral area = (√3/4)·a²; height = (√3/2)·a",
+								"inradius r = area/s; circumradius R = abc/(4·area); right triangle: r = (a+b−c)/2",
+								"area ratio of similar triangles = (ratio of corresponding sides)²"
+							],
+							"keyIdeas": [
+								"30-60-90 sides are in ratio 1 : √3 : 2; 45-45-90 sides in ratio 1 : 1 : √2.",
+								"Common Pythagorean triples: 3-4-5, 5-12-13, 8-15-17, 7-24-25, 9-40-41 (and their multiples).",
+								"Basic Proportionality (Thales): a line parallel to one side cuts the other two sides proportionally; Angle Bisector Theorem: the bisector divides the opposite side in the ratio of the adjacent sides.",
+								"The centroid divides each median in a 2:1 ratio; the median to the hypotenuse of a right triangle equals half the hypotenuse."
+							],
+							"example": {
+								"q": "In triangle ABC, D is on AB and E on AC with DE ∥ BC, AD=3 and DB=5. If the area of triangle ADE is 9, find the area of trapezium DBCE.",
+								"solution": "AB = AD+DB = 8, so triangle ADE ~ triangle ABC with side ratio AD/AB = 3/8. Area ratio = (3/8)² = 9/64. Thus area ABC = 9 × 64/9 = 64. Area of trapezium DBCE = 64 − 9 = 55."
+							},
+							"traps": [
+								"Taking the area ratio equal to the side ratio instead of its square.",
+								"Applying Pythagoras to a non-right triangle.",
+								"Assuming a triangle is isosceles/equilateral just from the figure."
+							]
+						},
+						{
+							"name": "Circles",
+							"frequency": "high",
+							"summary": "Chords, tangents, arcs, sectors, and inscribed-angle relationships. A high-frequency CAT area, often combined with triangles or coordinate geometry.",
+							"formulas": [
+								"area = πr²; circumference = 2πr",
+								"arc length = (θ/360)·2πr; sector area = (θ/360)·πr² (θ in degrees)",
+								"chord length = 2√(r²−d²), where d = distance from centre to chord",
+								"central angle = 2 × inscribed angle on the same arc",
+								"tangent length from external point = √(D²−r²), D = distance from point to centre",
+								"intersecting chords: PA·PB = PC·PD; tangent-secant: PT² = PA·PB"
+							],
+							"keyIdeas": [
+								"Angle in a semicircle is 90°; angles in the same segment are equal.",
+								"A tangent is perpendicular to the radius at the point of contact; two tangents from an external point are equal in length.",
+								"In a cyclic quadrilateral, opposite angles are supplementary (sum 180°).",
+								"Alternate segment theorem: the angle between a tangent and a chord equals the inscribed angle in the alternate segment."
+							],
+							"example": {
+								"q": "A chord of length 16 cm lies at a perpendicular distance of 6 cm from the centre of a circle. Find the radius.",
+								"solution": "The perpendicular from the centre bisects the chord, giving a half-chord of 8 cm. Then r = √(8² + 6²) = √(64 + 36) = √100 = 10 cm."
+							},
+							"traps": [
+								"Confusing the central angle (2θ) with the inscribed angle (θ) on the same arc.",
+								"Using the diameter in place of the radius in area/circumference formulas.",
+								"Forgetting that the radius to the point of tangency is perpendicular to the tangent."
+							]
+						},
+						{
+							"name": "Quadrilaterals & polygons",
+							"frequency": "medium",
+							"summary": "Areas and angle properties of squares, rectangles, parallelograms, rhombi, trapezia, and regular polygons. Regularly tested, especially interior/exterior angles and diagonals.",
+							"formulas": [
+								"rectangle: area = l·w, diagonal = √(l²+w²); square: area = a², diagonal = a√2",
+								"parallelogram: area = base·height; rhombus: area = ½·d1·d2, side = ½√(d1²+d2²)",
+								"trapezium: area = ½·(sum of parallel sides)·height; kite: area = ½·d1·d2",
+								"sum of interior angles of n-gon = (n−2)·180°; each interior angle of regular n-gon = (n−2)·180°/n",
+								"sum of exterior angles = 360°; each exterior angle of regular n-gon = 360°/n",
+								"number of diagonals = n(n−3)/2"
+							],
+							"keyIdeas": [
+								"The diagonals of a rhombus bisect each other at right angles; those of a rectangle are equal.",
+								"In a cyclic quadrilateral opposite angles are supplementary; Ptolemy: (product of diagonals) = sum of products of opposite sides.",
+								"Parallelogram law: d1² + d2² = 2(a² + b²).",
+								"For a regular polygon, work with the exterior angle (360°/n) — it is usually faster than the interior angle."
+							],
+							"example": {
+								"q": "Each interior angle of a regular polygon is 156°. How many sides does it have?",
+								"solution": "Exterior angle = 180° − 156° = 24°. Number of sides n = 360° / 24° = 15."
+							},
+							"traps": [
+								"Dropping the ½ in the rhombus/kite area (½·d1·d2).",
+								"Using (n−2)·180° for the sum of exterior angles (it is always 360°).",
+								"Assuming every parallelogram has equal or perpendicular diagonals (only rectangles/rhombi do)."
+							]
+						},
+						{
+							"name": "Coordinate geometry",
+							"frequency": "low",
+							"summary": "Points, lines, slopes, and areas on the Cartesian plane. Sparse on CAT — usually one straightforward distance, section, or area question when it appears.",
+							"formulas": [
+								"distance = √((x2−x1)² + (y2−y1)²)",
+								"midpoint = ((x1+x2)/2, (y1+y2)/2); section (ratio m:n internal) = ((mx2+nx1)/(m+n), (my2+ny1)/(m+n))",
+								"slope m = (y2−y1)/(x2−x1); line: y = mx + c",
+								"area of triangle = ½·|x1(y2−y3) + x2(y3−y1) + x3(y1−y2)|",
+								"distance from point (x0,y0) to line ax+by+c=0 = |ax0+by0+c| / √(a²+b²)",
+								"circle: (x−h)² + (y−k)² = r²"
+							],
+							"keyIdeas": [
+								"Parallel lines have equal slopes; perpendicular lines have slopes whose product is −1.",
+								"Three points are collinear exactly when the triangle-area formula gives 0.",
+								"The centroid of a triangle is the average of its three vertices: ((x1+x2+x3)/3, (y1+y2+y3)/3)."
+							],
+							"example": {
+								"q": "Find the area of the triangle with vertices (2,3), (4,7), and (6,1).",
+								"solution": "Area = ½·|2(7−1) + 4(1−3) + 6(3−7)| = ½·|12 − 8 − 24| = ½·|−20| = ½·20 = 10 square units."
+							},
+							"traps": [
+								"Forgetting the ½ or the absolute value in the triangle-area formula.",
+								"For perpendicular lines, using the negative slope instead of the negative reciprocal."
+							]
+						},
+						{
+							"name": "Trigonometry (basic)",
+							"frequency": "rare",
+							"summary": "Right-triangle ratios and basic identities. Low-yield for CAT (roughly 0-1 questions, usually folded into a geometry problem) — far more relevant to exams like SSC/JEE than to CAT.",
+							"formulas": [
+								"sin θ = opp/hyp, cos θ = adj/hyp, tan θ = opp/adj",
+								"sin²θ + cos²θ = 1; 1 + tan²θ = sec²θ; 1 + cot²θ = cosec²θ",
+								"tan θ = sin θ/cos θ; sec θ = 1/cos θ; cosec θ = 1/sin θ; cot θ = 1/tan θ",
+								"standard values: sin30=½, cos30=√3/2, sin45=cos45=1/√2, sin60=√3/2, tan45=1, tan30=1/√3, tan60=√3",
+								"angle of elevation: tan(angle) = height / horizontal distance"
+							],
+							"keyIdeas": [
+								"Memorize the 0°/30°/45°/60°/90° table — nearly every basic problem reduces to these.",
+								"Complementary-angle identity: sin(90°−θ) = cos θ and tan(90°−θ) = cot θ.",
+								"This subtopic is low priority for CAT; spend time here only after mastering the core geometry topics."
+							],
+							"example": {
+								"q": "The angle of elevation of the sun is 30°. A vertical tower is 30 m tall. Find the length of its shadow.",
+								"solution": "tan 30° = height / shadow → shadow = height / tan 30° = 30 / (1/√3) = 30√3 ≈ 51.96 m."
+							},
+							"traps": [
+								"Mixing up tan 30° (1/√3) with tan 60° (√3).",
+								"Confusing which side is opposite vs adjacent to the given angle."
+							]
+						},
+						{
+							"name": "2D & 3D mensuration",
+							"frequency": "high",
+							"summary": "Areas of plane figures and surface areas/volumes of solids, including melting-and-recasting problems. A high-frequency, formula-driven CAT area where volume conservation is a recurring theme.",
+							"formulas": [
+								"2D: circle area = πr², circumference = 2πr; equilateral triangle area = (√3/4)·a²; trapezium area = ½·(a+b)·h",
+								"cube: volume = a³, surface = 6a², space diagonal = a√3",
+								"cuboid: volume = l·w·h, surface = 2(lw+wh+hl), space diagonal = √(l²+w²+h²)",
+								"cylinder: volume = πr²h, curved surface = 2πrh, total surface = 2πr(r+h)",
+								"cone: volume = ⅓·πr²h, slant l = √(r²+h²), curved surface = πrl, total surface = πr(r+l)",
+								"sphere: volume = 4/3·πr³, surface = 4πr²; hemisphere: volume = 2/3·πr³, total surface = 3πr²"
+							],
+							"keyIdeas": [
+								"For equal radius r and height h=2r, cone : sphere : cylinder volumes are in the ratio 1 : 2 : 3.",
+								"In melting/recasting or pouring problems, total volume is conserved — set volumes equal.",
+								"Distinguish curved (lateral) surface area from total surface area; the total adds the flat faces (bases)."
+							],
+							"example": {
+								"q": "A solid metal sphere of radius 6 cm is melted and recast into small cones, each of radius 2 cm and height 3 cm. How many complete cones are formed?",
+								"solution": "Sphere volume = 4/3·π·6³ = 4/3·π·216 = 288π cm³. Each cone = ⅓·π·2²·3 = 4π cm³. Number of cones = 288π / 4π = 72."
+							},
+							"traps": [
+								"Confusing curved surface area with total surface area.",
+								"Using the slant height instead of the vertical height in the cone volume (⅓πr²h uses vertical height).",
+								"Forgetting the ⅓ factor for cones/pyramids or the 4/3 for a sphere."
+							]
+						}
+					]
+				},
+				{
+					"id": "qa-number-system",
+					"name": "Number System",
+					"weightPct": 9,
+					"priority": "medium",
+					"subtopics": [
+						{
+							"name": "Divisibility & remainders",
+							"frequency": "high",
+							"summary": "Rules and modular-arithmetic techniques for testing divisibility and finding remainders of large expressions. The single most tested Number System theme in CAT, especially remainders of large powers.",
+							"formulas": [
+								"3 | N (or 9 | N) iff it divides the digit sum of N",
+								"11 | N iff 11 divides (sum of odd-position digits − sum of even-position digits)",
+								"Divisibility by 4: last 2 digits; by 8: last 3 digits; by 25: last 2 digits",
+								"(a+b) mod n = ((a mod n)+(b mod n)) mod n; (a·b) mod n = ((a mod n)·(b mod n)) mod n",
+								"Fermat's Little Theorem: a^(p−1) ≡ 1 (mod p) for prime p, gcd(a,p)=1",
+								"Euler's Theorem: a^φ(n) ≡ 1 (mod n) when gcd(a,n)=1, where φ(n)=n·Π(1−1/p)",
+								"Wilson's Theorem: (p−1)! ≡ −1 (mod p) iff p is prime",
+								"(a^n + b^n) is divisible by (a+b) when n is odd; (a^n − b^n) is divisible by (a−b) for all n and by (a+b) when n is even"
+							],
+							"keyIdeas": [
+								"Reduce the base modulo n FIRST, then handle the exponent — never expand the power.",
+								"Use Fermat/Euler to collapse the exponent: cut the power down modulo (p−1) or φ(n).",
+								"Use negative remainders (e.g. treat a ≡ −1) to make cycles trivial, e.g. any (n−1)^k mod n toggles between 1 and −1.",
+								"For a composite modulus, split via CRT (Chinese Remainder Theorem) into coprime prime-power moduli."
+							],
+							"example": {
+								"q": "Find the remainder when 3^247 is divided by 17.",
+								"solution": "17 is prime and gcd(3,17)=1, so by Fermat 3^16 ≡ 1 (mod 17). Write 247 = 16·15 + 7, so 3^247 ≡ (3^16)^15 · 3^7 ≡ 3^7 (mod 17). Now 3^7 = 2187 = 17·128 + 11. Remainder = 11."
+							},
+							"traps": [
+								"Reducing the exponent modulo p instead of modulo (p−1) — Fermat cuts the EXPONENT by (p−1), not the base's power directly.",
+								"Applying Euler's theorem when gcd(a,n) ≠ 1 (it fails; handle common factors separately).",
+								"Forgetting that (a^n + b^n) divisibility by (a+b) needs n ODD, while (a^n − b^n) by (a−b) always holds."
+							]
+						},
+						{
+							"name": "Factors & multiples",
+							"frequency": "high",
+							"summary": "Counting and summing divisors of a number from its prime factorisation. A staple CAT topic — 'how many factors / how many even factors / how many perfect-square factors' questions appear almost every year.",
+							"formulas": [
+								"If N = p^a · q^b · r^c, number of factors = (a+1)(b+1)(c+1)",
+								"Sum of factors = [(p^(a+1)−1)/(p−1)] · [(q^(b+1)−1)/(q−1)] · [(r^(c+1)−1)/(r−1)]",
+								"Product of all factors = N^(d/2), where d = number of factors",
+								"Ways to write N as a product of two factors = d/2 if d is even, and (d+1)/2 if N is a perfect square",
+								"If N = 2^a · K with K odd: number of odd factors = number of factors of K; number of even factors = a · (factors of K)",
+								"Number of factors that are perfect squares = product of (⌊exponent/2⌋ + 1) over all primes"
+							],
+							"keyIdeas": [
+								"A number is a perfect square iff every exponent in its prime factorisation is even — so it has an ODD number of factors.",
+								"For 'perfect square factors', count how many even exponents (0,2,4,...) each prime allows.",
+								"For 'factors divisible by m', factor out m first, then count factors of the quotient.",
+								"Number of ways to write N as product of two COPRIME factors = 2^(k−1), where k = number of distinct primes."
+							],
+							"example": {
+								"q": "How many factors of 7200 are perfect squares?",
+								"solution": "7200 = 2^5 · 3^2 · 5^2. A perfect-square factor needs even exponents: for 2 choose from {0,2,4} (3 ways), for 3 from {0,2} (2 ways), for 5 from {0,2} (2 ways). Total = 3 × 2 × 2 = 12."
+							},
+							"traps": [
+								"Forgetting that exponent 0 (i.e. not including a prime, giving the factor 1) is a valid choice, so it's (a+1) options, not a.",
+								"Using d/2 for a perfect square N — its factor count d is odd, so the count of factor-pairs is (d+1)/2 (the square root pairs with itself).",
+								"Confusing 'sum of factors' with 'number of factors'."
+							]
+						},
+						{
+							"name": "HCF & LCM",
+							"frequency": "medium",
+							"summary": "Highest common factor and least common multiple, plus their classic applications to remainders, fractions, and word problems. Steady CAT presence, often disguised inside application problems.",
+							"formulas": [
+								"HCF × LCM = product of the two numbers (holds for exactly TWO numbers, not three or more)",
+								"HCF of fractions = HCF(numerators) / LCM(denominators)",
+								"LCM of fractions = LCM(numerators) / HCF(denominators)",
+								"Largest number dividing a, b, c leaving the SAME remainder = HCF(|a−b|, |b−c|, |c−a|)",
+								"Largest number dividing a, b, c leaving remainders r1, r2, r3 = HCF(a−r1, b−r2, c−r3)",
+								"Smallest number leaving remainder r when divided by each of d1, d2, ... = LCM(d1, d2, ...) + r"
+							],
+							"keyIdeas": [
+								"HCF(a,b) always divides LCM(a,b), and both divide/are-divided-by the numbers — check answers for this consistency.",
+								"For 'same remainder, unknown remainder' problems, take pairwise differences to eliminate the remainder, then take HCF.",
+								"For repeating-event (bells/lights) problems, use LCM; for equal-grouping/tiling problems, use HCF.",
+								"Two numbers with HCF h can be written as h·m and h·n with gcd(m,n)=1; then LCM = h·m·n."
+							],
+							"example": {
+								"q": "The HCF of two numbers is 12 and their LCM is 336. If one number is 48, what is the other?",
+								"solution": "Product of the two numbers = HCF × LCM = 12 × 336 = 4032. Other number = 4032 / 48 = 84. (Check: HCF(48,84)=12 and LCM(48,84)=336.)"
+							},
+							"traps": [
+								"Applying HCF × LCM = product of numbers to three or more numbers — it only works for two.",
+								"Swapping the fraction rules: HCF of fractions uses HCF of numerators over LCM of denominators (not the reverse).",
+								"Ignoring that the two numbers must both be multiples of the HCF and factors of the LCM."
+							]
+						},
+						{
+							"name": "Primes & composites",
+							"frequency": "medium",
+							"summary": "Properties of prime numbers, primality testing, and structure of composites. Tested through counting problems and property-based reasoning rather than heavy computation.",
+							"formulas": [
+								"N is prime iff it has no prime factor ≤ √N (only test primes up to the square root)",
+								"Every prime greater than 3 is of the form 6k ± 1 (converse not guaranteed)",
+								"There are exactly 25 primes below 100; 168 primes below 1000",
+								"1 is neither prime nor composite; 2 is the only even prime; 2 and 3 are the only consecutive primes",
+								"Number of composites from 1 to n = n − (primes up to n) − 1",
+								"Wilson's Theorem: p is prime iff (p−1)! ≡ −1 (mod p)"
+							],
+							"keyIdeas": [
+								"To test primality, only trial-divide by primes up to √N (e.g. for N < 289 test 2,3,5,7,11,13).",
+								"Among any 3 numbers spaced by 2 (p, p+2, p+4), one is always divisible by 3 — useful for prime-triplet arguments.",
+								"Use the 6k±1 form to quickly reject candidates and to reason about differences of primes.",
+								"Any composite N ≤ 100 must have a prime factor ≤ √100 = 10."
+							],
+							"example": {
+								"q": "For how many prime numbers p are p, p+2 and p+4 all prime?",
+								"solution": "Among p, p+2, p+4 the three values leave remainders 0,1,2 in some order modulo 3, so exactly one of them is a multiple of 3. For all three to be prime, that multiple of 3 must itself be 3 — giving p = 3 (3, 5, 7). Any larger p forces one term to be a composite multiple of 3. So there is exactly ONE such p (namely 3)."
+							},
+							"traps": [
+								"Treating 1 as prime, or forgetting 2 is prime (and the only even prime).",
+								"Assuming every number of the form 6k ± 1 is prime (e.g. 25 = 6·4+1 is composite).",
+								"Trial-dividing up to N/2 instead of stopping at √N (wastes time)."
+							]
+						},
+						{
+							"name": "Cyclicity & factorials",
+							"frequency": "high",
+							"summary": "Last-digit cyclicity of powers and the highest power of a prime in n! (Legendre's formula), including trailing zeros of factorials. Both are recurring, high-yield CAT tools.",
+							"formulas": [
+								"Last-digit cycles (period 4): 2→(2,4,8,6), 3→(3,9,7,1), 7→(7,9,3,1), 8→(8,4,2,6)",
+								"Period 2: 4→(4,6), 9→(9,1); constant last digit: 0,1,5,6",
+								"Last digit of a^n: reduce n mod 4, using 4 when the remainder is 0, then read the cycle",
+								"Highest power of prime p in n! = ⌊n/p⌋ + ⌊n/p²⌋ + ⌊n/p³⌋ + ... (Legendre's formula)",
+								"Number of trailing zeros in n! = highest power of 5 in n! = ⌊n/5⌋ + ⌊n/25⌋ + ⌊n/125⌋ + ...",
+								"Number of trailing zeros of n! in base b: take the minimum over each prime power in b of (its power in n! divided by its exponent in b)"
+							],
+							"keyIdeas": [
+								"For last digit, only the units digit of the base and the exponent mod 4 matter.",
+								"Trailing zeros are limited by 5s, not 2s, because 2s are far more plentiful in n!.",
+								"For the highest power of a composite (e.g. 6 = 2·3) in n!, take the more restrictive prime (here 3).",
+								"For last TWO digits of a power, work modulo 100 using Euler (φ(100)=40) or cyclicity of the base mod 100."
+							],
+							"example": {
+								"q": "How many trailing zeros does 100! have?",
+								"solution": "Trailing zeros = highest power of 5 in 100! = ⌊100/5⌋ + ⌊100/25⌋ + ⌊100/125⌋ = 20 + 4 + 0 = 24."
+							},
+							"traps": [
+								"Counting 2s instead of 5s for trailing zeros — the count of 5s is always the binding constraint.",
+								"Stopping Legendre's sum too early — keep adding ⌊n/p^k⌋ until the term becomes 0.",
+								"Using exponent-remainder 0 as index 0 in a cycle — a remainder of 0 means take the 4th (last) term of the cycle."
+							]
+						},
+						{
+							"name": "Base systems",
+							"frequency": "low",
+							"summary": "Representing numbers in bases other than 10, conversions, and base arithmetic. Appears occasionally in CAT, often blended with divisibility or digit-manipulation logic.",
+							"formulas": [
+								"Value of (d_k … d_1 d_0) in base b = d_k·b^k + … + d_1·b + d_0 (in base 10)",
+								"Decimal → base b: divide repeatedly by b; the remainders read bottom-to-top give the digits",
+								"Last digit of N written in base b = N mod b; last two digits encode N mod b²",
+								"Number of digits of N in base b = ⌊log_b N⌋ + 1",
+								"In base b, each digit ranges 0 to b−1; carrying/borrowing uses groups of b (not 10)",
+								"In base b, the divisibility-by-(b−1) rule mirrors base-10's rule for 9: sum the digits"
+							],
+							"keyIdeas": [
+								"Convert operands to base 10, compute, then convert the result back — usually faster than arithmetic within the base.",
+								"A digit d appearing in a base-b numeral requires b > d (e.g. a numeral containing 7 cannot be base 5 or less).",
+								"Trailing zeros of a number in base b are governed by the primes dividing b (same idea as trailing zeros of factorials).",
+								"Base-b palindromes and digit-reversal problems reduce to place-value equations in b."
+							],
+							"example": {
+								"q": "Convert the decimal number 100 into base 7.",
+								"solution": "Divide by 7 repeatedly: 100 = 7·14 + 2, 14 = 7·2 + 0, 2 = 7·0 + 2. Reading remainders bottom-to-top gives (202) in base 7. Check: 2·49 + 0·7 + 2 = 100."
+							},
+							"traps": [
+								"Reading the division remainders top-to-bottom instead of bottom-to-top (reverses the digits).",
+								"Using a digit ≥ b in a base-b number (invalid, e.g. writing 8 in base 7).",
+								"Carrying in tens during base-b addition instead of carrying in groups of b."
+							]
+						},
+						{
+							"name": "Indices & surds",
+							"frequency": "medium",
+							"summary": "Laws of exponents, fractional/negative powers, and manipulation of surds (irrational roots). Underpins exponential equations and surd-comparison questions in CAT.",
+							"formulas": [
+								"a^m · a^n = a^(m+n); a^m / a^n = a^(m−n); (a^m)^n = a^(mn)",
+								"(ab)^m = a^m · b^m; (a/b)^m = a^m / b^m; a^0 = 1 (a≠0); a^(−n) = 1/a^n",
+								"a^(m/n) = (n-th root of a)^m = the n-th root of a^m",
+								"√a · √b = √(ab); √a / √b = √(a/b) (for a,b ≥ 0)",
+								"Rationalise: 1/(√a + √b) = (√a − √b)/(a − b)",
+								"If a^x = b^y = (ab)^z, then 1/z = 1/x + 1/y"
+							],
+							"keyIdeas": [
+								"Reduce both sides to the same base to solve exponential equations, then equate exponents.",
+								"Factor out the smallest power (e.g. 3^(x−1)) to collapse sums of powers of the same base.",
+								"To compare surds, raise all to a common power (LCM of the roots' orders) so they share an index.",
+								"Rationalise denominators (and telescoping surd chains) using the conjugate to remove roots."
+							],
+							"example": {
+								"q": "If 3^(x−1) + 3^(x+1) = 90, find x.",
+								"solution": "Factor 3^(x−1): 3^(x−1)·(1 + 3²) = 90, so 3^(x−1)·10 = 90, giving 3^(x−1) = 9 = 3². Equate exponents: x − 1 = 2, so x = 3."
+							},
+							"traps": [
+								"Writing (a^m)^n as a^(m^n) instead of a^(mn).",
+								"Assuming √(a+b) = √a + √b, or that a^(−n) means a negative number (it means the reciprocal).",
+								"Comparing surds by comparing radicands with different indices without first equalising the root orders."
+							]
+						}
+					]
+				},
+				{
+					"id": "qa-modern-math",
+					"name": "Modern Math",
+					"weightPct": 6,
+					"priority": "medium",
+					"subtopics": [
+						{
+							"name": "Permutations & combinations",
+							"frequency": "high",
+							"summary": "Counting arrangements (order matters) and selections (order doesn't) of objects. A core, high-frequency CAT QA area, usually 1-2 questions, often blended with probability.",
+							"formulas": [
+								"nPr = n!/(n−r)!",
+								"nCr = n!/(r!(n−r)!)",
+								"nCr = nC(n−r)",
+								"nC0 + nC1 + ... + nCn = 2^n",
+								"circular arrangements of n distinct = (n−1)!",
+								"arrangements of n items with repeats = n!/(p! q! r! ...)",
+								"selecting r from n with repetition allowed = (n+r−1)C r"
+							],
+							"keyIdeas": [
+								"Decide arrangement (use P, order matters) vs selection (use C, order doesn't) before computing.",
+								"Multiplication principle for sequential independent choices; addition principle for mutually exclusive cases.",
+								"Handle 'together' constraints by gluing items into one block; use complementary counting (total − unwanted) for 'at least' conditions.",
+								"For identical objects divide out by the factorial of each repeated group."
+							],
+							"example": {
+								"q": "A committee of 3 men and 2 women is to be formed from a group of 6 men and 5 women. In how many ways can this be done?",
+								"solution": "Order does not matter, so use combinations. Choose 3 men from 6: 6C3 = 20. Choose 2 women from 5: 5C2 = 10. By the multiplication principle, total = 20 × 10 = 200 ways."
+							},
+							"traps": [
+								"Using nPr when order does not matter (or nCr when it does) — decide arrange vs select first.",
+								"Forgetting to divide by factorials for repeated/identical items (e.g. arranging LEADER = 6!/2! = 360, not 720).",
+								"Double counting in 'at least one' problems instead of using total minus the complement."
+							]
+						},
+						{
+							"name": "Probability",
+							"frequency": "high",
+							"summary": "Measuring the chance of events using favorable-over-total counting, built directly on P&C. High-frequency in CAT QA and often the payoff step of a counting problem.",
+							"formulas": [
+								"P(A) = favorable outcomes / total outcomes",
+								"0 ≤ P(A) ≤ 1",
+								"P(not A) = 1 − P(A)",
+								"P(A∪B) = P(A) + P(B) − P(A∩B)",
+								"P(A∩B) = P(A)·P(B) if A, B independent",
+								"P(A|B) = P(A∩B)/P(B)",
+								"mutually exclusive: P(A∩B) = 0, so P(A∪B) = P(A) + P(B)"
+							],
+							"keyIdeas": [
+								"Count favorable and total outcomes with P&C; keep both counts on the same basis (both ordered or both unordered).",
+								"Use complementary probability 1 − P(not A) for 'at least one' type events.",
+								"Distinguish independent (multiply) from mutually exclusive (add) — they are not the same thing.",
+								"Use conditional probability when outcomes depend on a prior event or on drawing without replacement."
+							],
+							"example": {
+								"q": "Two fair dice are rolled. What is the probability that the sum of the numbers shown is 8?",
+								"solution": "Total outcomes = 6 × 6 = 36. Favorable pairs summing to 8: (2,6), (3,5), (4,4), (5,3), (6,2) = 5 outcomes. Probability = 5/36."
+							},
+							"traps": [
+								"Confusing independent events (multiply probabilities) with mutually exclusive events (add probabilities).",
+								"Mixing ordered and unordered counts between numerator and denominator.",
+								"Forgetting that without-replacement draws change the denominator (and use conditional probability)."
+							]
+						},
+						{
+							"name": "Set theory & Venn diagrams",
+							"frequency": "medium",
+							"summary": "Counting elements across overlapping groups using union/intersection formulas and Venn diagrams. A medium-frequency CAT QA topic, common as data-heavy 'survey' word problems.",
+							"formulas": [
+								"|A∪B| = |A| + |B| − |A∩B|",
+								"|A∪B∪C| = |A| + |B| + |C| − |A∩B| − |B∩C| − |A∩C| + |A∩B∩C|",
+								"neither / outside = Total − |A∪B∪C|",
+								"exactly two = (|A∩B| + |B∩C| + |A∩C|) − 3·|A∩B∩C|",
+								"at least two = (|A∩B| + |B∩C| + |A∩C|) − 2·|A∩B∩C|"
+							],
+							"keyIdeas": [
+								"Apply inclusion-exclusion to avoid double counting overlaps.",
+								"For 3 sets, fill the Venn diagram from the innermost region (all three) outward.",
+								"Carefully separate 'exactly two' from 'at least two' from 'all three' — the pairwise counts include the triple overlap.",
+								"'Neither' means the total minus the union."
+							],
+							"example": {
+								"q": "In a survey of 100 people, 72 like tea and 44 like coffee. If every person likes at least one of the two drinks, how many like both?",
+								"solution": "Everyone likes at least one, so |T∪C| = 100. By inclusion-exclusion, |T∩C| = |T| + |C| − |T∪C| = 72 + 44 − 100 = 16. So 16 people like both."
+							},
+							"traps": [
+								"Adding group sizes without subtracting the overlap (double counting).",
+								"In 3-set problems, treating pairwise intersections as 'exactly two' when they also include the triple overlap.",
+								"Ignoring the 'neither' region when the totals are given."
+							]
+						},
+						{
+							"name": "Binomial theorem",
+							"frequency": "rare",
+							"summary": "Expansion of (x+y)^n using binomial coefficients. Effectively not tested in modern CAT — a legacy syllabus item, so treat it as low-yield and study it only after the core topics.",
+							"formulas": [
+								"(x+y)^n = Σ (k=0 to n) nCk x^(n−k) y^k",
+								"general term: T(r+1) = nCr x^(n−r) y^r",
+								"number of terms in expansion = n + 1",
+								"sum of all coefficients = put x = y = 1 → 2^n"
+							],
+							"keyIdeas": [
+								"Use the general term T(r+1) = nCr x^(n−r) y^r to target a specific term or coefficient instead of full expansion.",
+								"Find a required power of x by solving the exponent equation for r, then substitute back.",
+								"Low priority for CAT — do not over-invest; a light familiarity is enough."
+							],
+							"example": {
+								"q": "Find the coefficient of x^3 in the expansion of (2x + 3)^5.",
+								"solution": "General term T(r+1) = 5Cr (2x)^(5−r) (3)^r. Power of x is 5−r; set 5−r = 3, so r = 2. Then T(3) = 5C2 · (2x)^3 · 3^2 = 10 · 8x^3 · 9 = 720 x^3. The coefficient is 720."
+							},
+							"traps": [
+								"Using term number r+1 versus index r inconsistently when locating a term.",
+								"Forgetting to raise the numerical coefficients (like 2 and 3 here) to their powers, not just the variable."
+							]
+						},
+						{
+							"name": "Functions & graphs",
+							"frequency": "medium",
+							"summary": "Behavior of functions — composition, inverses, and graph transformations of modulus, quadratic, and step functions. A medium-frequency CAT QA topic, tested through max/min, symmetry, and function-equation questions.",
+							"formulas": [
+								"composition: (f∘g)(x) = f(g(x))",
+								"even function: f(−x) = f(x) (symmetric about y-axis)",
+								"odd function: f(−x) = −f(x) (symmetric about origin)",
+								"inverse satisfies: f(f⁻¹(x)) = x",
+								"modulus: |x| = x if x ≥ 0, else −x",
+								"greatest integer [x] = largest integer ≤ x",
+								"vertex of y = ax² + bx + c at x = −b/(2a)"
+							],
+							"keyIdeas": [
+								"Evaluate compositions from the inside out; domains must be compatible.",
+								"Use even/odd symmetry to shortcut evaluation and rule out options.",
+								"Read transformations off the graph: f(x)+c shifts up, f(x−c) shifts right, |f(x)| reflects the negative part upward.",
+								"Locate a quadratic's max/min at the vertex x = −b/(2a)."
+							],
+							"example": {
+								"q": "If f(x) = (x−1)/(x+1) for x ≠ −1, find f(f(x)).",
+								"solution": "f(f(x)) = (f(x)−1)/(f(x)+1). Numerator: (x−1)/(x+1) − 1 = [(x−1)−(x+1)]/(x+1) = −2/(x+1). Denominator: (x−1)/(x+1) + 1 = [(x−1)+(x+1)]/(x+1) = 2x/(x+1). Dividing, f(f(x)) = (−2)/(2x) = −1/x."
+							},
+							"traps": [
+								"Computing g(f(x)) instead of f(g(x)) — composition order matters.",
+								"Ignoring domain restrictions (e.g. x = −1 or x = 0 excluded), leading to invalid values.",
+								"Mishandling modulus by dropping the negative-branch case."
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"scoring": {
+		"note": "Approximate, varies yearly with paper difficulty and slot normalization",
+		"overall": [
+			{
+				"percentile": 90,
+				"marksLow": 52,
+				"marksHigh": 60
+			},
+			{
+				"percentile": 95,
+				"marksLow": 60,
+				"marksHigh": 70
+			},
+			{
+				"percentile": 98,
+				"marksLow": 70,
+				"marksHigh": 80
+			},
+			{
+				"percentile": 99,
+				"marksLow": 80,
+				"marksHigh": 96
+			},
+			{
+				"percentile": 99.5,
+				"marksLow": 100,
+				"marksHigh": 115
+			}
+		],
+		"sectional2025": {
+			"varc": {
+				"p90": 26,
+				"p95": 32.5,
+				"p99": 44
+			},
+			"dilr": {
+				"p90": 16.7,
+				"p95": 21.5,
+				"p99": 29.8
+			},
+			"qa": {
+				"p90": 15,
+				"p95": 18.5,
+				"p99": 27.3
+			}
+		},
+		"iimCutoffs": {
+			"topIIMs": "99+ percentile overall (GEM often 99.5+); sectional 80-90 percentile enforced",
+			"otherIIMs": "95-98 percentile",
+			"compositeScore": "CAT + class 10/12 % + graduation % + work-ex + academic & gender diversity; then WAT + GD + PI"
+		}
+	},
+	"strategy": {
+		"phases": [
+			{
+				"id": "foundation",
+				"name": "Foundation",
+				"months": "1-2",
+				"weeklyHours": 20,
+				"focus": "Concepts + fundamentals across all sections; build daily reading habit"
+			},
+			{
+				"id": "practice",
+				"name": "Practice",
+				"months": "3-4",
+				"weeklyHours": 27,
+				"focus": "Topic-wise drilling, sectional tests, begin mocks"
+			},
+			{
+				"id": "revision",
+				"name": "Revision + Mocks",
+				"months": "5-6",
+				"weeklyHours": 32,
+				"focus": "Full-length mocks + deep analysis, weak-area repair"
+			}
+		],
+		"dailyHours": {
+			"fullTime": "4-6",
+			"working": "2-4"
+		},
+		"mocks": {
+			"total": "25-35",
+			"cadence": "1 per 2 weeks early, 1-2 per week in final 2-3 months",
+			"rule": "Analysis > attempts"
+		},
+		"sectionTips": {
+			"varc": "Read 5000-7000 words/day of dense non-fiction; RC is 70% so prioritize it; never skip VARC (sectional cutoff)",
+			"dilr": "Set selection is everything: scan all sets first 2-3 min, pick the 3-4 most approachable; ~50 assisted then ~300 self-solved sets each of DI & LR",
+			"qa": "Build Arithmetic + Algebra first (70% of section); master percentages/ratios early; shortcuts after concepts"
+		},
+		"commonMistakes": [
+			"Quant-strong candidates under-preparing VARC and missing sectional cutoff",
+			"Chasing raw attempts over accuracy and set selection",
+			"Hoarding mocks without analyzing them",
+			"Starting VARC reading too late"
+		]
+	},
+	"resources": {
+		"youtube": [
+			{
+				"name": "Rodha",
+				"strength": "1400+ free videos, all sections; most complete free course"
+			},
+			{
+				"name": "2IIM CAT Preparation",
+				"strength": "In-depth tutorials, strong QA"
+			},
+			{
+				"name": "CATKing",
+				"strength": "1000+ videos, full roadmap + OMET coverage"
+			},
+			{
+				"name": "Cracku",
+				"strength": "Lectures, shortcuts, mock analysis"
+			},
+			{
+				"name": "Anantha Chajjer",
+				"strength": "QA shortcuts & concept clarity"
+			},
+			{
+				"name": "Shlok Bhagwat",
+				"strength": "VARC / reading strategy"
+			}
+		],
+		"mocks": [
+			{
+				"name": "Rodha",
+				"detail": "10 free mocks (3 full, 3 sectional, 6 topic-wise)"
+			},
+			{
+				"name": "Cracku",
+				"detail": "Free mocks, question banks, PYQs"
+			},
+			{
+				"name": "CATKing",
+				"detail": "Free full-length mocks + topic quizzes"
+			},
+			{
+				"name": "Official (iimcat.ac.in)",
+				"detail": "Previous-year papers + answer keys; official mock before exam"
+			}
+		],
+		"reading": [
+			"Aeon Essays",
+			"The Economist",
+			"Harvard Business Review",
+			"The Hindu / Indian Express editorials",
+			"Arts & Letters Daily"
+		],
+		"communities": [
+			"PagalGuy",
+			"r/CATpreparation (Reddit)"
+		]
+	},
+	"relatedExams": [
+		{
+			"id": "xat",
+			"name": "XAT",
+			"for": "XLRI + 160 schools",
+			"note": "Adds Decision Making + GK (no essay since 2025); early January"
+		},
+		{
+			"id": "gmat",
+			"name": "GMAT",
+			"for": "Global + ISB etc.",
+			"note": "On-demand, adaptive, valid 5 years"
+		},
+		{
+			"id": "nmat",
+			"name": "NMAT",
+			"for": "NMIMS + others",
+			"note": "Multiple attempts, self-scheduled"
+		},
+		{
+			"id": "snap",
+			"name": "SNAP",
+			"for": "Symbiosis",
+			"note": "December"
+		},
+		{
+			"id": "iift",
+			"name": "IIFT",
+			"for": "IIFT",
+			"note": "Adds GK"
+		},
+		{
+			"id": "cmat",
+			"name": "CMAT",
+			"for": "AICTE B-schools",
+			"note": "National-level"
+		}
+	],
+	"materialAddedOn": "2026-07"
+}

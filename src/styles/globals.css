@@ -1,0 +1,160 @@
+@import "tailwindcss";
+
+@theme {
+	--font-sans:
+		var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif,
+		"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+/* ------------------------------------------------------------------ */
+/* Color themes (shadcn-style presets, switched at runtime).          */
+/* The active theme is chosen by the `data-theme` attribute on <html> */
+/* (set by the anti-FOUC script in layout.tsx + the ThemeSwitcher).   */
+/*                                                                    */
+/* Tokens, referenced in the UI as `bg-(--accent)`, `text-(--ink)`,   */
+/* `.app-bg`, etc:                                                    */
+/*   --grad-from/to   full-page gradient stops                        */
+/*   --accent         primary accent (title, bars, buttons)           */
+/*   --accent-light   accent-tinted TEXT (readable on --surface/inset)*/
+/*   --accent-fg      text sitting ON an --accent fill                */
+/*   --surface        solid panel fill (dialogs, menus)               */
+/*   --ink            foreground: text, glass panels, hairlines.      */
+/*                    White on dark themes, near-black on light ones.  */
+/*                    Used with opacity, e.g. text-(--ink)/70.         */
+/*   --inset          recessed box fill (code blocks). Dark on dark    */
+/*                    themes, light-gray on light ones.                */
+/* Default (no attribute) == Violet, matching the original design.    */
+/* ------------------------------------------------------------------ */
+
+/* Shared dark-theme foreground. Dark presets inherit these; light    */
+/* presets override --ink / --inset / color-scheme below.             */
+:root {
+	color-scheme: dark;
+	--ink: #ffffff;
+	--inset: #0b0b16;
+
+	/* Semantic status colors (learning / practiced / mastered, frequency badges,
+	   worked-example, traps). Each is a tinted bg + readable fg. Dark defaults
+	   here; light themes override the fg to a dark shade below so the text stays
+	   legible on a light page. */
+	--warn-bg: rgb(245 158 11 / 0.3); /* amber */
+	--warn-fg: #fde68a;
+	--info-bg: rgb(14 165 233 / 0.3); /* sky */
+	--info-fg: #bae6fd;
+	--ok-bg: rgb(16 185 129 / 0.38); /* emerald */
+	--ok-fg: #d1fae5;
+}
+
+/* Light themes: same tinted backgrounds (lighter), dark text for contrast. */
+:root[data-theme="paper"],
+:root[data-theme="sky"],
+:root[data-theme="mint"] {
+	--warn-bg: rgb(245 158 11 / 0.22);
+	--warn-fg: #92400e;
+	--info-bg: rgb(2 132 199 / 0.18);
+	--info-fg: #075985;
+	--ok-bg: rgb(16 185 129 / 0.18);
+	--ok-fg: #065f46;
+}
+
+/* ---- Dark presets ---- */
+:root,
+:root[data-theme="violet"] {
+	--grad-from: #2e026d;
+	--grad-to: #15162c;
+	--surface: #1b1436;
+	--accent: hsl(280 100% 70%);
+	--accent-light: hsl(280 100% 82%);
+	--accent-fg: #15162c;
+}
+
+:root[data-theme="blue"] {
+	--grad-from: #0b2a6b;
+	--grad-to: #0a0f1f;
+	--surface: #10192f;
+	--accent: hsl(217 91% 68%);
+	--accent-light: hsl(217 91% 82%);
+	--accent-fg: #0a0f1f;
+}
+
+:root[data-theme="emerald"] {
+	--grad-from: #043a2e;
+	--grad-to: #05140f;
+	--surface: #0a2019;
+	--accent: hsl(160 84% 52%);
+	--accent-light: hsl(160 70% 78%);
+	--accent-fg: #05140f;
+}
+
+:root[data-theme="rose"] {
+	--grad-from: #5b0a2c;
+	--grad-to: #1a0510;
+	--surface: #2a0c1b;
+	--accent: hsl(346 90% 66%);
+	--accent-light: hsl(346 90% 82%);
+	--accent-fg: #1a0510;
+}
+
+:root[data-theme="amber"] {
+	--grad-from: #5a3a05;
+	--grad-to: #1a1205;
+	--surface: #2a1e08;
+	--accent: hsl(38 95% 56%);
+	--accent-light: hsl(38 95% 76%);
+	--accent-fg: #1a1205;
+}
+
+:root[data-theme="slate"] {
+	--grad-from: #1e293b;
+	--grad-to: #0b0f17;
+	--surface: #161c27;
+	--accent: hsl(212 40% 72%);
+	--accent-light: hsl(212 40% 85%);
+	--accent-fg: #0b0f17;
+}
+
+/* ---- Light presets ---- */
+:root[data-theme="paper"] {
+	color-scheme: light;
+	--grad-from: #faf9ff;
+	--grad-to: #ece9f7;
+	--surface: #ffffff;
+	--accent: hsl(280 65% 52%);
+	--accent-light: hsl(280 55% 42%);
+	--accent-fg: #ffffff;
+	--ink: #1b1a2b;
+	--inset: #ecebf4;
+}
+
+:root[data-theme="sky"] {
+	color-scheme: light;
+	--grad-from: #eff6ff;
+	--grad-to: #dbe9fe;
+	--surface: #ffffff;
+	--accent: hsl(217 80% 52%);
+	--accent-light: hsl(217 70% 42%);
+	--accent-fg: #ffffff;
+	--ink: #0f1b2d;
+	--inset: #e6eefb;
+}
+
+:root[data-theme="mint"] {
+	color-scheme: light;
+	--grad-from: #effcf5;
+	--grad-to: #d6f4e2;
+	--surface: #ffffff;
+	--accent: hsl(160 70% 36%);
+	--accent-light: hsl(160 65% 28%);
+	--accent-fg: #ffffff;
+	--ink: #0c1f18;
+	--inset: #e1f4ea;
+}
+
+/* Full-page gradient background driven by the active theme. */
+.app-bg {
+	background-image: linear-gradient(
+		to bottom,
+		var(--grad-from),
+		var(--grad-to)
+	);
+}

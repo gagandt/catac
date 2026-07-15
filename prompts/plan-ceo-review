@@ -1,0 +1,20 @@
+Now, this was a problem we have given, and the deliverables that we have received are in the research directory. That is where I need your help. You want to review everything here to see whether we got on the right track to create what we wanted. Again, TLDR of this entire thing, if it was not clear before, is that we want a system. We want a system that, on the top level, first of all asks the user, "Hey, which exam do you want to prepare for?"
+Once we have an answer, or once this user has actually selected that particular thing in the navigation, we want a progress-saved system that tells us:
+
+- Okay, you have covered this much.
+- This is what you have to actually do next.
+- How many days are actually remaining?
+- This is what we actually initially planned. All of this should actually be communicable through Claude, so there should be a schema that we will be designing right now. We will be saving preferences to our Claude, and this Claude will actually be transferred to someone else. Whenever they are talking to their Claude, they can adjust these things. Let's say on day one, whenever somebody gets this entire system, they will be chatting with Claude: "Hey, I have four months remaining. Let me plan everything accordingly: how much time do I want to give to a particular thing? How much of this thing do I want to give to a particular plan?" All of this interaction happens using Claude, the installed one, and then we see everything on the UI as well. Of course, the user can actually tweak everything on any given syllabus items, individual syllabus items, or overall syllabus items, like subject things like that. This is what we actually wanted to achieve here.
+
+Now, the important thing is that all of this should be available for different exams that the user is going to be adding.
+
+1. It should be reverse-engineerable using Claude. We need unique skills and stuff. We need to have a cloud @README.md that tells, "Okay, these are the skills that are available, and all of this is backward compatible with the UI."
+2. We have a local DB, so our code will be able to access all of that as well.
+3. The user is interacting with Claude, so it has to be really easy if we need to have all these skills and stuff. The user should be able to build more, whatever they want. We are giving an open-ended architecture here, and everything would live under one. Let's say exam, there are lambdas, all of this. We are giving an open-ended infrastructure. You can add multiple exams there itself.
+4. All of this needs to be a tracking platform. We are not bringing the content here. We are just giving them one place where they can track their progress and do other things.
+
+This is what I want you to do:
+
+- Find out flaws.
+- Find out things that we might not have done in this current version of the OfficeRGBU that we might have gone over.
+- For this list, you actually have a system that can achieve all of this.

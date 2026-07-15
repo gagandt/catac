@@ -1,0 +1,348 @@
+{
+	"id": "cat",
+	"name": "CAT",
+	"fullName": "Common Admission Test",
+	"researchedOn": "2026-07",
+	"meta": {
+		"conductedBy": "IIMs (rotational; convening IIM announced yearly)",
+		"officialSite": "https://iimcat.ac.in",
+		"purpose": "MBA/PGDM admission to 21 IIMs and 1200+ B-schools in India",
+		"mode": "Computer-Based Test at test centers",
+		"frequency": "Once a year, a Sunday in late November",
+		"slots": 3,
+		"testCities": "170+ (choose up to 6)",
+		"applicationFee": { "general": 2600, "reserved": 1300, "currency": "INR" },
+		"eligibility": {
+			"degree": "Bachelor's degree",
+			"minMarks": { "general": 50, "reserved": 45 },
+			"finalYearAllowed": true,
+			"ageLimit": null,
+			"attemptLimit": null
+		},
+		"cycle": {
+			"notification": "Late July",
+			"registration": "Early August to mid/late September",
+			"admitCard": "Early November",
+			"examDay": "Last Sunday of November",
+			"results": "First/second week of January",
+			"cat2026Date": "2026-11-29"
+		}
+	},
+	"pattern": {
+		"totalQuestions": 68,
+		"totalMarks": 204,
+		"durationMinutes": 120,
+		"sectionOrderLocked": true,
+		"sectionTimingLocked": true,
+		"marking": {
+			"mcq": { "correct": 3, "wrong": -1, "unattempted": 0 },
+			"tita": { "correct": 3, "wrong": 0, "unattempted": 0 }
+		},
+		"pwdDurationMinutes": 160
+	},
+	"sections": [
+		{
+			"id": "varc",
+			"name": "Verbal Ability & Reading Comprehension",
+			"short": "VARC",
+			"questions": 24,
+			"marks": 72,
+			"timeMinutes": 40,
+			"topics": [
+				{
+					"id": "varc-rc",
+					"name": "Reading Comprehension",
+					"approxQuestions": 16,
+					"weightPct": 70,
+					"subtopics": [
+						"Main idea / central theme",
+						"Inference-based questions",
+						"Specific detail / fact identification",
+						"Author's tone, attitude, purpose",
+						"Logical structure of passage",
+						"Vocabulary-in-context",
+						"Application / extrapolation",
+						"Passage types: argumentative, analytical, descriptive, narrative, abstract"
+					]
+				},
+				{
+					"id": "varc-va",
+					"name": "Verbal Ability",
+					"approxQuestions": 8,
+					"weightPct": 30,
+					"subtopics": [
+						"Para-jumbles",
+						"Para-summary",
+						"Odd-sentence-out",
+						"Para-completion",
+						"Sentence correction / grammar",
+						"Analogies / word relationships"
+					]
+				}
+			]
+		},
+		{
+			"id": "dilr",
+			"name": "Data Interpretation & Logical Reasoning",
+			"short": "DILR",
+			"questions": 22,
+			"marks": 66,
+			"timeMinutes": 40,
+			"format": "4 sets of 5-6 questions; set selection is the core skill",
+			"topics": [
+				{
+					"id": "dilr-di",
+					"name": "Data Interpretation",
+					"subtopics": [
+						"Tables",
+						"Bar graphs & line graphs",
+						"Pie charts",
+						"Venn diagrams",
+						"Scatter plots & radar charts",
+						"Caselets (data in text)",
+						"Mixed / multi-chart sets",
+						"Data-sufficiency-style calculation sets"
+					]
+				},
+				{
+					"id": "dilr-lr",
+					"name": "Logical Reasoning",
+					"subtopics": [
+						"Seating arrangements (linear, circular)",
+						"Grid / matrix arrangements",
+						"Blood relations & family trees",
+						"Direction sense",
+						"Syllogisms",
+						"Coding-decoding",
+						"Number & letter series",
+						"Games & tournaments",
+						"Clocks & calendars",
+						"Routes & networks",
+						"Cubes",
+						"Constraint-based puzzles"
+					]
+				}
+			]
+		},
+		{
+			"id": "qa",
+			"name": "Quantitative Aptitude",
+			"short": "QA",
+			"questions": 22,
+			"marks": 66,
+			"timeMinutes": 40,
+			"topics": [
+				{
+					"id": "qa-arithmetic",
+					"name": "Arithmetic",
+					"weightPct": 40,
+					"priority": "highest",
+					"subtopics": [
+						"Percentages",
+						"Ratio & proportion",
+						"Averages & mixtures / alligation",
+						"Profit, loss & discount",
+						"Simple & compound interest",
+						"Time, speed & distance",
+						"Time & work",
+						"Pipes & cisterns",
+						"Boats & streams",
+						"Partnerships"
+					]
+				},
+				{
+					"id": "qa-algebra",
+					"name": "Algebra",
+					"weightPct": 30,
+					"priority": "high",
+					"subtopics": [
+						"Linear equations",
+						"Quadratic equations",
+						"Inequalities & modulus",
+						"Functions",
+						"Logarithms",
+						"Progressions (AP, GP, HP)",
+						"Sequences & series",
+						"Maxima & minima",
+						"Polynomials"
+					]
+				},
+				{
+					"id": "qa-geometry",
+					"name": "Geometry & Mensuration",
+					"weightPct": 15,
+					"priority": "medium",
+					"subtopics": [
+						"Lines & angles",
+						"Triangles & similarity",
+						"Circles",
+						"Quadrilaterals & polygons",
+						"Coordinate geometry",
+						"Trigonometry (basic)",
+						"2D & 3D mensuration"
+					]
+				},
+				{
+					"id": "qa-number-system",
+					"name": "Number System",
+					"weightPct": 6,
+					"priority": "medium",
+					"subtopics": [
+						"Divisibility & remainders",
+						"Factors & multiples",
+						"HCF & LCM",
+						"Primes & composites",
+						"Cyclicity & factorials",
+						"Base systems",
+						"Indices & surds"
+					]
+				},
+				{
+					"id": "qa-modern-math",
+					"name": "Modern Math",
+					"weightPct": 6,
+					"priority": "medium",
+					"subtopics": [
+						"Permutations & combinations",
+						"Probability",
+						"Set theory & Venn diagrams",
+						"Binomial theorem",
+						"Functions & graphs"
+					]
+				}
+			]
+		}
+	],
+	"scoring": {
+		"note": "Approximate, varies yearly with paper difficulty and slot normalization",
+		"overall": [
+			{ "percentile": 90, "marksLow": 52, "marksHigh": 60 },
+			{ "percentile": 95, "marksLow": 60, "marksHigh": 70 },
+			{ "percentile": 98, "marksLow": 70, "marksHigh": 80 },
+			{ "percentile": 99, "marksLow": 80, "marksHigh": 96 },
+			{ "percentile": 99.5, "marksLow": 100, "marksHigh": 115 }
+		],
+		"sectional2025": {
+			"varc": { "p90": 26, "p95": 32.5, "p99": 44 },
+			"dilr": { "p90": 16.7, "p95": 21.5, "p99": 29.8 },
+			"qa": { "p90": 15, "p95": 18.5, "p99": 27.3 }
+		},
+		"iimCutoffs": {
+			"topIIMs": "99+ percentile overall (GEM often 99.5+); sectional 80-90 percentile enforced",
+			"otherIIMs": "95-98 percentile",
+			"compositeScore": "CAT + class 10/12 % + graduation % + work-ex + academic & gender diversity; then WAT + GD + PI"
+		}
+	},
+	"strategy": {
+		"phases": [
+			{
+				"id": "foundation",
+				"name": "Foundation",
+				"months": "1-2",
+				"weeklyHours": 20,
+				"focus": "Concepts + fundamentals across all sections; build daily reading habit"
+			},
+			{
+				"id": "practice",
+				"name": "Practice",
+				"months": "3-4",
+				"weeklyHours": 27,
+				"focus": "Topic-wise drilling, sectional tests, begin mocks"
+			},
+			{
+				"id": "revision",
+				"name": "Revision + Mocks",
+				"months": "5-6",
+				"weeklyHours": 32,
+				"focus": "Full-length mocks + deep analysis, weak-area repair"
+			}
+		],
+		"dailyHours": { "fullTime": "4-6", "working": "2-4" },
+		"mocks": {
+			"total": "25-35",
+			"cadence": "1 per 2 weeks early, 1-2 per week in final 2-3 months",
+			"rule": "Analysis > attempts"
+		},
+		"sectionTips": {
+			"varc": "Read 5000-7000 words/day of dense non-fiction; RC is 70% so prioritize it; never skip VARC (sectional cutoff)",
+			"dilr": "Set selection is everything: scan all sets first 2-3 min, pick the 3-4 most approachable; ~50 assisted then ~300 self-solved sets each of DI & LR",
+			"qa": "Build Arithmetic + Algebra first (70% of section); master percentages/ratios early; shortcuts after concepts"
+		},
+		"commonMistakes": [
+			"Quant-strong candidates under-preparing VARC and missing sectional cutoff",
+			"Chasing raw attempts over accuracy and set selection",
+			"Hoarding mocks without analyzing them",
+			"Starting VARC reading too late"
+		]
+	},
+	"resources": {
+		"youtube": [
+			{
+				"name": "Rodha",
+				"strength": "1400+ free videos, all sections; most complete free course"
+			},
+			{
+				"name": "2IIM CAT Preparation",
+				"strength": "In-depth tutorials, strong QA"
+			},
+			{
+				"name": "CATKing",
+				"strength": "1000+ videos, full roadmap + OMET coverage"
+			},
+			{ "name": "Cracku", "strength": "Lectures, shortcuts, mock analysis" },
+			{
+				"name": "Anantha Chajjer",
+				"strength": "QA shortcuts & concept clarity"
+			},
+			{ "name": "Shlok Bhagwat", "strength": "VARC / reading strategy" }
+		],
+		"mocks": [
+			{
+				"name": "Rodha",
+				"detail": "10 free mocks (3 full, 3 sectional, 6 topic-wise)"
+			},
+			{ "name": "Cracku", "detail": "Free mocks, question banks, PYQs" },
+			{ "name": "CATKing", "detail": "Free full-length mocks + topic quizzes" },
+			{
+				"name": "Official (iimcat.ac.in)",
+				"detail": "Previous-year papers + answer keys; official mock before exam"
+			}
+		],
+		"reading": [
+			"Aeon Essays",
+			"The Economist",
+			"Harvard Business Review",
+			"The Hindu / Indian Express editorials",
+			"Arts & Letters Daily"
+		],
+		"communities": ["PagalGuy", "r/CATpreparation (Reddit)"]
+	},
+	"relatedExams": [
+		{
+			"id": "xat",
+			"name": "XAT",
+			"for": "XLRI + 160 schools",
+			"note": "Adds Decision Making, GK, Essay; early January"
+		},
+		{
+			"id": "gmat",
+			"name": "GMAT",
+			"for": "Global + ISB etc.",
+			"note": "On-demand, adaptive, valid 5 years"
+		},
+		{
+			"id": "nmat",
+			"name": "NMAT",
+			"for": "NMIMS + others",
+			"note": "Multiple attempts, self-scheduled"
+		},
+		{ "id": "snap", "name": "SNAP", "for": "Symbiosis", "note": "December" },
+		{ "id": "iift", "name": "IIFT", "for": "IIFT", "note": "Adds GK" },
+		{
+			"id": "cmat",
+			"name": "CMAT",
+			"for": "AICTE B-schools",
+			"note": "National-level"
+		}
+	]
+}
