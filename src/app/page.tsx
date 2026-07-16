@@ -15,18 +15,24 @@ export default async function Home() {
 						<h1 className="font-extrabold text-4xl tracking-tight sm:text-6xl">
 							Prep <span className="text-(--accent)">Tracker</span>
 						</h1>
-						<p className="text-lg text-(--ink)/70">
+						<p className="text-(--ink)/70 text-lg">
 							Which exam do you want to prepare for?
 						</p>
+						<Link
+							className="rounded-full bg-(--ink)/10 px-4 py-1.5 text-(--ink)/80 text-sm transition hover:bg-(--ink)/20"
+							href="/calendar"
+						>
+							📅 Exam calendar — CAT · GMAT · XAT · SNAP · NMAT
+						</Link>
 					</div>
 
 					{exams.length === 0 ? (
 						<div className="flex flex-col items-center gap-3 rounded-lg bg-(--ink)/10 px-6 py-5 text-center">
 							<p className="text-(--ink)/80">No exams tracked yet.</p>
 							<SkillCta
+								blurb="Add an exam to track (CAT, XAT, GMAT, NMAT…). This skill researches the exam, writes a content pack, and seeds it."
 								command="/add-exam"
 								label="Add an exam"
-								blurb="Add an exam to track (CAT, XAT, GMAT, NMAT…). This skill researches the exam, writes a content pack, and seeds it."
 							/>
 						</div>
 					) : (
@@ -38,7 +44,7 @@ export default async function Home() {
 									key={e.id}
 								>
 									<h3 className="font-bold text-2xl">{e.name}</h3>
-									<p className="text-sm text-(--ink)/70">{e.fullName}</p>
+									<p className="text-(--ink)/70 text-sm">{e.fullName}</p>
 								</Link>
 							))}
 						</div>

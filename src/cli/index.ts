@@ -15,6 +15,14 @@
 import { readFileSync, writeFileSync } from "node:fs";
 
 import {
+	addExamEvent,
+	clearExamEvents,
+	type ExamEventInput,
+	listExamEvents,
+	setExamEvents,
+	TRACKED_EXAMS,
+} from "~/server/core/calendar";
+import {
 	type ExamPack,
 	exportExamContent,
 	importExamContent,
@@ -110,6 +118,13 @@ const HELP = `catac — prep tracker CLI
   review done <subtopicId> [--grade 0-5]     grade a review, reschedule it
   pack export <examId> [--out file.json]     export exam content (no progress)
   pack import <file.json>                     import an exam pack into the DB
+  dates exams                                 list tracked exams (cat/gmat/xat/snap/nmat)
+  dates list [examId]                         list key exam dates (calendar page)
+  dates add <examId> --date YYYY-MM-DD        add one key date
+       --kind registration|admit_card|exam_day|result|window|other
+       --label ".." [--end ..] [--notes ..] [--source url]
+  dates set <examId> --file events.json       bulk-replace an exam's dates (JSON array)
+  dates clear <examId>                        wipe an exam's dates
 
   --json   machine-readable output on any command`;
 
@@ -432,6 +447,73 @@ async function main() {
 				return;
 			}
 			throw new Error(`unknown: pack ${verb ?? ""}`.trim());
+		}
+
+		case "dates": {
+			if (verb === "exams") {
+				out(
+					TRACKED_EXAMS.map((e) => `${e.id}\t${e.name}`).join("\n"),
+					TRACKED_EXAMS,
+				);
+				return;
+			}
+			if (verb === "list" || verb === undefined) {
+				const events = await listExamEvents(
+					typeof pos[2] === "string" ? pos[2] : undefined,
+				);
+				out(
+					events
+						.map(
+							(e) =>
+								`${e.date}${e.endDate ? `→${e.endDate}` : ""}  [${e.examName}] ${e.kind.padEnd(12)} ${e.label}`,
+						)
+						.join("\n") || "(no dates yet)",
+					events,
+				);
+				return;
+			}
+			if (verb === "add") {
+				const examId = pos[2];
+				if (
+					!examId ||
+					typeof opts.date !== "string" ||
+					typeof opts.label !== "string"
+				)
+					throw new Error(
+						'usage: dates add <examId> --kind K --label ".." --date YYYY-MM-DD [--end ..] [--notes ..] [--source url]',
+					);
+				const res = await addExamEvent(examId, {
+					kind: typeof opts.kind === "string" ? opts.kind : "other",
+					label: opts.label,
+					date: opts.date,
+					endDate: typeof opts.end === "string" ? opts.end : undefined,
+					notes: typeof opts.notes === "string" ? opts.notes : undefined,
+					source: typeof opts.source === "string" ? opts.source : undefined,
+				});
+				out(`added event #${res.id} for ${examId}`, res);
+				return;
+			}
+			if (verb === "set") {
+				// Bulk-replace one exam's events from a JSON file: [{kind,label,date,...}]
+				const examId = pos[2];
+				const file = typeof opts.file === "string" ? opts.file : undefined;
+				if (!examId || !file)
+					throw new Error("usage: dates set <examId> --file events.json");
+				const events = JSON.parse(
+					readFileSync(file, "utf8"),
+				) as ExamEventInput[];
+				const res = await setExamEvents(examId, events);
+				out(`set ${res.count} events for ${examId}`, res);
+				return;
+			}
+			if (verb === "clear") {
+				const examId = pos[2];
+				if (!examId) throw new Error("usage: dates clear <examId>");
+				const res = await clearExamEvents(examId);
+				out(`cleared dates for ${examId}`, res);
+				return;
+			}
+			throw new Error(`unknown: dates ${verb ?? ""}`.trim());
 		}
 
 		default:

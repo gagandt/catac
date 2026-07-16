@@ -279,3 +279,30 @@ export const snapshot = createTable(
 	}),
 	(t) => [unique("snapshot_exam_date_uq").on(t.examId, t.date)],
 );
+
+// Key dates for the exams we track on the calendar page (registration windows,
+// admit card, exam day, results). `examId` is a plain tracked-exam key (cat,
+// gmat, xat, snap, nmat) — NOT an FK, so we can track exams that don't have a
+// full syllabus pack. Claude refreshes these via web research (`/refresh-exam-dates`).
+export const examEvent = createTable(
+	"exam_event",
+	(d) => ({
+		id: d.integer({ mode: "number" }).primaryKey({ autoIncrement: true }),
+		examId: d.text({ length: 16 }).notNull(), // cat | gmat | xat | snap | nmat
+		kind: d.text({ length: 24 }).notNull(), // registration | admit_card | exam_day | result | window | other
+		label: d.text({ length: 160 }).notNull(),
+		date: d.text({ length: 10 }).notNull(), // ISO start date
+		endDate: d.text({ length: 10 }), // optional end (windows/multi-day slots)
+		notes: d.text(),
+		source: d.text(), // URL the date came from
+		updatedAt: d
+			.integer({ mode: "timestamp" })
+			.$onUpdate(() => new Date())
+			.default(sql`(unixepoch())`)
+			.notNull(),
+	}),
+	(t) => [
+		index("exam_event_exam_idx").on(t.examId),
+		index("exam_event_date_idx").on(t.date),
+	],
+);

@@ -1,3 +1,4 @@
+import { calendarRouter } from "~/server/api/routers/calendar";
 import { examRouter } from "~/server/api/routers/exam";
 import { mockRouter } from "~/server/api/routers/mock";
 import { planRouter } from "~/server/api/routers/plan";
@@ -12,6 +13,7 @@ import { createCallerFactory, createTRPCRouter } from "~/server/api/trpc";
  * All routers added in /api/routers should be manually added here.
  */
 export const appRouter = createTRPCRouter({
+	calendar: calendarRouter,
 	exam: examRouter,
 	mock: mockRouter,
 	plan: planRouter,

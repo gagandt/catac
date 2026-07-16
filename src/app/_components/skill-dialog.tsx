@@ -22,19 +22,19 @@ export function SkillCta({ command, label, blurb, className }: SkillCtaProps) {
 	return (
 		<>
 			<button
-				type="button"
-				onClick={() => setOpen(true)}
 				className={
 					className ??
-					"rounded-lg bg-(--accent)/20 px-4 py-2 font-medium text-(--accent-light) ring-1 ring-(--accent)/40 transition hover:bg-(--accent)/30"
+					"rounded-lg bg-(--accent)/20 px-4 py-2 font-medium text-(--accent-light) ring-(--accent)/40 ring-1 transition hover:bg-(--accent)/30"
 				}
+				onClick={() => setOpen(true)}
+				type="button"
 			>
 				{label}
 			</button>
 			{open && (
 				<SkillDialog
-					command={command}
 					blurb={blurb}
+					command={command}
 					onClose={() => setOpen(false)}
 				/>
 			)}
@@ -42,14 +42,16 @@ export function SkillCta({ command, label, blurb, className }: SkillCtaProps) {
 	);
 }
 
-function SkillDialog({
+export function SkillDialog({
 	command,
 	blurb,
 	onClose,
+	title = "Run this in Claude Code",
 }: {
 	command: string;
 	blurb: string;
 	onClose: () => void;
+	title?: string;
 }) {
 	const [copied, setCopied] = useState(false);
 
@@ -75,29 +77,29 @@ function SkillDialog({
 			role="presentation"
 		>
 			<div
-				className="w-full max-w-md rounded-2xl bg-(--surface) p-6 text-(--ink) shadow-2xl ring-1 ring-(--ink)/10"
+				aria-modal="true"
+				className="w-full max-w-md rounded-2xl bg-(--surface) p-6 text-(--ink) shadow-2xl ring-(--ink)/10 ring-1"
 				onClick={(e) => e.stopPropagation()}
 				role="dialog"
-				aria-modal="true"
 			>
 				<div className="flex items-start justify-between gap-4">
-					<h2 className="font-bold text-xl">Run this in Claude Code</h2>
+					<h2 className="font-bold text-xl">{title}</h2>
 					<button
-						type="button"
-						onClick={onClose}
-						className="text-(--ink)/50 hover:text-(--ink)"
 						aria-label="Close"
+						className="text-(--ink)/50 hover:text-(--ink)"
+						onClick={onClose}
+						type="button"
 					>
 						✕
 					</button>
 				</div>
 
-				<p className="mt-2 text-sm text-(--ink)/70">{blurb}</p>
+				<p className="mt-2 text-(--ink)/70 text-sm">{blurb}</p>
 
 				<button
-					type="button"
+					className="group mt-4 flex w-full items-center justify-between gap-3 rounded-lg bg-(--inset) px-4 py-3 ring-(--ink)/10 ring-1 transition hover:ring-(--accent)/50"
 					onClick={copy}
-					className="group mt-4 flex w-full items-center justify-between gap-3 rounded-lg bg-(--inset) px-4 py-3 ring-1 ring-(--ink)/10 transition hover:ring-(--accent)/50"
+					type="button"
 				>
 					<code className="text-(--accent-light) text-lg">{command}</code>
 					<span className="text-(--ink)/50 text-xs uppercase tracking-wide group-hover:text-(--ink)/80">
@@ -105,7 +107,7 @@ function SkillDialog({
 					</span>
 				</button>
 
-				<ol className="mt-4 flex flex-col gap-1.5 text-sm text-(--ink)/60">
+				<ol className="mt-4 flex flex-col gap-1.5 text-(--ink)/60 text-sm">
 					<li>1. Open your Claude Code session for this project.</li>
 					<li>
 						2. Paste{" "}
