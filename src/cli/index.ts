@@ -22,10 +22,16 @@ import {
 import { getSyllabus, listExams } from "~/server/core/exam";
 import { listMocks, logMock } from "~/server/core/mock";
 import {
+	addPlanItem,
 	adjustPlanItem,
 	createPlan,
+	deletePlanItem,
 	getActivePlan,
+	type MockTier,
+	movePlanItem,
+	type PlanPriority,
 	reweightPlanFromMock,
+	setPlanItemPriority,
 } from "~/server/core/plan";
 import {
 	getNext,
@@ -83,10 +89,18 @@ const HELP = `catac — prep tracker CLI
   status [examId]                            coverage % overall + per section
   next [examId] [--limit N]                  highest-leverage things to do next
   plan create <examId> --target YYYY-MM-DD   build a dated, weighted study plan
-       [--daily N] [--notes "..."]
+       [--daily N] [--by subtopic|topic]      (subtopic-level by default; mocks woven in)
+       [--notes "..."]
   plan show [examId]                         show the active plan + days left
   plan adjust <itemId> [--hours N]           tweak one plan item
        [--start YYYY-MM-DD] [--end ..] [--order N]
+  plan move <itemId> <YYYY-MM-DD>            move an item to a new start date
+  plan priority <itemId> <high|normal>       flag/unflag an item as priority
+  plan add <examId> --kind study|mock        add a node by hand
+       [--subtopic id] [--topic id] [--section id]
+       [--tier vision|subject|global]
+       [--title ".."] [--start YYYY-MM-DD] [--hours N] [--priority high]
+  plan remove <itemId>                       delete a plan node
   plan reweight [examId]                     rebias plan toward weak sections
                                              (from the latest mock)
   mock add <examId> --<sectionId> N ...      log a mock (e.g. --varc 30 --dilr 20)
@@ -216,6 +230,8 @@ async function main() {
 					examId,
 					targetDate: opts.target,
 					dailyHours: opts.daily !== undefined ? Number(opts.daily) : undefined,
+					granularity:
+						opts.by === "topic" || opts.by === "subtopic" ? opts.by : undefined,
 					notes: typeof opts.notes === "string" ? opts.notes : undefined,
 				});
 				if (!p) throw new Error("plan creation failed");
@@ -246,6 +262,61 @@ async function main() {
 					orderIndex: opts.order !== undefined ? Number(opts.order) : undefined,
 				});
 				out(`adjusted item ${res.id}`, res);
+				return;
+			}
+			if (verb === "move") {
+				const itemId = Number(pos[2]);
+				const start = pos[3];
+				if (!Number.isInteger(itemId) || !start)
+					throw new Error("usage: plan move <itemId> <YYYY-MM-DD>");
+				const res = await movePlanItem(itemId, start);
+				out(`moved item ${res.id} to ${res.plannedStart}`, res);
+				return;
+			}
+			if (verb === "priority") {
+				const itemId = Number(pos[2]);
+				const level = pos[3];
+				if (
+					!Number.isInteger(itemId) ||
+					(level !== "high" && level !== "normal")
+				)
+					throw new Error("usage: plan priority <itemId> <high|normal>");
+				const res = await setPlanItemPriority(itemId, level as PlanPriority);
+				out(`item ${res.id} priority -> ${res.priority}`, res);
+				return;
+			}
+			if (verb === "add") {
+				const examId = pos[2];
+				const kind = opts.kind;
+				if (!examId || (kind !== "study" && kind !== "mock"))
+					throw new Error(
+						"usage: plan add <examId> --kind study|mock [--topic id] [--section id] [--tier ..]",
+					);
+				const res = await addPlanItem({
+					examId,
+					kind,
+					topicId: typeof opts.topic === "string" ? opts.topic : undefined,
+					subtopicId:
+						typeof opts.subtopic === "string" ? opts.subtopic : undefined,
+					sectionId:
+						typeof opts.section === "string" ? opts.section : undefined,
+					mockTier:
+						typeof opts.tier === "string" ? (opts.tier as MockTier) : undefined,
+					title: typeof opts.title === "string" ? opts.title : undefined,
+					plannedStart: typeof opts.start === "string" ? opts.start : undefined,
+					allocatedHours:
+						opts.hours !== undefined ? Number(opts.hours) : undefined,
+					priority: opts.priority === "high" ? "high" : undefined,
+				});
+				out(`added plan item #${res.id}`, res);
+				return;
+			}
+			if (verb === "remove") {
+				const itemId = Number(pos[2]);
+				if (!Number.isInteger(itemId))
+					throw new Error("usage: plan remove <itemId>");
+				const res = await deletePlanItem(itemId);
+				out(`removed item ${res.id}`, res);
 				return;
 			}
 			if (verb === "reweight") {
@@ -375,17 +446,31 @@ function planHuman(p: {
 	totalAllocatedHours: number;
 	items: {
 		id: number;
+		kind: string;
+		mockTier: string | null;
+		title: string | null;
 		topicName: string | null;
+		priority: string;
 		allocatedHours: number | null;
 		plannedStart: string | null;
 		plannedEnd: string | null;
 	}[];
 }): string {
 	const head = `plan for ${p.examId}: ${p.daysRemaining} days to ${p.targetDate}, ${p.totalAllocatedHours}h total`;
-	const lines = p.items.map(
-		(i) =>
-			`  #${i.id}  ${i.plannedStart}→${i.plannedEnd}  ${String(i.allocatedHours ?? 0).padStart(5)}h  ${i.topicName ?? i.id}`,
-	);
+	const lines = p.items.map((i) => {
+		const tag =
+			i.kind === "mock"
+				? `[mock:${i.mockTier ?? "?"}]`
+				: "[study]    ".slice(0, 11);
+		const star = i.priority === "high" ? " ★" : "";
+		const label = i.title ?? i.topicName ?? String(i.id);
+		// For a subtopic study node, show its parent topic in ‹…›.
+		const ctx =
+			i.kind === "study" && i.topicName && i.topicName !== label
+				? ` ‹${i.topicName}›`
+				: "";
+		return `  #${String(i.id).padStart(3)}  ${i.plannedStart}→${i.plannedEnd}  ${String(i.allocatedHours ?? 0).padStart(5)}h  ${tag} ${label}${ctx}${star}`;
+	});
 	return [head, ...lines].join("\n");
 }
 

@@ -1,0 +1,2200 @@
+{
+	"id": "gmat",
+	"name": "GMAT",
+	"fullName": "Graduate Management Admission Test (Focus Edition)",
+	"researchedOn": "2026-07",
+	"materialAddedOn": "2026-07",
+	"scoringKind": "gmat_scaled",
+	"meta": {
+		"conductedBy": "GMAC — Graduate Management Admission Council",
+		"officialSite": "https://www.mba.com",
+		"version": "GMAT Focus Edition — the only version offered since 31 Jan 2024 (the old 10-section/AWA/SC/IR format is retired)",
+		"purpose": "Admission to MBA & business-master's programmes worldwide; in India accepted by ISB, IIM 1-year/executive programmes, Great Lakes, SPJIMR PGPM and a growing list of B-schools",
+		"mode": "Computer-adaptive; take at a test center OR online at home — identical exam, questions and 205-805 score scale",
+		"frequency": "On demand, year-round — book any open slot; not a fixed annual exam date",
+		"validity": "Scores valid 5 years",
+		"attempts": {
+			"perRolling12Months": 5,
+			"lifetimeCap": "None — the old 8-attempt lifetime limit was removed in October 2024",
+			"minGapBetweenAttempts": "16 days",
+			"note": "Online and test-center attempts count against the same 5-per-rolling-12-months cap"
+		},
+		"applicationFee": {
+			"testCenter": "US$275 (varies by country)",
+			"online": "US$300 (≈US$25 online premium)",
+			"indiaApprox": "≈INR 24,780 test-center / INR 27,036 online (USD-pegged + 18% GST)",
+			"currency": "USD",
+			"note": "Includes up to 5 free score reports; reschedule/cancel fees and region-specific pricing apply; verify on mba.com"
+		},
+		"eligibility": {
+			"minAge": "18+ (13-17 allowed with parental consent)",
+			"degree": "No formal education requirement to sit the exam; a bachelor's is expected by the MBA programmes that use the score",
+			"note": "Open to any candidate"
+		}
+	},
+	"pattern": {
+		"version": "GMAT Focus Edition",
+		"totalQuestions": 64,
+		"durationMinutes": 135,
+		"optionalBreakMinutes": 10,
+		"sectionCount": 3,
+		"optionsPerQuestion": 5,
+		"adaptive": "Question-level computer-adaptive (difficulty adjusts to your answers within each section)",
+		"calculator": "On-screen calculator allowed ONLY in Data Insights — no calculator in Quantitative Reasoning",
+		"sectionOrderChoice": true,
+		"negativeMarking": false,
+		"mustAnswerAll": true,
+		"editRule": "You may bookmark any number of questions and, at the end of a section (if time remains), review and change up to 3 answers per section",
+		"essay": "None — the AWA essay was removed in the Focus Edition",
+		"sections": [
+			{
+				"name": "Quantitative Reasoning",
+				"questions": 21,
+				"timeMinutes": 45,
+				"note": "Problem Solving MCQ only; no Data Sufficiency, no geometry"
+			},
+			{
+				"name": "Verbal Reasoning",
+				"questions": 23,
+				"timeMinutes": 45,
+				"note": "Reading Comprehension + Critical Reasoning only; no Sentence Correction"
+			},
+			{
+				"name": "Data Insights",
+				"questions": 20,
+				"timeMinutes": 45,
+				"note": "Data Sufficiency, Multi-Source Reasoning, Table Analysis, Graphics Interpretation, Two-Part Analysis"
+			}
+		],
+		"removedFromOldGmat": [
+			"AWA / Analytical Writing essay",
+			"Sentence Correction (Verbal)",
+			"Geometry (Quantitative)",
+			"Data Sufficiency moved OUT of Quant and INTO Data Insights",
+			"standalone Integrated Reasoning (folded into Data Insights)"
+		]
+	},
+	"sections": [
+		{
+			"id": "gmat-quant",
+			"name": "Quantitative Reasoning",
+			"short": "QR",
+			"questions": 21,
+			"marks": 21,
+			"timeMinutes": 45,
+			"format": "Problem Solving MCQ only (5 options). No Data Sufficiency here (moved to Data Insights) and NO geometry in the Focus Edition.",
+			"topics": [
+				{
+					"id": "gmat-quant-arithmetic",
+					"name": "Arithmetic & Number Properties",
+					"weightPct": 30,
+					"priority": "high",
+					"subtopics": [
+						{
+							"name": "Integers, factors & divisibility",
+							"frequency": "high",
+							"summary": "Properties of integers: factors, multiples, remainders, and even/odd behavior. The GMAT rarely asks a bare 'is this divisible' question; instead it hides divisibility inside remainder problems, 'how many factors' counting, and consecutive-integer arguments, then engineers wrong answers around off-by-one and sign slips.",
+							"formulas": [
+								"Dividend = divisor x quotient + remainder, with 0 <= remainder < divisor",
+								"If n = p1^a1 x p2^a2 x ... x pk^ak (prime factorization), the number of positive divisors is (a1+1)(a2+1)...(ak+1)",
+								"Divisibility: by 3 if digit sum divisible by 3; by 9 if digit sum divisible by 9; by 4 if last two digits form a multiple of 4; by 8 if last three digits form a multiple of 8; by 6 if divisible by both 2 and 3; by 11 if the alternating digit sum is a multiple of 11",
+								"The product of any k consecutive integers is divisible by k! (e.g. any 3 consecutive integers are divisible by 6)",
+								"even +/- even = even, odd +/- odd = even, even +/- odd = odd; even x anything = even, odd x odd = odd"
+							],
+							"keyIdeas": [
+								"For 'how many factors' questions, always go to the prime factorization first, then apply (exponent+1) to each prime and multiply.",
+								"For remainder problems, either list the first few candidates that satisfy each condition and find the overlap, or use dividend = divisor x quotient + remainder to test choices.",
+								"Consecutive integers guarantee a specific factor: among any n consecutive integers exactly one is divisible by n, which resolves many 'must be divisible by' questions instantly."
+							],
+							"example": {
+								"q": "How many positive divisors does 360 have? (A) 12 (B) 18 (C) 20 (D) 24 (E) 36",
+								"solution": "Prime-factorize: 360 = 2^3 x 3^2 x 5^1. The number of positive divisors is (3+1)(2+1)(1+1) = 4 x 3 x 2 = 24. The answer is (D). Note (A) 12 is the trap you get from (3+1)(2+1) = 12 if you drop the lone prime 5's contribution."
+							},
+							"traps": [
+								"Forgetting to add 1 to each exponent, or dropping a prime that appears only to the first power (here, ignoring the 5 gives the trap answer 12).",
+								"Confusing 'number of factors' with 'number of prime factors' or with the sum of the exponents.",
+								"In remainder problems, allowing a remainder equal to or greater than the divisor, or forgetting remainder 0 is possible."
+							]
+						},
+						{
+							"name": "Primes & prime factorization",
+							"frequency": "medium",
+							"summary": "Primes are integers greater than 1 with exactly two positive divisors. The GMAT tests the Fundamental Theorem of Arithmetic through greatest-prime-factor questions, trailing-zero counts on factorials, and 'is it prime' traps where a composite number (like 51 or 91) looks prime.",
+							"formulas": [
+								"Every integer > 1 has a unique prime factorization (Fundamental Theorem of Arithmetic)",
+								"1 is neither prime nor composite; 2 is the only even prime",
+								"To test whether n is prime, check divisibility only by primes up to sqrt(n)",
+								"Exponent of a prime p in n! = floor(n/p) + floor(n/p^2) + floor(n/p^3) + ... (Legendre's formula)",
+								"Number of trailing zeros of n! = floor(n/5) + floor(n/25) + floor(n/125) + ... (the count of factor-5s, which are scarcer than factor-2s)"
+							],
+							"keyIdeas": [
+								"Trailing zeros equal the number of times 10 = 2 x 5 divides the number; since 2s are always more plentiful than 5s in a factorial, just count the 5s.",
+								"When counting 5s in n!, remember higher powers of 5 (25, 125, ...) each contribute an EXTRA factor, so add floor(n/25), floor(n/125), etc.",
+								"Before calling a two-digit answer 'prime', screen it against 3, 7, 11, 13: classic composites that pose as primes include 51 = 3x17, 57 = 3x19, 91 = 7x13, 119 = 7x17."
+							],
+							"example": {
+								"q": "How many consecutive zeros are at the end of the product of all integers from 1 to 25 inclusive (that is, 25!)? (A) 4 (B) 5 (C) 6 (D) 7 (E) 10",
+								"solution": "Trailing zeros come from factors of 10 = 2 x 5, and 5s are the limiting prime. Count the 5s in 25!: floor(25/5) + floor(25/25) = 5 + 1 = 6. The answer is (C). The trap (B) 5 comes from stopping at floor(25/5) and forgetting that 25 = 5 x 5 contributes a second factor of 5."
+							},
+							"traps": [
+								"Stopping at floor(n/5) and missing the extra 5s from 25, 125, ... (here that gives the trap answer 5 instead of 6).",
+								"Trying to count 2s instead of 5s, or the min of the two counts unnecessarily; 5s always govern.",
+								"Treating a composite like 51, 57, or 91 as prime when picking a 'greatest prime factor'."
+							]
+						},
+						{
+							"name": "Fractions & decimals",
+							"frequency": "high",
+							"summary": "Manipulating, comparing, and converting fractions and their decimal forms. The GMAT loves ordering questions (which fraction is largest) and terminating-vs-repeating classification, engineering trap answers around 'bigger numerator/denominator = bigger value' misconceptions.",
+							"formulas": [
+								"Compare positive fractions a/b and c/d by cross-multiplying: a/b > c/d exactly when ad > bc",
+								"A fraction in lowest terms terminates as a decimal if and only if its denominator's only prime factors are 2 and/or 5",
+								"A purely repeating decimal 0.(d1 d2 ... dk) repeating = (the k-digit block)/(10^k - 1); e.g. 0.272727... = 27/99 = 3/11",
+								"Divide by a fraction by multiplying by its reciprocal: (a/b) / (c/d) = (a/b) x (d/c)",
+								"To add/subtract, use a common denominator: a/b +/- c/d = (ad +/- bc)/(bd)"
+							],
+							"keyIdeas": [
+								"To rank fractions quickly, convert to decimals or benchmark each against 1/2 and 2/3; cross-multiply only the two finalists.",
+								"Fractions near 1 are easiest compared by their gaps to 1: 5/6 (gap 1/6) vs 7/8 (gap 1/8) means 7/8 is larger because its gap is smaller.",
+								"For repeating decimals, put the repeating block over as many 9s as it has digits, then reduce."
+							],
+							"example": {
+								"q": "Which of the following is the greatest? (A) 5/8 (B) 7/11 (C) 2/3 (D) 9/14 (E) 11/17",
+								"solution": "Convert to decimals: 5/8 = 0.625, 7/11 = 0.636, 2/3 = 0.667, 9/14 = 0.643, 11/17 = 0.647. The largest is 2/3 = 0.667, answer (C). Equivalently, benchmark against 2/3: only 2/3 reaches it while the others fall short. The trap (E) 11/17 has the biggest numbers but is only about 0.647."
+							},
+							"traps": [
+								"Assuming the fraction with the largest numerator and denominator (11/17 here) is greatest.",
+								"Misclassifying a fraction as terminating when its reduced denominator still contains a prime other than 2 or 5.",
+								"Writing a repeating decimal over the wrong number of 9s, or forgetting to reduce (leaving 27/99 instead of 3/11)."
+							]
+						},
+						{
+							"name": "Percentages",
+							"frequency": "high",
+							"summary": "Percent-of, percent change, and successive percentage changes. The GMAT's favorite trap is treating successive percent changes as additive; it also swaps the base ('percent of' vs 'percent more than') to bait a wrong reference quantity.",
+							"formulas": [
+								"x% of N = (x/100) x N",
+								"Percent change = (new value - old value) / (old value) x 100%",
+								"A is p% more than B means A = B x (1 + p/100); A is p% less than B means A = B x (1 - p/100)",
+								"Successive changes multiply: applying +a% then +/-b% gives overall factor (1 + a/100)(1 +/- b/100)",
+								"Net effect of +a% then -b% = a - b - (ab/100) percent"
+							],
+							"keyIdeas": [
+								"Convert every percentage to a multiplier and multiply them together; never add successive percent changes.",
+								"Pick 100 (or the LCM of the denominators) as the starting amount when no number is given; percentages are scale-free.",
+								"Read the base carefully: 'percent of B', 'percent more than B', and 'percent greater than what it was' can each point to a different reference."
+							],
+							"example": {
+								"q": "The price of a stock first rose by 25% and then fell by 20% from its increased value. The final price is what percent of the original price? (A) 95% (B) 100% (C) 105% (D) 108% (E) 110%",
+								"solution": "Apply the multipliers in order: final = original x 1.25 x 0.80 = original x 1.00. So the final price is 100% of the original (no net change), answer (B). Check with 100: 100 -> 125 -> 125 x 0.80 = 100. The trap (C) 105% comes from adding the percents (+25 - 20 = +5)."
+							},
+							"traps": [
+								"Adding successive percent changes (+25 and -20 to get +5%, the trap 105%) instead of multiplying the factors.",
+								"Applying the second percentage to the original amount rather than to the already-changed amount.",
+								"Confusing 'X is what percent of Y' with 'X is what percent greater than Y' (the latter subtracts 100%)."
+							]
+						},
+						{
+							"name": "Ratios & proportions",
+							"frequency": "high",
+							"summary": "Comparing quantities by ratio, splitting totals into parts, and solving proportions (including mixtures where one component changes). The GMAT baits you into answering the wrong part of the ratio or reporting the multiplier k instead of an actual quantity.",
+							"formulas": [
+								"a : b = c : d if and only if ad = bc (cross-multiplication)",
+								"If a quantity is split in ratio a : b, the parts are a/(a+b) and b/(a+b) of the total; with a common multiplier the actual amounts are ak and bk",
+								"Direct proportion: y = kx (y/x constant). Inverse proportion: y = k/x (xy constant)",
+								"To chain ratios a : b and b : c into a : b : c, scale each so the shared term b matches"
+							],
+							"keyIdeas": [
+								"Introduce a single multiplier k so the parts become ak, bk, ... then translate each sentence into one equation in k.",
+								"When only one component of a mixture changes (water added, some drained), keep the unchanged component's amount fixed and set up the new-ratio proportion.",
+								"At the end, re-read the question to output the exact quantity asked (a specific component or the total), not k and not the wrong part."
+							],
+							"example": {
+								"q": "In a mixture the ratio of milk to water is 5 : 3. When 4 liters of water is added, the ratio of milk to water becomes 5 : 4. How many liters of milk are in the mixture? (A) 12 (B) 15 (C) 20 (D) 25 (E) 30",
+								"solution": "Let milk = 5k and water = 3k. Adding 4 L of water leaves milk unchanged: 5k / (3k + 4) = 5/4. Cross-multiply: 20k = 5(3k + 4) = 15k + 20, so 5k = 20 and k = 4. Milk = 5k = 20 liters, answer (C). Check: milk 20, water 12; after adding 4, water 16, and 20 : 16 = 5 : 4."
+							},
+							"traps": [
+								"Reporting the multiplier k = 4 (trap-adjacent) or the water amount 12/16 instead of the milk asked for.",
+								"Scaling both components when only one actually changes (adding water must not change the milk amount).",
+								"Treating ratio parts as the actual counts without introducing the multiplier k."
+							]
+						},
+						{
+							"name": "Powers, roots & exponents",
+							"frequency": "medium",
+							"summary": "Laws of exponents, roots as fractional powers, and solving exponential equations. The GMAT's core move is rewriting different bases as a common base; wrong answers reward multiplying exponents when you should add, or mishandling negative and fractional exponents.",
+							"formulas": [
+								"a^m x a^n = a^(m+n); a^m / a^n = a^(m-n); (a^m)^n = a^(mn); (ab)^n = a^n x b^n",
+								"a^0 = 1 for a not equal to 0; a^(-n) = 1/a^n",
+								"a^(1/n) = the nth root of a; a^(m/n) = (nth root of a)^m",
+								"sqrt(ab) = sqrt(a) x sqrt(b) and sqrt(a/b) = sqrt(a)/sqrt(b) for a, b >= 0",
+								"To solve an exponential equation, rewrite both sides with the same base, then equate the exponents"
+							],
+							"keyIdeas": [
+								"Rewrite every term over a common prime base (2, 3, or 5) so the equation reduces to a linear equation in the exponents.",
+								"Add exponents when multiplying like bases; multiply exponents only when raising a power to a power. Keep these two operations distinct.",
+								"Factor out the smallest power in sums like 2^n + 2^n = 2 x 2^n = 2^(n+1); you cannot just add exponents across a sum."
+							],
+							"example": {
+								"q": "If 4^x = 8^(x-1), what is the value of x? (A) 1 (B) 2 (C) 3 (D) 4 (E) 6",
+								"solution": "Write both sides base 2: 4^x = (2^2)^x = 2^(2x) and 8^(x-1) = (2^3)^(x-1) = 2^(3x-3). Equate exponents: 2x = 3x - 3, so x = 3, answer (C). Check: 4^3 = 64 and 8^2 = 64. The trap answers come from failing to convert to a common base before comparing."
+							},
+							"traps": [
+								"Comparing exponents without first converting to a common base (equating x and x-1 directly).",
+								"Multiplying exponents when multiplying like bases (or adding when raising a power to a power).",
+								"Mishandling sums of powers (writing 2^n + 2^n as 2^(2n) instead of 2^(n+1))."
+							]
+						}
+					]
+				},
+				{
+					"id": "gmat-quant-algebra",
+					"name": "Algebra",
+					"weightPct": 25,
+					"priority": "high",
+					"subtopics": [
+						{
+							"name": "Linear equations & systems",
+							"frequency": "high",
+							"summary": "Solving one linear equation in one variable, or a system of two linear equations in two variables. On the GMAT this almost always arrives disguised as a word problem (mixture, purchase, age, rate) where the hard part is translating the words into two equations, not the algebra.",
+							"formulas": [
+								"Slope-intercept line: y = mx + b, where m is slope and b is the y-intercept",
+								"Slope between two points: m = (y2 - y1) / (x2 - x1)",
+								"A 2x2 system a1*x + b1*y = c1, a2*x + b2*y = c2: unique solution when a1/a2 != b1/b2; no solution when a1/a2 = b1/b2 != c1/c2; infinitely many when a1/a2 = b1/b2 = c1/c2",
+								"Solve systems by elimination (add/subtract to cancel a variable) or substitution (isolate one variable, plug in)"
+							],
+							"keyIdeas": [
+								"Name your variables explicitly and write one equation per fact in the stem; count equations vs. unknowns before solving.",
+								"Elimination is usually fastest when coefficients line up; add or subtract the equations to kill one variable in one step.",
+								"Read the last line carefully: the question may ask for a single variable, a difference, or a combined expression like 2x + y that you can get without solving fully.",
+								"Plug your answer back into BOTH original equations as a 10-second check."
+							],
+							"example": {
+								"q": "A store sells notebooks for $3 each and pens for $2 each. A customer buys a total of 12 items and pays exactly $29 (before tax). How many notebooks did the customer buy? (A) 3 (B) 4 (C) 5 (D) 7 (E) 9",
+								"solution": "Let n = notebooks and p = pens. Then n + p = 12 and 3n + 2p = 29. Substitute p = 12 - n: 3n + 2(12 - n) = 29 -> 3n + 24 - 2n = 29 -> n + 24 = 29 -> n = 5. Check: 5 notebooks ($15) + 7 pens ($14) = $29 and 5 + 7 = 12 items. Notebooks = 5, so the answer is (C)."
+							},
+							"traps": [
+								"Solving for the wrong quantity: n = 5 but p = 7, and 7 is offered as choice (D) to catch anyone who tracks pens instead of notebooks.",
+								"Mis-translating 'total of 12 items' as a dollar equation, or dropping the distribution of the 2 across (12 - n)."
+							]
+						},
+						{
+							"name": "Quadratic equations",
+							"frequency": "medium",
+							"summary": "Equations of the form ax^2 + bx + c = 0. The GMAT mostly wants you to factor (integers chosen so factoring is clean) or to apply the relationships between the roots; it rarely requires the full quadratic formula. Word problems about consecutive integers, areas of numbers, or products lead here.",
+							"formulas": [
+								"Quadratic formula: x = (-b +/- sqrt(b^2 - 4ac)) / (2a)",
+								"Discriminant D = b^2 - 4ac: D > 0 -> two distinct real roots, D = 0 -> one repeated real root, D < 0 -> no real roots",
+								"Vieta's relations for ax^2 + bx + c = 0: sum of roots = -b/a, product of roots = c/a",
+								"Factored form: if r and s are the roots, ax^2 + bx + c = a(x - r)(x - s)",
+								"Zero-product property: if (x - r)(x - s) = 0 then x = r or x = s"
+							],
+							"keyIdeas": [
+								"Try factoring first: find two numbers that multiply to a*c and add to b; GMAT numbers are almost always designed to factor over the integers.",
+								"Use sum = -b/a and product = c/a when the question asks about the roots (their sum, product, or reciprocals) rather than their individual values.",
+								"Always move everything to one side to get '= 0' before factoring; a set to a nonzero constant is a common setup error.",
+								"For 'consecutive integer' word problems, model as n(n+1) or n(n+2) and expand to a quadratic."
+							],
+							"example": {
+								"q": "The product of two consecutive positive integers is 156. What is the sum of the two integers? (A) 23 (B) 24 (C) 25 (D) 27 (E) 29",
+								"solution": "Let the integers be n and n + 1. Then n(n + 1) = 156, so n^2 + n - 156 = 0. Factor: find two numbers with product -156 and sum +1, namely 13 and -12, giving (n + 13)(n - 12) = 0. Since n is positive, n = 12, so the integers are 12 and 13. Their sum is 12 + 13 = 25. (Check: 12 * 13 = 156.) The answer is (C)."
+							},
+							"traps": [
+								"Accepting the negative root: n = -13 satisfies the equation but violates 'positive integers'; discard it.",
+								"Answering with a single integer (12 or 13) instead of their sum, or confusing product (156) with sum in the final step."
+							]
+						},
+						{
+							"name": "Inequalities",
+							"frequency": "medium",
+							"summary": "Solving and manipulating linear (and simple compound) inequalities, and counting or bounding the values that satisfy them. The GMAT's favorite twist is the sign flip when multiplying or dividing by a negative, and strict vs. non-strict endpoints.",
+							"formulas": [
+								"Multiplying or dividing both sides by a negative number REVERSES the inequality sign (a < b implies -a > -b)",
+								"Adding a constant to both sides, or adding two same-direction inequalities, preserves the direction",
+								"Compound inequality: -a < expression < b is solved by operating on all three parts at once",
+								"|x| < a (a > 0) is equivalent to -a < x < a; |x| > a is equivalent to x < -a or x > a",
+								"You may NOT divide an inequality by a variable whose sign is unknown"
+							],
+							"keyIdeas": [
+								"Isolate the variable in the middle of a compound inequality by applying each operation to all three parts simultaneously.",
+								"Watch the endpoints: strict '<' excludes the boundary, '<=' includes it; this changes integer counts.",
+								"When multiplying or dividing by a negative, flip the sign immediately and circle it so you don't forget.",
+								"To count integer solutions in an open interval, list the integers strictly inside, or use (upper - lower - 1) when both bounds are non-integers close by."
+							],
+							"example": {
+								"q": "If -3 < 2x - 1 < 7, how many integer values of x satisfy the inequality? (A) 3 (B) 4 (C) 5 (D) 6 (E) infinitely many",
+								"solution": "Add 1 to all three parts: -3 + 1 < 2x < 7 + 1, i.e. -2 < 2x < 8. Divide all parts by 2 (positive, no flip): -1 < x < 4. The integers strictly between -1 and 4 are 0, 1, 2, and 3, which is 4 values. The answer is (B)."
+							},
+							"traps": [
+								"Including the endpoints -1 and 4 because the inequality is strict; counting them gives 6 (choice D), the engineered trap.",
+								"Forgetting to divide the bound '8' by 2, or including only one endpoint to land on the trap value 5 (choice C)."
+							]
+						},
+						{
+							"name": "Absolute value",
+							"frequency": "medium",
+							"summary": "Equations and expressions involving |x|, the distance of x from 0. The GMAT tests whether you remember that an absolute-value equation splits into two cases (positive and negative), and it hides one of the two solutions to punish incomplete casework.",
+							"formulas": [
+								"|x| = a (with a >= 0) has two solutions: x = a or x = -a",
+								"|x| = sqrt(x^2); |x| >= 0 always",
+								"|ab| = |a| * |b| and |a/b| = |a| / |b|",
+								"|x| < a (a > 0) is equivalent to -a < x < a; |x| > a is equivalent to x < -a or x > a",
+								"Triangle inequality: |a + b| <= |a| + |b|"
+							],
+							"keyIdeas": [
+								"Split |expression| = k into two equations: expression = k and expression = -k, then solve each.",
+								"For a solvable equation |ax + b| = k, the two roots are symmetric about x = -b/a, so their sum is 2*(-b/a) regardless of k.",
+								"Check that k >= 0; if the right side is negative there are no solutions (e.g., |x| = -3 has none).",
+								"Interpret |x - c| as distance from c on the number line to reason about ranges quickly."
+							],
+							"example": {
+								"q": "If |2x - 3| = 7, what is the sum of all possible values of x? (A) -2 (B) 3 (C) 5 (D) 7 (E) 10",
+								"solution": "Split into two cases. Case 1: 2x - 3 = 7 -> 2x = 10 -> x = 5. Case 2: 2x - 3 = -7 -> 2x = -4 -> x = -2. Both check: |2(5) - 3| = |7| = 7 and |2(-2) - 3| = |-7| = 7. The sum of all values is 5 + (-2) = 3. The answer is (B)."
+							},
+							"traps": [
+								"Solving only the positive case and reporting x = 5 (choice C) as 'the' answer, ignoring the negative case.",
+								"Adding the two right-hand values 7 + (-7)... or picking 10 (the sum 7 + something) by combining wrong quantities instead of summing the two x-values."
+							]
+						},
+						{
+							"name": "Functions & sequences",
+							"frequency": "medium",
+							"summary": "Function notation and composition (evaluate f at a value, or f of f), plus arithmetic and geometric sequences. The GMAT uses function notation and made-up symbol operators to test careful substitution, and sequence questions to test the nth-term and sum formulas.",
+							"formulas": [
+								"Function evaluation/composition: f(g(x)) means apply g first, then f",
+								"Arithmetic sequence nth term: a_n = a_1 + (n - 1)d, where d is the common difference",
+								"Arithmetic sum of first n terms: S_n = (n/2)(a_1 + a_n) = (n/2)(2a_1 + (n - 1)d)",
+								"Geometric sequence nth term: a_n = a_1 * r^(n - 1), where r is the common ratio",
+								"Geometric sum of first n terms: S_n = a_1 (r^n - 1)/(r - 1) for r != 1; infinite sum = a_1/(1 - r) for |r| < 1"
+							],
+							"keyIdeas": [
+								"Work function composition from the inside out and keep parentheses; substitute the whole inner expression before simplifying.",
+								"For a sequence, find the common difference d (or ratio r) from two known terms: d = (a_p - a_q)/(p - q).",
+								"Remember the (n - 1) in the nth-term formula, not n; the 1st term uses zero steps of d.",
+								"For custom-symbol 'function' problems, just follow the definition literally, substituting the given inputs."
+							],
+							"example": {
+								"q": "In an arithmetic sequence, the 4th term is 14 and the 9th term is 34. What is the 20th term? (A) 74 (B) 76 (C) 78 (D) 80 (E) 82",
+								"solution": "The common difference d = (a_9 - a_4)/(9 - 4) = (34 - 14)/5 = 20/5 = 4. The first term a_1 = a_4 - 3d = 14 - 3(4) = 2. Then a_20 = a_1 + 19d = 2 + 19(4) = 2 + 76 = 78. (Check: a_4 = 2 + 3(4) = 14 and a_9 = 2 + 8(4) = 34.) The answer is (C)."
+							},
+							"traps": [
+								"Off-by-one: using a_n = a_1 + n*d and computing 2 + 20(4) = 82 (choice E), or 2 + 19... errors from forgetting the (n - 1).",
+								"Dividing the term-value gap by the wrong index gap (using 9 - 4 = 5 vs. mistakenly 9 or 4) when finding d."
+							]
+						},
+						{
+							"name": "Algebraic expressions & factoring",
+							"frequency": "medium",
+							"summary": "Manipulating polynomial expressions using the standard product and factoring identities, without necessarily solving an equation. The GMAT rewards recognizing a hidden identity (difference of squares, perfect-square expansion, or the x + 1/x pattern) to avoid brute-force computation.",
+							"formulas": [
+								"(a + b)^2 = a^2 + 2ab + b^2 and (a - b)^2 = a^2 - 2ab + b^2",
+								"Difference of squares: a^2 - b^2 = (a + b)(a - b)",
+								"(a + b)^3 = a^3 + 3a^2 b + 3ab^2 + b^3",
+								"Sum/difference of cubes: a^3 + b^3 = (a + b)(a^2 - ab + b^2); a^3 - b^3 = (a - b)(a^2 + ab + b^2)",
+								"Reciprocal identity: (x + 1/x)^2 = x^2 + 1/x^2 + 2, so x^2 + 1/x^2 = (x + 1/x)^2 - 2"
+							],
+							"keyIdeas": [
+								"Before computing, scan for a factoring identity; recognizing a^2 - b^2 or a perfect square turns ugly arithmetic into one step.",
+								"Squaring a sum introduces the cross term 2ab; the +2 (or 2ab) is where most errors hide.",
+								"For symmetric expressions like x + 1/x, square the given quantity to reach x^2 + 1/x^2 without ever finding x.",
+								"Factor out the greatest common factor first, then look for a recognizable pattern in what remains."
+							],
+							"example": {
+								"q": "If x + 1/x = 5, what is the value of x^2 + 1/x^2? (A) 21 (B) 23 (C) 25 (D) 27 (E) 10",
+								"solution": "Square both sides: (x + 1/x)^2 = 5^2 = 25. Expanding the left side, (x + 1/x)^2 = x^2 + 2*(x)(1/x) + 1/x^2 = x^2 + 2 + 1/x^2. So x^2 + 2 + 1/x^2 = 25, which gives x^2 + 1/x^2 = 25 - 2 = 23. The answer is (B)."
+							},
+							"traps": [
+								"Forgetting the cross term and reporting 25 (choice C), i.e., assuming (x + 1/x)^2 = x^2 + 1/x^2.",
+								"Adding 2 instead of subtracting it (getting 27, choice D) after the expansion."
+							]
+						}
+					]
+				},
+				{
+					"id": "gmat-quant-word-problems",
+					"name": "Word Problems",
+					"weightPct": 25,
+					"priority": "high",
+					"subtopics": [
+						{
+							"name": "Speed, distance & time",
+							"frequency": "high",
+							"summary": "Motion problems relating distance, speed, and time, including round trips, relative speed, and average speed. On GMAT Focus Problem Solving these reward careful reading (which leg is which speed, when they meet) far more than arithmetic speed.",
+							"formulas": [
+								"distance = speed x time; speed = distance / time; time = distance / speed",
+								"average speed = total distance / total time (NEVER just the average of the speeds)",
+								"for two equal distances at speeds a and b: average speed = 2ab/(a+b) (harmonic mean)",
+								"same direction relative speed = a - b; opposite directions (meeting/crossing) relative speed = a + b",
+								"unit conversion: km/h to m/s multiply by 5/18; m/s to km/h multiply by 18/5"
+							],
+							"keyIdeas": [
+								"Always go back to total distance / total time for average speed; pick a convenient total distance (e.g. an LCM) when only speeds are given.",
+								"When distances are equal, average speed is the harmonic mean 2ab/(a+b), which is always less than the arithmetic mean.",
+								"For meeting/overtaking, combine the motions into one relative-speed object: closing gap divided by relative speed gives the time."
+							],
+							"example": {
+								"q": "A cyclist covers the first half of a 36 km journey at 12 km/h and the second half at 18 km/h. How long does the entire journey take? (A) 2 hours (B) 2.25 hours (C) 2.4 hours (D) 2.5 hours (E) 3 hours",
+								"solution": "Each half is 36/2 = 18 km. First half time = 18/12 = 1.5 h; second half time = 18/18 = 1 h. Total time = 1.5 + 1 = 2.5 hours. The answer is (D). (Sanity check: average speed = 36/2.5 = 14.4 km/h = 2(12)(18)/(12+18), the harmonic mean, not 15.)"
+							},
+							"traps": [
+								"Averaging the two speeds to 15 km/h and computing 36/15 = 2.4 h (choice C) — average speed is total distance over total time, not the mean of the speeds.",
+								"Mixing up which quantity is halved (splitting time instead of distance) when the problem says 'first half of the journey' (distance)."
+							]
+						},
+						{
+							"name": "Work & rate",
+							"frequency": "high",
+							"summary": "Rate-of-work problems: individuals or machines completing a job alone versus together, plus pipes filling/draining a tank. A GMAT Focus staple that is fastest when you convert every time into a per-unit rate and add the rates.",
+							"formulas": [
+								"rate = work / time; if a job is done alone in t units, rate = 1/t (job per unit time)",
+								"combined rate = sum of individual rates; a drain/leak subtracts its rate",
+								"two workers finishing in a and b: time together = ab/(a+b)",
+								"work done = rate x time; fraction of job left = 1 - (work done)"
+							],
+							"keyIdeas": [
+								"Add rates, never times: two people who each take 6 hours finish in 3 hours, not 12 or 6.",
+								"Set the whole job = 1 (or use the LCM of the times as total 'units of work') so every rate is a clean fraction.",
+								"For inflow/outflow, treat draining pipes as negative rates and take the net rate."
+							],
+							"example": {
+								"q": "Pipe A can fill a tank in 3 hours and pipe B can fill it in 6 hours. A drain C can empty the full tank in 4 hours. If all three are open on an empty tank, how long will it take to fill? (A) 2 hours (B) 3 hours (C) 4 hours (D) 5 hours (E) 6 hours",
+								"solution": "Net rate = 1/3 + 1/6 - 1/4. Using a common denominator of 12: 4/12 + 2/12 - 3/12 = 3/12 = 1/4 of the tank per hour. Time to fill = 1 / (1/4) = 4 hours. The answer is (C)."
+							},
+							"traps": [
+								"Forgetting to subtract the drain: 1/3 + 1/6 = 1/2 gives 2 hours (choice A).",
+								"Averaging or summing the times (e.g. taking 3 hours as a mid-value, choice B) instead of combining rates."
+							]
+						},
+						{
+							"name": "Mixtures & alligation",
+							"frequency": "medium",
+							"summary": "Combining two ingredients (or concentrations) to hit a target price or strength, and repeated-replacement problems. GMAT Focus favors the weighted-average / alligation shortcut to find the mixing ratio quickly.",
+							"formulas": [
+								"weighted average: mean = (q1 v1 + q2 v2)/(q1 + q2)",
+								"alligation rule: (quantity of cheaper)/(quantity of dearer) = (dearer value - mean)/(mean - cheaper value)",
+								"repeated replacement: after n draw-and-replace cycles of x from a container of volume V, original remaining = V(1 - x/V)^n",
+								"to change concentration by adding pure solvent, hold the solute amount fixed and solve for the new total"
+							],
+							"keyIdeas": [
+								"Alligation gives the ratio directly: the distances of the two ingredient values from the mean are inverse to the amounts used.",
+								"Fix whatever does not change (e.g. the amount of pure milk when only water is added) and let the total volume adjust.",
+								"Order matters in the alligation ratio: the ingredient farther below the mean is used in larger amount, so double-check which side of the ratio is which."
+							],
+							"example": {
+								"q": "In what ratio must tea costing $60 per kg be mixed with tea costing $100 per kg so that the mixture is worth $75 per kg? (A) 3:5 (B) 5:3 (C) 2:1 (D) 1:2 (E) 3:2",
+								"solution": "By alligation, (cheaper):(dearer) = (100 - 75):(75 - 60) = 25:15 = 5:3. So 5 parts of the $60 tea to 3 parts of the $100 tea. The answer is (B). (Check: (5x60 + 3x100)/8 = (300 + 300)/8 = 600/8 = $75.)"
+							},
+							"traps": [
+								"Inverting the ratio to 3:5 (choice A) by pairing each ingredient with its own distance from the mean instead of the opposite distance.",
+								"Averaging prices to $80 and assuming an equal mix, ignoring that $75 is closer to $60 so more of the cheaper tea is needed."
+							]
+						},
+						{
+							"name": "Simple & compound interest",
+							"frequency": "medium",
+							"summary": "Interest earned or owed under simple versus compound growth, and the gap between the two. GMAT Focus typically tests short horizons (2-3 periods) and whether you keep compounding on the growing balance rather than the principal.",
+							"formulas": [
+								"simple interest: SI = P x R x T / 100; amount = P(1 + RT/100)",
+								"compound interest (annual): A = P(1 + R/100)^n, and CI = A - P",
+								"compounded k times per year for t years: A = P(1 + R/(100k))^(kt)",
+								"CI - SI over 2 years at rate R = P(R/100)^2"
+							],
+							"keyIdeas": [
+								"Compound each period on the new balance; for 2 years just apply the growth factor twice, e.g. (1.1)^2 = 1.21.",
+								"For exactly 2 years the compound advantage over simple is a single clean term, P(R/100)^2 — often faster than computing both amounts.",
+								"Match the compounding frequency to the rate: a 'per annum compounded semi-annually' rate is halved and the number of periods doubled."
+							],
+							"example": {
+								"q": "A sum of $8,000 is invested at 10% per annum compounded annually. What is the compound interest earned after 2 years? (A) $1,600 (B) $1,680 (C) $1,700 (D) $1,760 (E) $1,800",
+								"solution": "A = 8000(1 + 10/100)^2 = 8000 x (1.1)^2 = 8000 x 1.21 = 9,680. Compound interest = 9,680 - 8,000 = $1,680. The answer is (B). (Check: simple interest would be 8000 x 10 x 2/100 = 1,600, and the extra 80 = 8000 x (0.1)^2 is the interest-on-interest.)"
+							},
+							"traps": [
+								"Computing simple interest (8000 x 10 x 2 / 100 = 1,600, choice A) and forgetting the second year earns interest on the first year's interest.",
+								"Doubling the one-year interest (2 x 800 = 1,600) — the same mistake as simple interest, a deliberately planted choice."
+							]
+						},
+						{
+							"name": "Profit, loss & discount",
+							"frequency": "medium",
+							"summary": "Buying and selling with markups, markdowns, and margins expressed as percentages of cost or marked price. GMAT Focus leans on the fact that percentages taken on different bases (cost vs. marked price) do not simply add or subtract.",
+							"formulas": [
+								"profit = SP - CP; profit% = (SP - CP)/CP x 100 (always on cost price)",
+								"loss% = (CP - SP)/CP x 100",
+								"SP = CP(1 + profit%/100); CP = SP/(1 + profit%/100)",
+								"discount% = (MP - SP)/MP x 100 (on marked price)",
+								"two successive changes of a% and b%: net% = a + b + ab/100 (use negative signs for discounts/losses)"
+							],
+							"keyIdeas": [
+								"Assume CP = 100 to turn every percentage into a concrete dollar amount and read the profit% straight off the final SP.",
+								"Keep the bases straight: markup and profit are on cost, discount is on the marked price, so a 40% markup and 25% discount do not net to 15%.",
+								"Combine successive percentages with a + b + ab/100 rather than adding them, remembering the cross term."
+							],
+							"example": {
+								"q": "A merchant marks his goods 40% above cost and then allows a 25% discount on the marked price. What is his profit percent? (A) 5% (B) 10% (C) 15% (D) 20% (E) 25%",
+								"solution": "Let CP = $100. Marked price = 100 x 1.40 = $140. Selling price = 140 x (1 - 0.25) = 140 x 0.75 = $105. Profit = 105 - 100 = $5, so profit% = 5/100 = 5%. The answer is (A). (Or via net%: 40 - 25 - (40 x 25)/100 = 40 - 25 - 10 = 5%.)"
+							},
+							"traps": [
+								"Subtracting the percentages to get 40 - 25 = 15% (choice C) — the discount is taken on the higher marked price, not on cost, so the cross term matters.",
+								"Applying the 25% discount to cost instead of to the marked price, which understates the selling price and the profit."
+							]
+						},
+						{
+							"name": "Age & number-relation problems",
+							"frequency": "low",
+							"summary": "Translate 'ages ago / from now' or digit relationships into linear equations and solve. Less common on GMAT Focus than on Indian exams, but when it appears the whole difficulty is disciplined algebraic setup and answering the exact quantity asked.",
+							"formulas": [
+								"if present age = x, then n years ago = x - n and n years hence = x + n",
+								"the difference between two people's ages stays constant over time",
+								"two-digit number with tens digit t and units digit u: value = 10t + u; reversed = 10u + t; their difference = 9(t - u)",
+								"sum/ratio conditions become simultaneous linear equations to solve"
+							],
+							"keyIdeas": [
+								"Define one variable for the present age and write every other age relative to it and to the correct time point (past vs. future).",
+								"Apply the time shift to BOTH people in a 'years ago / years hence' statement, not just one.",
+								"Answer the exact age at the exact time the question asks — often the trap is a correct number for the wrong moment or the wrong person."
+							],
+							"example": {
+								"q": "A father is currently four times as old as his son. In 5 years, he will be three times as old as his son. What is the son's present age? (A) 8 (B) 10 (C) 12 (D) 15 (E) 20",
+								"solution": "Let the son's present age = s, so the father is 4s. In 5 years: 4s + 5 = 3(s + 5). Then 4s + 5 = 3s + 15, so s = 10. The son is 10 now. The answer is (B). (Check: father is 40 now; in 5 years son = 15, father = 45 = 3 x 15.)"
+							},
+							"traps": [
+								"Reporting 15 (choice D), the son's age five years from now, instead of his present age that the question asks for.",
+								"Shifting only the father by 5 years (writing 4s + 5 = 3s) and forgetting to add 5 to the son as well."
+							]
+						}
+					]
+				},
+				{
+					"id": "gmat-quant-stats",
+					"name": "Statistics, Counting & Probability",
+					"weightPct": 20,
+					"priority": "medium",
+					"subtopics": [
+						{
+							"name": "Averages & weighted averages",
+							"frequency": "high",
+							"summary": "The arithmetic mean and its weighted form, tested constantly on GMAT Focus QR both directly and buried inside word problems (mixtures, group scores, new-member-changes-the-average). The GMAT rewards spotting that a weighted average lands closer to the group with more weight, not the midpoint.",
+							"formulas": [
+								"Average (mean) = (sum of terms) / (number of terms)",
+								"Sum of terms = average x number of terms",
+								"Weighted average = (w1*x1 + w2*x2 + ... + wn*xn) / (w1 + w2 + ... + wn)",
+								"For two groups: combined average = (n1*A1 + n2*A2) / (n1 + n2)",
+								"Average of an evenly spaced set = (first + last) / 2"
+							],
+							"keyIdeas": [
+								"Convert averages to SUMS immediately; totals combine cleanly, averages do not.",
+								"A weighted average always lies between the two group averages and is pulled toward the group with the larger weight (count) - use this to sanity-check and eliminate options.",
+								"For 'a new value changes the mean by d', use: new sum = old sum + (added value); or think in terms of how far the added value is from the current mean.",
+								"For evenly spaced lists (consecutive integers, arithmetic sequences), mean = median = (first+last)/2 - no need to add every term."
+							],
+							"example": {
+								"q": "A shopkeeper mixes 8 kilograms of coffee costing $9 per kilogram with some kilograms of coffee costing $12 per kilogram. If the resulting blend costs $10 per kilogram, how many kilograms of the $12 coffee were used? (A) 2 (B) 3 (C) 4 (D) 5 (E) 6",
+								"solution": "Let x = kg of the $12 coffee. Weighted average: (8*9 + x*12)/(8 + x) = 10. So 72 + 12x = 10(8 + x) = 80 + 10x. Then 12x - 10x = 80 - 72, i.e. 2x = 8, so x = 4. Answer: (C). Check: (72 + 48)/(8+4) = 120/12 = 10. Correct."
+							},
+							"traps": [
+								"Assuming a 50/50 mix because $10 sits between $9 and $12 - the mean is NOT the midpoint; more weight sits on the cheaper coffee, so answers built on 'equal amounts' (here 8 kg) are the engineered trap.",
+								"Averaging two averages directly (e.g. (9+12)/2) instead of weighting by quantity.",
+								"Forgetting that the added quantity x also appears in the denominator (the total weight)."
+							]
+						},
+						{
+							"name": "Median, mode & range",
+							"frequency": "medium",
+							"summary": "Positional statistics: median (middle value of the ordered list), mode (most frequent), and range (max - min). GMAT Focus loves 'greatest/least possible value' puzzles where you must satisfy several of these constraints at once while sorting the list.",
+							"formulas": [
+								"Median: order the values. If n is odd, median = the middle term (position (n+1)/2). If n is even, median = average of the two middle terms.",
+								"Mode = the value that appears most often (a set can have no mode or several modes).",
+								"Range = largest value - smallest value",
+								"Median position for n terms: ((n+1)/2)-th value when ordered"
+							],
+							"keyIdeas": [
+								"ALWAYS sort the list first; median and range are meaningless until values are in order.",
+								"For 'greatest possible value of the largest element', minimize every other element subject to the constraints, then let the last element absorb the remaining sum.",
+								"A 'unique mode' of value m means m must appear strictly more often than any other value - this constrains how you fill in repeated slots.",
+								"Median is unaffected by extreme outliers; range and mean are - use this to distinguish which stat a question actually controls."
+							],
+							"example": {
+								"q": "A list of 5 positive integers has a mean of 9, a median of 8, and a unique mode of 6. What is the greatest possible value of the largest integer in the list? (A) 15 (B) 16 (C) 18 (D) 20 (E) 21",
+								"solution": "Mean 9 over 5 integers means total sum = 45. Ordered as a<=b<=c<=d<=e, the median is the 3rd term, so c = 8. The unique mode is 6, so 6 must appear more often than any other value; the only slots at or below the median available for 6 are a and b, so set a = b = 6 (6 now appears twice). Remaining: d + e = 45 - (6+6+8) = 25, with d >= c = 8. If d = 8, then 8 would appear twice, tying 6 and destroying the unique mode, so d must be at least 9. Minimizing d at 9 gives e = 25 - 9 = 16. List: 6, 6, 8, 9, 16 (mean 9, median 8, unique mode 6). Greatest largest value = 16. Answer: (B)."
+							},
+							"traps": [
+								"Letting d = 8 to push e higher (giving e = 17): this creates two 8s, so 6 is no longer the UNIQUE mode - 17 is the engineered trap answer.",
+								"Forgetting the median fixes the middle term, and instead treating '8' as the mean or as a value that can move.",
+								"Confusing median with mean when the list is not evenly spaced."
+							]
+						},
+						{
+							"name": "Standard deviation & variance",
+							"frequency": "medium",
+							"summary": "Measures of spread around the mean. On GMAT Focus you rarely compute an ugly SD; instead you compare which set is more spread out, or judge how adding/transforming values changes the SD. Occasionally a clean set is given whose SD is an integer.",
+							"formulas": [
+								"Mean (mu) = (sum of terms) / n",
+								"Variance = ( sum of (xi - mu)^2 ) / n   (population variance, the GMAT convention)",
+								"Standard deviation (SD) = sqrt(variance)",
+								"Adding a constant c to every term: mean shifts by c, SD is UNCHANGED.",
+								"Multiplying every term by a constant k: mean and SD are both multiplied by |k| (variance by k^2)."
+							],
+							"keyIdeas": [
+								"SD measures distance from the mean: sets whose values cluster tightly have small SD; sets with values far from the mean have large SD - often you can rank sets by inspection without arithmetic.",
+								"Shifting all values by the same amount (translation) never changes SD; only spreading or compressing does.",
+								"Adding a value exactly equal to the mean lowers the SD (it pulls the average squared distance down); adding an extreme value raises it.",
+								"If SD = 0, every element is identical."
+							],
+							"example": {
+								"q": "What is the standard deviation of the set {2, 4, 4, 4, 5, 5, 7, 9}? (A) 1 (B) 2 (C) 3 (D) 4 (E) 5",
+								"solution": "Mean = (2+4+4+4+5+5+7+9)/8 = 40/8 = 5. Deviations from the mean: -3, -1, -1, -1, 0, 0, 2, 4. Squared deviations: 9, 1, 1, 1, 0, 0, 4, 16, which sum to 32. Variance = 32/8 = 4. Standard deviation = sqrt(4) = 2. Answer: (B)."
+							},
+							"traps": [
+								"Reporting the variance (4) instead of the standard deviation (2) - 4 is placed as a trap option.",
+								"Dividing the squared-deviation sum by (n-1) = 7 instead of n = 8; the GMAT uses population SD, so divide by n.",
+								"Forgetting to square the deviations, or averaging the absolute deviations instead."
+							]
+						},
+						{
+							"name": "Permutations & combinations",
+							"frequency": "medium",
+							"summary": "Counting arrangements (order matters = permutations) versus selections (order does not = combinations). GMAT Focus problems hinge on correctly deciding order-vs-no-order and on using the complement or case-splitting for 'at least/at most' conditions.",
+							"formulas": [
+								"Permutations (order matters): nPr = n! / (n - r)!",
+								"Combinations (order does not matter): nCr = n! / ( r! (n - r)! )",
+								"Fundamental counting principle: if step 1 has a ways and step 2 has b ways, together there are a*b ways.",
+								"Complement: (ways satisfying 'at least one') = (total ways) - (ways with none)",
+								"nC0 = nCn = 1;  nCr = nC(n-r)"
+							],
+							"keyIdeas": [
+								"Ask 'does order matter?' first: a committee/team/handshake = combination; a ranking/seating/password = permutation.",
+								"For 'at least one' conditions, subtract the forbidden case from the total (complement) instead of summing many cases.",
+								"Break selection-with-conditions into independent choices and multiply (e.g. choose men AND choose women), then add across mutually exclusive cases.",
+								"Compute nCr by cancelling factorials early: 9C3 = (9*8*7)/(3*2*1) = 84, not by expanding 9!."
+							],
+							"example": {
+								"q": "A committee of 3 people is to be formed from a group of 5 men and 4 women. How many different committees include at least one woman? (A) 64 (B) 70 (C) 74 (D) 80 (E) 84",
+								"solution": "Total committees of 3 from all 9 people = 9C3 = (9*8*7)/(3*2*1) = 84. Committees with NO woman (all 3 men) = 5C3 = (5*4*3)/(3*2*1) = 10. At least one woman = total - none = 84 - 10 = 74. Answer: (C)."
+							},
+							"traps": [
+								"Computing 'exactly one woman' (4C1 * 5C2 = 4*10 = 40) instead of 'at least one woman' - misreading the condition.",
+								"Using permutations (order matters) and overcounting, since committee membership is unordered.",
+								"Leaving the total 84 (forgetting to remove the all-men case) as the answer - 84 is the engineered trap option."
+							]
+						},
+						{
+							"name": "Probability",
+							"frequency": "medium",
+							"summary": "The likelihood of events, computed as favorable outcomes over total outcomes, extended to combined events (and/or), complements, and dependent draws without replacement. GMAT Focus emphasizes precise reading of 'without replacement', 'at least', and 'or'.",
+							"formulas": [
+								"P(event) = (number of favorable outcomes) / (total number of equally likely outcomes)",
+								"P(A or B) = P(A) + P(B) - P(A and B)   (subtract overlap; for mutually exclusive events P(A and B)=0)",
+								"P(A and B) = P(A) * P(B)  for independent events;  = P(A) * P(B | A)  for dependent events",
+								"Complement: P(not A) = 1 - P(A)   (best route for 'at least one')",
+								"Without replacement: the denominator shrinks by 1 on each successive draw."
+							],
+							"keyIdeas": [
+								"For 'at least one', compute 1 - P(none); direct enumeration is usually longer and error-prone.",
+								"Distinguish with vs without replacement: without replacement, both the numerator count and the total drop after each draw.",
+								"'Same color / both / all' problems: sum the mutually exclusive cases (both red + both blue), each computed as a product of sequential probabilities.",
+								"Multiply along a single sequence of events (AND); add across separate mutually exclusive sequences (OR)."
+							],
+							"example": {
+								"q": "A bag contains 4 red marbles and 6 blue marbles. If two marbles are drawn at random without replacement, what is the probability that both marbles are the same color? (A) 1/3 (B) 2/5 (C) 7/15 (D) 8/15 (E) 3/5",
+								"solution": "There are two ways to get the same color. P(both red) = (4/10)(3/9) = 12/90. P(both blue) = (6/10)(5/9) = 30/90. These cases are mutually exclusive, so add: 12/90 + 30/90 = 42/90 = 7/15. Answer: (C)."
+							},
+							"traps": [
+								"Treating the draws as WITH replacement (using 4/10*4/10 + 6/10*6/10 = 52/100 = 13/25) - the second denominator must be 9, not 10.",
+								"Computing only one color (e.g. both blue = 1/3) and stopping - 1/3 is placed as a trap option.",
+								"Adding probabilities of overlapping events without subtracting the overlap in P(A or B) problems."
+							]
+						},
+						{
+							"name": "Sets & Venn diagrams",
+							"frequency": "medium",
+							"summary": "Overlapping-group counting via the inclusion-exclusion principle, usually with a 'neither' category. GMAT Focus tests two-set and occasionally three-set problems, and distinguishes 'only A', 'both', and 'at least one' precisely.",
+							"formulas": [
+								"Two sets: |A or B| = |A| + |B| - |A and B|",
+								"Total = |A| + |B| - |A and B| + (neither)",
+								"Three sets: |A or B or C| = |A|+|B|+|C| - |A and B| - |A and B... pairwise sums| + |A and B and C|  (subtract each pairwise overlap, add back the triple overlap)",
+								"Only A = |A| - (elements A shares with other sets);  for two sets, only A = |A| - |A and B|"
+							],
+							"keyIdeas": [
+								"Set up Total = (at least one) + (neither); solve for whichever piece is unknown.",
+								"Sort the given numbers into 'only', 'both', and 'neither' regions of a Venn diagram before answering - the question usually targets one specific region.",
+								"Inclusion-exclusion exists to correct double-counting: elements in the overlap were counted in both |A| and |B|, so subtract the overlap once.",
+								"For three sets, remember the triple overlap is subtracted three times by the pairwise terms, so it must be added back once."
+							],
+							"example": {
+								"q": "Of 120 students, 70 study Spanish, 45 study French, and 15 study neither language. How many students study both Spanish and French? (A) 5 (B) 10 (C) 15 (D) 20 (E) 25",
+								"solution": "Students studying at least one language = 120 - 15 (neither) = 105. By inclusion-exclusion, |Spanish or French| = |Spanish| + |French| - |both|, so 105 = 70 + 45 - |both| = 115 - |both|. Thus |both| = 115 - 105 = 10. Answer: (B)."
+							},
+							"traps": [
+								"Ignoring the 15 'neither' students and using 120 as 'at least one' (giving 70+45-120 = -5, an impossible value that signals the mistake).",
+								"Confusing 'both' with 'only one language' - the question asks for the overlap, not only-Spanish (60) or only-French (35).",
+								"In three-set problems, forgetting to add back the triple-overlap after subtracting the pairwise overlaps."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "gmat-verbal",
+			"name": "Verbal Reasoning",
+			"short": "VR",
+			"questions": 23,
+			"marks": 23,
+			"timeMinutes": 45,
+			"format": "Reading Comprehension + Critical Reasoning only (5-option MCQ). Sentence Correction was REMOVED in the Focus Edition.",
+			"topics": [
+				{
+					"id": "gmat-verbal-rc",
+					"name": "Reading Comprehension",
+					"weightPct": 50,
+					"priority": "highest",
+					"subtopics": [
+						{
+							"name": "Main idea & primary purpose",
+							"frequency": "high",
+							"summary": "Asks for the passage's central point or the author's overriding reason for writing (to describe, argue, critique, resolve, etc.). Nearly every GMAT Focus RC passage carries at least one of these, and the credited answer must cover the WHOLE passage, not one paragraph.",
+							"keyIdeas": [
+								"Answer must span the entire passage; if a choice only fits one paragraph or one detail, it is a trap.",
+								"Match the VERB: 'describe/explain' vs 'argue/advocate' vs 'refute/critique'. A descriptive passage rarely has an 'advocate' answer, and vice versa.",
+								"Predict the main idea in your own words BEFORE reading choices, then eliminate anything too narrow, too broad, or the wrong scope.",
+								"Watch for the older-view/newer-view structure: the main point is usually the shift or the author's stance on it, not either view alone."
+							],
+							"example": {
+								"q": "Historians long attributed the rapid growth of nineteenth-century American cities primarily to industrial employment. Recent scholarship, however, suggests that improvements in municipal water and sewer systems, by reducing mortality, contributed at least as significantly to urban population gains. Some researchers now argue that public-health infrastructure, rather than factory jobs alone, deserves primary credit.\n\nThe primary purpose of the passage is to\n(A) argue that industrial employment played no role in nineteenth-century urban growth\n(B) describe a shift in scholarly explanation for a historical phenomenon\n(C) compare mortality rates in cities with and without modern sewer systems\n(D) advocate for increased public investment in municipal water infrastructure\n(E) reconcile two competing theories into a single unified account",
+								"solution": "The passage lays out an older explanation (industrial employment) and then reports that recent scholarship credits public-health infrastructure 'at least as significantly.' Its work is to describe that change in explanation, so (B) is credited. (A) is too extreme: the passage says 'factory jobs alone' and 'at least as significantly,' never that industry played NO role. (C) names a detail the passage does not actually supply (no rates are compared) and is far too narrow to be the purpose. (D) turns a historical account into a present-day policy recommendation the author never makes. (E) fails because the author reports a challenge to the old view, not a reconciliation of the two into one account."
+							},
+							"traps": [
+								"Extreme answers ('no role,' 'entirely,' 'proves') that overstate a measured passage.",
+								"Too-narrow choices that correctly describe one sentence or paragraph but not the whole passage.",
+								"Wrong-verb choices: labeling a neutral, descriptive passage as one that 'advocates' or 'refutes.'"
+							]
+						},
+						{
+							"name": "Inference",
+							"frequency": "high",
+							"summary": "Asks what MUST be true given the passage, or what the author would most likely agree with, without being stated outright. The credited answer follows necessarily from the text; on the GMAT it is almost always a small, safe logical step, not a bold prediction.",
+							"keyIdeas": [
+								"Credited inference = 'must be true,' not 'could be true' or 'is probably true.' If you can imagine the passage true and the choice false, eliminate it.",
+								"Stay inside the passage's scope: reject choices that add outside knowledge, new comparisons, or causes/quantities the text never gives.",
+								"Contrast words ('until,' 'however,' 'unlike') are inference gold: what one side asserts implies its opposite about the other side.",
+								"Prefer weak, hedged language ('some,' 'at least,' 'need not') over strong absolutes when picking among choices."
+							],
+							"example": {
+								"q": "Until the 1970s, marine biologists assumed that deep-sea ecosystems depended entirely on organic matter drifting down from sunlit surface waters. The discovery of hydrothermal vent communities, which thrive on chemical energy from the seafloor, forced a reconsideration of this assumption.\n\nThe passage implies which of the following about deep-sea ecosystems as they were understood before the 1970s?\n(A) They were believed to be incapable of supporting complex life.\n(B) They were thought to rely on energy that originated near the ocean surface.\n(C) They were considered less biologically diverse than surface ecosystems.\n(D) They were assumed to derive their energy primarily from the seafloor.\n(E) They were known to contain organisms that use chemical energy.",
+								"solution": "Before the 1970s, scientists assumed deep-sea ecosystems depended 'entirely on organic matter drifting down from sunlit surface waters.' If the food supply drifts down from sunlit surface waters, then its energy originated near the surface, so (B) must be true. (A) adds an unsupported claim about 'complex life' and incapability. (C) introduces a diversity comparison the passage never makes. (D) states the NEW, post-vent understanding (energy from the seafloor) and so contradicts the pre-1970s assumption the question asks about. (E) is contradicted outright: chemical-energy communities were DISCOVERED in the 1970s, so they were not 'known' before."
+							},
+							"traps": [
+								"'Could be true'/plausible-sounding choices that are not forced by the text.",
+								"Reversal traps that state the new finding when the question asks about the old belief (or vice versa).",
+								"Choices that smuggle in outside knowledge or a comparison/quantity the passage never provides."
+							]
+						},
+						{
+							"name": "Supporting detail & fact",
+							"frequency": "medium",
+							"summary": "Asks what the passage explicitly states ('According to the passage...'). Unlike inference, the answer is directly stated, but it is paraphrased, and traps are built from nearby true-sounding statements the passage never actually makes.",
+							"keyIdeas": [
+								"Go back and locate the exact sentence; do not answer from memory. The right choice is a paraphrase of specific text.",
+								"Distractors reuse the passage's own words in a false relationship (right words, wrong claim) — verify the whole statement, not just the keywords.",
+								"Watch direction/comparison words: 'more/less,' 'before/after,' 'causes/results from' are the most common places a distractor flips the fact.",
+								"'According to the passage' means stated, not implied — do not reason beyond the text."
+							],
+							"example": {
+								"q": "The monarch butterfly's annual migration spans up to 3,000 miles, yet no single butterfly completes the round trip. Instead, the journey unfolds over three to four generations: the butterflies that begin the northward spring migration are the great-grandparents of those that return south in autumn. Only the final, southbound generation lives up to eight months, long enough to overwinter in Mexico; earlier generations live only a few weeks.\n\nAccording to the passage, which of the following is true of the generation of monarchs that migrates south in autumn?\n(A) It completes the entire round-trip migration of up to 3,000 miles.\n(B) It has a longer lifespan than the generations of that year that preceded it.\n(C) It consists of the great-grandparents of the spring migrants.\n(D) It begins the northward migration in spring.\n(E) It typically lives no more than a few weeks.",
+								"solution": "The passage states the final, southbound generation lives up to eight months while 'earlier generations live only a few weeks,' so the autumn generation lives longer than the earlier ones — (B) is directly supported. (A) contradicts 'no single butterfly completes the round trip.' (C) reverses the family relationship: the SPRING migrants are the great-grandparents OF the returning autumn butterflies, not the other way around. (D) is wrong because the northward spring migration is begun by a different (earlier) generation. (E) states the lifespan of the EARLIER generations, not the southbound one, so it misassigns the detail."
+							},
+							"traps": [
+								"Reversed relationships (who is whose ancestor, what causes what, which is larger).",
+								"Detail-swap: attributing to one group a fact the passage stated about another group.",
+								"Extreme quantifiers ('entirely,' 'always,' 'never') attached to a hedged statement in the text."
+							]
+						},
+						{
+							"name": "Function & structure",
+							"frequency": "medium",
+							"summary": "Asks WHY the author included a particular sentence, example, or paragraph, or how the passage is organized ('serves primarily to,' 'in order to'). The answer is the rhetorical role — to support, rebut, illustrate, concede, qualify — not the content itself.",
+							"keyIdeas": [
+								"Answer the question 'why is this here?' — the role, not a restatement of what the detail says.",
+								"Read the sentences immediately before and after the cited part; function is defined by how it connects to the surrounding argument.",
+								"Learn the role verbs: support, illustrate, rebut/counter, concede, qualify, introduce, contrast. Match the choice's verb to the logic.",
+								"An example given by one side usually functions to advance THAT side's claim or to answer the other side — track who is speaking."
+							],
+							"example": {
+								"q": "Proponents of the new zoning ordinance contend that it will lower housing costs by permitting denser construction. Critics counter that increased density, absent new transit investment, will merely intensify congestion. The ordinance's supporters, however, point to three comparable cities where density rose while commute times fell — evidence, they say, that congestion need not follow density.\n\nIn the passage, the reference to 'three comparable cities' functions primarily to\n(A) concede a genuine limitation of the proposed zoning ordinance\n(B) rebut the critics' objection by offering counterevidence\n(C) introduce a new argument against adopting the ordinance\n(D) explain why additional transit investment is necessary\n(E) summarize the central disagreement between the two sides",
+								"solution": "The critics claim density will intensify congestion; the supporters then cite three cities where density rose but commute times fell, offered as 'evidence' against that claim. Its role is therefore to rebut the critics with counterevidence — (B). (A) is the opposite of its function: the example defends, not concedes. (C) misidentifies the side — the example argues FOR the ordinance, not against it. (D) inverts the point: the cities are meant to show congestion 'need not follow,' undercutting the claim that transit investment is required, not explaining its necessity. (E) mislabels a specific piece of evidence as a neutral summary of the debate."
+							},
+							"traps": [
+								"Choices that restate what the detail SAYS instead of why it is there.",
+								"Wrong-side traps: assigning the detail to the opposing party's argument.",
+								"Swapping concede/support or support/rebut — right topic, wrong rhetorical direction."
+							]
+						},
+						{
+							"name": "Tone & author's attitude",
+							"frequency": "low",
+							"summary": "Asks how the author feels about the subject (approving, skeptical, neutral, critical). GMAT Focus authors are almost always measured, so the credited tone is usually mild and qualified; strongly emotional or one-sided labels are typically traps.",
+							"keyIdeas": [
+								"Anchor tone to evaluative wording — praise/criticism cues, hedges ('certainly, but'), and concessions signal a balanced, qualified attitude.",
+								"Prefer moderate two-part answers ('measured skepticism,' 'qualified approval') over pure-emotion extremes ('contempt,' 'enthusiasm,' 'outrage').",
+								"A passage that both grants a merit AND flags a flaw indicates a mixed/qualified stance, not wholesale approval or dismissal.",
+								"If the passage is purely reportorial with no evaluative words, the answer is neutral/objective — do not read in emotion that is not there."
+							],
+							"example": {
+								"q": "The latest biography hails its subject as a self-made visionary. Yet the author glosses over the substantial inherited wealth that financed the entrepreneur's early ventures, and treats every setback as the work of jealous rivals rather than of the subject's own miscalculations. The result is engaging, certainly — but readers seeking a balanced account will have to look elsewhere.\n\nThe author's attitude toward the biography can best be described as\n(A) unqualified admiration\n(B) dismissive contempt\n(C) measured skepticism\n(D) indifferent detachment\n(E) bitter resentment",
+								"solution": "The author grants a merit ('engaging, certainly') but faults the book for glossing over inherited wealth and shifting blame for setbacks, concluding it is not balanced. That is a mixed, critical-but-controlled stance: measured skepticism, (C). (A) ignores the sustained criticism. (B) overshoots — the author concedes the book is engaging, so this is not contempt or outright dismissal. (D) is wrong because the author is clearly engaged and evaluative, not indifferent. (E) attributes an intense personal emotion ('bitter,' 'resentment') that the controlled, analytical wording does not support."
+							},
+							"traps": [
+								"Pure-emotion extremes ('contempt,' 'resentment,' 'enthusiasm') where the text is measured.",
+								"One-sided labels ('unqualified admiration') that ignore a concession or a criticism.",
+								"Reading emotion into a neutral, purely descriptive passage."
+							]
+						},
+						{
+							"name": "Application & extension",
+							"frequency": "low",
+							"summary": "Gives a principle, criterion, or pattern from the passage and asks which NEW situation best fits it (or, occasionally, which new case the argument does not cover). Success depends on abstracting the passage's rule and testing each option against it.",
+							"keyIdeas": [
+								"Distill the passage's principle into a one-line test, then check each choice against that test literally.",
+								"The credited answer satisfies EVERY condition of the principle; a near-miss that meets most but not all conditions is the classic trap.",
+								"Right answers often come from a totally different subject area than the passage — do not reject a choice just because its topic feels unrelated.",
+								"For 'which would the author consider an exception/does NOT apply,' invert the test and find the case that violates one condition."
+							],
+							"example": {
+								"q": "A firm exhibits a 'network effect' when each additional user makes the product more valuable to existing users, as with a telephone system: one phone is useless if no one else owns one, but the network grows more useful as it expands. Products with strong network effects tend to concentrate market share, because users gravitate toward whichever platform already has the most participants.\n\nBased on the passage, which of the following products would most likely exhibit a strong network effect?\n(A) A brand of bottled water sold in single-serving bottles\n(B) A messaging platform whose usefulness depends on how many of a user's contacts can be reached through it\n(C) A limited-edition art print sold to a single private collector\n(D) A prescription medication taken privately by individual patients\n(E) A hardcover novel read independently by each of its readers",
+								"solution": "The principle: a product has a network effect when its value to each user RISES as more people use it. Test each choice. (B) fits exactly — a messaging platform is more useful the more of your contacts are reachable on it, so more users increase every user's value. That is credited. (A) bottled water's value to a buyer is independent of how many others buy it. (C) a single collector means there are no other users whose participation could add value. (D) medication is taken privately; one patient's use does not raise its value to another. (E) a novel is read independently, so additional readers do not make it more valuable to existing readers. Only (B) satisfies the 'more users, more value' condition."
+							},
+							"traps": [
+								"Near-miss choices that share the passage's topic but fail one condition of the principle.",
+								"Rejecting the correct answer because its subject matter differs from the passage's example.",
+								"Choosing a merely 'popular' or 'widely used' product when the principle actually requires value to increase WITH the number of users."
+							]
+						}
+					]
+				},
+				{
+					"id": "gmat-verbal-cr",
+					"name": "Critical Reasoning",
+					"weightPct": 50,
+					"priority": "highest",
+					"subtopics": [
+						{
+							"name": "Assumption",
+							"frequency": "high",
+							"summary": "You must find the unstated premise the argument NEEDS to be true to hold together. On the GMAT Focus Verbal section this is one of the most common CR types; the correct answer is a small, necessary bridge between the evidence and the conclusion, never a big new claim.",
+							"keyIdeas": [
+								"Split the argument into conclusion and premises, then ask 'what gap must be filled for the premises to force the conclusion?'",
+								"Use the Negation Test: negate the answer choice. If the negated version destroys the argument, it is the required assumption; if the argument survives, it is not necessary.",
+								"The right answer is usually modest ('will not drop enough to...', 'no other factor...'), not sweeping. Distrust extreme words like 'all', 'only', 'most' unless the logic truly demands them.",
+								"Watch for the two classic gaps: per-unit vs. total (margin vs. volume) and the assumption that no alternative cause is at work."
+							],
+							"example": {
+								"q": "The Bayview Cafe plans to increase its profits by closing its dining room and switching entirely to takeout. The cafe's managers note that each takeout order currently earns a higher profit margin than each dine-in order, so serving only takeout will raise the cafe's overall profits.\n\nThe argument depends on which of the following assumptions?\n(A) Takeout food is less expensive for the cafe to prepare than dine-in food.\n(B) Eliminating the dining room will not reduce the cafe's total sales by enough to outweigh the higher per-order profit margin on takeout.\n(C) No competing restaurant nearby offers a takeout service comparable to the cafe's.\n(D) The cafe's staff can prepare takeout orders more quickly than dine-in orders.\n(E) Most of the cafe's current customers already prefer takeout to dining in.",
+								"solution": "Conclusion: switching to takeout-only will raise overall profits. Evidence: each takeout order has a higher profit margin than each dine-in order. The gap is per-order margin vs. TOTAL profit: higher margin per order does not guarantee higher total profit if closing the dining room drives many customers away and total volume collapses. (B) fills exactly that gap. Negate it: 'eliminating the dining room WILL cut total sales by enough to outweigh the higher margin' — then profits fall and the conclusion dies, so (B) is required. (A) merely restates information already implied by the margin premise; it adds no necessary bridge. (C) is too strong and out of scope — the plan can still work even if competitors offer takeout. (D) speed is irrelevant to the profit conclusion. (E) is not needed: even if most customers prefer dine-in, the plan can succeed as long as enough of them still order takeout, which is what (B) captures more precisely.",
+								"options": [
+									"(A) Takeout food is less expensive for the cafe to prepare than dine-in food.",
+									"(B) Eliminating the dining room will not reduce the cafe's total sales by enough to outweigh the higher per-order profit margin on takeout.",
+									"(C) No competing restaurant nearby offers a takeout service comparable to the cafe's.",
+									"(D) The cafe's staff can prepare takeout orders more quickly than dine-in orders.",
+									"(E) Most of the cafe's current customers already prefer takeout to dining in."
+								],
+								"answer": "B"
+							},
+							"traps": [
+								"Restatement trap: a choice that just repeats a premise in new words feels safe but is not an assumption (it adds no new required link).",
+								"Too-strong scope: 'no competitor', 'all customers', 'only' — the argument rarely needs an absolute; the negation test exposes these as unnecessary.",
+								"Right-topic-wrong-direction: a choice that would actually weaken the plan (or is merely a bonus, not a requirement)."
+							]
+						},
+						{
+							"name": "Strengthen",
+							"frequency": "high",
+							"summary": "You add a new fact that makes the conclusion MORE likely to be true — typically by confirming the argument's assumption or, in causal arguments, by ruling out an alternative explanation. The GMAT loves cause-and-effect conclusions drawn from a correlation; the best strengthener usually eliminates a competing cause.",
+							"keyIdeas": [
+								"Identify the conclusion and the assumption; the credited answer defends that assumption.",
+								"For 'X caused Y' arguments, strengthen by ruling out other causes, showing the cause preceded the effect, or presenting a control group where the cause was absent and the effect did not occur.",
+								"The answer need not prove the conclusion — it only has to push the needle. Compare choices by which moves it more.",
+								"Ignore choices that are merely consistent with the conclusion but add no support (background facts, restatements)."
+							],
+							"example": {
+								"q": "Over the past year, GreenLeaf Grocery posted small signs describing the environmental benefits of plant-based foods next to its produce section. Sales of plant-based foods at the store rose 30% during that year. GreenLeaf concludes that the signs caused the increase and plans to add similar signs in all of its stores.\n\nWhich of the following, if true, most strengthens the argument?\n(A) GreenLeaf's total grocery sales rose about 5% over the same year.\n(B) At other grocery stores in the same region that did not post such signs, sales of plant-based foods stayed roughly flat over the same year.\n(C) Many GreenLeaf customers say they enjoy the taste of plant-based foods.\n(D) The signs were printed on recycled paper to reflect their message.\n(E) GreenLeaf's plant-based foods are priced higher than the comparable animal products it sells.",
+								"solution": "The conclusion is causal: the signs caused the 30% jump. The main threat is an alternative cause — maybe a region-wide surge in demand for plant-based foods lifted sales everywhere. (B) is a control group: comparable stores WITHOUT the signs saw flat sales, so the region-wide-trend explanation is undercut and the signs stand out as the likely cause. That directly strengthens. (A) shows plant-based sales outpaced overall sales, which is mildly suggestive but does not rule out that a general plant-based food trend (not the signs) drove the gain — weaker than (B). (C) is background that does not tie the rise to the signs. (D) is irrelevant to what caused the sales change. (E) if anything works against the claim, since higher prices would tend to suppress sales. Best answer: (B).",
+								"options": [
+									"(A) GreenLeaf's total grocery sales rose about 5% over the same year.",
+									"(B) At other grocery stores in the same region that did not post such signs, sales of plant-based foods stayed roughly flat over the same year.",
+									"(C) Many GreenLeaf customers say they enjoy the taste of plant-based foods.",
+									"(D) The signs were printed on recycled paper to reflect their message.",
+									"(E) GreenLeaf's plant-based foods are priced higher than the comparable animal products it sells."
+								],
+								"answer": "B"
+							},
+							"traps": [
+								"Half-strengtheners: a choice consistent with the conclusion but that leaves the main alternative cause standing (like (A)) will lose to one that eliminates it.",
+								"Background restatement: pleasant, on-topic facts (taste, packaging) that add no logical support.",
+								"Reverse-direction: a fact that actually undercuts the conclusion slipped in among the options."
+							]
+						},
+						{
+							"name": "Weaken",
+							"frequency": "high",
+							"summary": "You add a new fact that makes the conclusion LESS likely — most powerfully by exposing an alternative cause, a confounding variable, or a broken link between evidence and conclusion. The GMAT's favorite weakener attacks a causal claim built on a correlation by pointing to a lurking third factor.",
+							"keyIdeas": [
+								"Attack the conclusion, not a premise you must accept as given. Ask 'what would have to be true for this conclusion to fail?'",
+								"For causal claims, the strongest weakener names a plausible alternative cause or shows the two groups differed in another relevant way (selection bias / confounder).",
+								"Do not fall for choices that merely fail to strengthen; a real weakener actively cuts against the conclusion.",
+								"Beware misreading the exact claim — 'reduces risk' means fewer, not zero; a choice noting some people still got sick does not weaken it."
+							],
+							"example": {
+								"q": "A supplement maker found that customers who took its new product, VitaBoost, reported fewer colds last winter than customers who did not take it. The company concludes that VitaBoost reduces a person's risk of catching a cold.\n\nWhich of the following, if true, most weakens the argument?\n(A) VitaBoost contains vitamin C, which some studies associate with immune function.\n(B) The customers who chose to take VitaBoost were also far more likely than non-takers to wash their hands frequently and get flu vaccinations, habits that independently lower cold risk.\n(C) VitaBoost costs more than most competing supplements on the market.\n(D) Some customers who took VitaBoost still caught at least one cold during the winter.\n(E) The comparison covered only a single winter season.",
+								"solution": "The conclusion is causal: VitaBoost reduces cold risk, inferred from a correlation (takers reported fewer colds). (B) supplies a confounder: the takers were systematically healthier in OTHER ways (handwashing, vaccination) that on their own reduce colds, so their fewer colds may have nothing to do with VitaBoost. That is a direct alternative cause and the strongest weakener. (A) supports the claim, if anything. (C) price is irrelevant to whether it works. (D) misreads the claim — 'reduces risk' does not mean nobody gets a cold, so some takers still catching colds is fully consistent with the conclusion. (E) a single season raises a mild reliability doubt but offers no reason the effect is not real; it is far weaker than naming a concrete confounder. Best answer: (B).",
+								"options": [
+									"(A) VitaBoost contains vitamin C, which some studies associate with immune function.",
+									"(B) The customers who chose to take VitaBoost were also far more likely than non-takers to wash their hands frequently and get flu vaccinations, habits that independently lower cold risk.",
+									"(C) VitaBoost costs more than most competing supplements on the market.",
+									"(D) Some customers who took VitaBoost still caught at least one cold during the winter.",
+									"(E) The comparison covered only a single winter season."
+								],
+								"answer": "B"
+							},
+							"traps": [
+								"Claim-misread: a choice that attacks a stronger claim than the argument actually made ('some still got a cold' vs. 'reduces risk').",
+								"Wrong-direction: a choice that quietly supports the conclusion (the vitamin C option).",
+								"Vague doubt: 'only one season / small sample' feels critical but does not identify a real flaw and loses to a concrete alternative cause."
+							]
+						},
+						{
+							"name": "Evaluate the argument",
+							"frequency": "medium",
+							"summary": "You pick the QUESTION whose answer would most help judge whether the argument is sound. The credited choice is a variable that swings the argument both ways: one answer to it strengthens the conclusion, the opposite answer weakens it. It often probes a hidden alternative cause.",
+							"keyIdeas": [
+								"Apply the 'Variance Test': imagine each answer to the question resolved both ways. If one way helps the argument and the other way hurts it, that choice is correct; if the argument is unaffected either way, eliminate it.",
+								"The right question usually targets the same gap you would attack to weaken — most often a competing explanation the author ignored.",
+								"Reject questions about cost, feasibility, or future plans; they do not test whether the reasoning holds.",
+								"Watch for 'baseline already given' traps — a question asking for data the stimulus effectively already supplied."
+							],
+							"example": {
+								"q": "The town of Millbrook installed a roundabout at its busiest intersection last year to cut collisions there. In the year since, collisions at that intersection have fallen 40%. The town's traffic engineer concludes that the roundabout caused the decline and recommends building roundabouts at other intersections.\n\nWhich of the following would be most useful to evaluate the engineer's conclusion?\n(A) Whether the volume of traffic passing through the intersection was about the same in the year after the roundabout as in the year before.\n(B) Whether the roundabout was more expensive to build than installing a traffic signal would have been.\n(C) Whether drivers find roundabouts more confusing than traffic signals.\n(D) How many collisions occurred at that intersection in the years before the roundabout was installed.\n(E) Whether the town plans to install roundabouts at intersections that carry light traffic.",
+								"solution": "The conclusion credits the roundabout for the 40% drop in collisions. A key alternative cause is a change in how many cars use the intersection. (A) targets exactly that: if traffic volume stayed the same, fewer collisions points to the roundabout (strengthens); if volume plunged — say a nearby road closed and diverted cars — then fewer collisions could simply reflect fewer cars, not the roundabout (weakens). Because the two possible answers swing the argument in opposite directions, (A) passes the Variance Test. (B) cost and (E) future plans do not bear on whether the roundabout caused the decline. (C) driver opinion does not settle the collision count. (D) looks useful but the '40% fall' already implies the earlier baseline, so it adds little and does not isolate the cause. Best answer: (A).",
+								"options": [
+									"(A) Whether the volume of traffic passing through the intersection was about the same in the year after the roundabout as in the year before.",
+									"(B) Whether the roundabout was more expensive to build than installing a traffic signal would have been.",
+									"(C) Whether drivers find roundabouts more confusing than traffic signals.",
+									"(D) How many collisions occurred at that intersection in the years before the roundabout was installed.",
+									"(E) Whether the town plans to install roundabouts at intersections that carry light traffic."
+								],
+								"answer": "A"
+							},
+							"traps": [
+								"One-directional questions: a choice whose answer helps only if it comes out one way (or never changes the verdict) fails the Variance Test.",
+								"Cost/feasibility/future-plan questions that feel relevant to a decision but do not test the argument's logic.",
+								"Redundant-baseline questions asking for information the stimulus already provided."
+							]
+						},
+						{
+							"name": "Inference (must be true)",
+							"frequency": "high",
+							"summary": "You choose the statement that MUST be true given the facts — a conclusion the passage forces, not merely one it makes plausible. Unlike Strengthen/Weaken, no new outside information is added; the answer stays tightly within what was stated, and conditional logic (if/then) is common.",
+							"keyIdeas": [
+								"The credited answer is provable from the text. If you can imagine the statements true but the choice false, eliminate it.",
+								"For conditional stimuli, the safe deductions are the statement itself and its contrapositive (A->B gives not-B->not-A). Reject the converse (B->A) and inverse (not-A->not-B).",
+								"Distrust quantity and degree words the passage did not license: 'most', 'all', 'only', 'always' are frequent overreaches.",
+								"Prefer the weaker, more cautious choice; the answer is often a modest, almost boring restatement of a locked-in consequence."
+							],
+							"example": {
+								"q": "Every employee at Trenton Manufacturing who received a performance bonus last quarter had also completed the company's advanced safety-training course. No employee in the assembly division completed that course last quarter.\n\nIf the statements above are true, which of the following must also be true?\n(A) Every employee who completed the safety-training course received a performance bonus.\n(B) No employee in the assembly division received a performance bonus last quarter.\n(C) Most employees who received a bonus worked outside the assembly division.\n(D) The safety-training course was open only to employees outside the assembly division.\n(E) Some employees who completed the course did not receive a bonus.",
+								"solution": "Translate: bonus -> completed course. Second fact: every assembly-division employee did NOT complete the course. Apply the contrapositive of the first statement (did not complete course -> no bonus): since no assembly-division employee completed the course, no assembly-division employee received a bonus. That is exactly (B), which must be true. (A) is the converse error — completing the course does not guarantee a bonus. (C) 'most' introduces a quantity the text never gives; we know assembly got zero bonuses, but nothing about the proportions among bonus recipients. (D) confuses 'did not complete' with 'was not allowed to' — the course could have been open to assembly employees who simply did not take it. (E) is unsupported — the facts leave open whether every course-completer got a bonus or not. Only (B) is forced.",
+								"options": [
+									"(A) Every employee who completed the safety-training course received a performance bonus.",
+									"(B) No employee in the assembly division received a performance bonus last quarter.",
+									"(C) Most employees who received a bonus worked outside the assembly division.",
+									"(D) The safety-training course was open only to employees outside the assembly division.",
+									"(E) Some employees who completed the course did not receive a bonus."
+								],
+								"answer": "B"
+							},
+							"traps": [
+								"Converse/inverse of a conditional: swapping or negating the if/then wrongly (the classic (A) here).",
+								"Quantity overreach: 'most/all/only' when the passage supports just 'some' or 'none'.",
+								"Could-be-true dressed as must-be-true: a plausible statement the facts neither force nor rule out."
+							]
+						},
+						{
+							"name": "Explain the paradox",
+							"frequency": "medium",
+							"summary": "The stimulus presents two facts that seem to conflict (a surprising result, a discrepancy). You pick the choice that makes BOTH facts true at once by supplying the missing piece. The right answer resolves the tension without contradicting anything stated.",
+							"keyIdeas": [
+								"Pin down the exact two things in tension, then look for a choice that lets both stand simultaneously.",
+								"The answer typically introduces an overlooked factor — a change in volume, a difference between the groups, or a hidden cost/benefit — that reconciles them.",
+								"Reject choices that deepen the mystery, take a side, or are merely on-topic but do not bridge the two facts.",
+								"For revenue/count paradoxes, remember total = per-unit x quantity: a change in one can be swamped by the other."
+							],
+							"example": {
+								"q": "When the city doubled the fee for parking in its downtown garages, officials expected revenue from those garages to rise. Instead, in the year after the increase, total revenue from the downtown garages fell.\n\nWhich of the following, if true, most helps to explain the drop in revenue?\n(A) The city used the additional per-car fee revenue to fund improvements to public transit.\n(B) After the fee increase, the number of cars using the downtown garages fell by more than half.\n(C) Parking fees in the neighboring city also rose during the same period.\n(D) The downtown garages had been renovated the year before the fee was increased.\n(E) Some drivers complained that the new parking fee was too high.",
+								"solution": "The puzzle: the per-car fee doubled, yet total garage revenue FELL. Total revenue = fee per car x number of cars, so a large enough drop in the number of cars can more than offset a higher fee. (B) supplies exactly that: usage fell by more than half, so even at double the fee, total revenue declines (e.g., 100 cars at $10 = $1,000 becomes 40 cars at $20 = $800). Both facts now hold together. (A) concerns how revenue was spent, not why it dropped. (C) a neighboring increase would tend to keep drivers parking downtown, if anything deepening the paradox. (D) prior renovation is irrelevant to the year-over-year revenue fall. (E) complaints alone do not reduce revenue unless drivers actually stopped parking, which the vague statement never establishes; (B) quantifies the behavior change and resolves the discrepancy. Best answer: (B).",
+								"options": [
+									"(A) The city used the additional per-car fee revenue to fund improvements to public transit.",
+									"(B) After the fee increase, the number of cars using the downtown garages fell by more than half.",
+									"(C) Parking fees in the neighboring city also rose during the same period.",
+									"(D) The downtown garages had been renovated the year before the fee was increased.",
+									"(E) Some drivers complained that the new parking fee was too high."
+								],
+								"answer": "B"
+							},
+							"traps": [
+								"Vague behavior claims ('some complained') that suggest a reason but never establish the change in quantity needed to resolve the numbers.",
+								"Deepens-the-paradox choices that would make the surprising result even more puzzling.",
+								"On-topic-but-inert facts (how money was spent, prior renovations) that never connect the two conflicting statements."
+							]
+						},
+						{
+							"name": "Boldface & argument structure",
+							"frequency": "medium",
+							"summary": "Two portions of the passage are printed in boldface and you identify the ROLE each plays (evidence, conclusion, opposing position, counter-consideration, etc.). These appear at higher difficulty on the GMAT Focus Verbal section and reward mapping the argument's skeleton before reading the choices.",
+							"keyIdeas": [
+								"First, find the author's own conclusion and stance; then label each boldface relative to it — does it support the author, oppose the author, or is it a fact the author interprets?",
+								"Track the connective words: 'but', 'however', 'yet' usually flip from one side to the author's side; 'because', 'since', 'after all' signal support.",
+								"Prescreen answer choices by verbs: rule out any that mislabel a boldface (e.g., calling a piece of evidence 'the conclusion') before weighing fine distinctions.",
+								"A boldface can belong to a view the author argues AGAINST — do not assume both boldfaces are on the same side."
+							],
+							"example": {
+								"q": "In the argument below, the two portions in boldface are shown between double asterisks.\n\nFor decades, conventional wisdom held that a company's stock price rises when it announces layoffs, because investors reward cost-cutting. **A recent analysis of 500 layoff announcements found that, on average, the announcing companies' share prices declined over the following year.** Some analysts treat this as proof that layoffs destroy shareholder value. But that conclusion may be premature: **many of the companies studied announced layoffs precisely because they were already in financial trouble, which by itself could account for the weak share performance.**\n\nIn the argument, the two boldface portions play which of the following roles?\n(A) The first is the author's main conclusion; the second is evidence offered in support of that conclusion.\n(B) The first is a finding that has been used to support a position the author questions; the second is a consideration the author raises to call that position into doubt.\n(C) The first is evidence supporting the author's position; the second states that position.\n(D) The first states the author's position; the second is an objection that the author goes on to reject.\n(E) The first and the second each provide independent support for the same conclusion.",
+								"solution": "Map the argument first. The author's stance appears after 'But that conclusion may be premature' — the author DOUBTS the claim that layoffs destroy shareholder value. Boldface 1 is the analysis finding (share prices fell); 'some analysts' use it to support the claim the author questions, so it is evidence for a position the author disputes. Boldface 2 is the author's counter — an alternative explanation (the firms were already troubled) offered to undercut that position. That matches (B) exactly. (A) and (C) wrongly call one of the boldfaces the author's conclusion or evidence for it, but boldface 1 supports the OPPOSING view and boldface 2 is a doubt, not the author's stated main conclusion. (D) reverses the roles — the first is not the author's position, and the author does not reject the second, he endorses it. (E) is wrong because the two boldfaces support opposing sides, not the same conclusion. Best answer: (B).",
+								"options": [
+									"(A) The first is the author's main conclusion; the second is evidence offered in support of that conclusion.",
+									"(B) The first is a finding that has been used to support a position the author questions; the second is a consideration the author raises to call that position into doubt.",
+									"(C) The first is evidence supporting the author's position; the second states that position.",
+									"(D) The first states the author's position; the second is an objection that the author goes on to reject.",
+									"(E) The first and the second each provide independent support for the same conclusion."
+								],
+								"answer": "B"
+							},
+							"traps": [
+								"Mislabeling evidence as the conclusion (or vice versa) — the fastest way to fall for (A)/(C).",
+								"Assuming both boldfaces defend the same side when one actually belongs to a view the author opposes.",
+								"Reversed-role choices that swap which boldface the author supports and which he doubts."
+							]
+						},
+						{
+							"name": "Flawed reasoning",
+							"frequency": "medium",
+							"summary": "You identify the logical flaw that makes an argument vulnerable — the question usually reads 'the argument is most vulnerable to criticism on the grounds that it...'. The answer names a reasoning error (attacking the source, confusing correlation with cause, overlooking an alternative, unwarranted generalization) in abstract terms.",
+							"keyIdeas": [
+								"Name the fallacy in your own words before reading choices, then match: common ones are ad hominem (attacking the arguer), causation-from-correlation, sampling/generalization errors, and equivocation.",
+								"The answer must describe the ARGUER's reasoning error, not simply state a true criticism of the underlying topic.",
+								"Distinguish 'dismissing a claim' from 'asserting the opposite claim' — a choice that overstates what the arguer concluded is a trap.",
+								"Abstract answer choices are the norm; test each against what the argument actually did, discarding any flaw the argument did not commit."
+							],
+							"example": {
+								"q": "A newspaper columnist wrote: 'The mayor claims that her new economic policies caused the city's unemployment rate to fall last year. But the mayor is a politician seeking reelection, so her claim that the policies helped should be dismissed.'\n\nThe columnist's argument is most vulnerable to criticism on the grounds that it\n(A) rejects a claim merely because of the motives or position of the person who made it, rather than addressing the evidence for the claim.\n(B) fails to consider that a city's unemployment rate can be affected by national economic conditions.\n(C) assumes without justification that the mayor's policies had no effect on unemployment.\n(D) relies on unemployment statistics that may have been gathered improperly.\n(E) treats an effect as though it were a cause.",
+								"solution": "The columnist dismisses the mayor's claim solely because she is a politician who wants reelection — an attack on the source rather than on the claim's merits (the ad hominem fallacy). (A) describes exactly that error, so it is the credited answer. (B) is a legitimate real-world point about unemployment, but it criticizes the mayor's claim, not the columnist's reasoning, which is what the question asks about. (C) overstates the columnist's conclusion: he says the claim should be DISMISSED, which is not the same as asserting the policies had NO effect — dismissing a claim for lack of credibility is different from proving the opposite. (D) no issue with how the statistics were gathered is raised in the argument. (E) there is no reversal of cause and effect in the columnist's reasoning. Best answer: (A).",
+								"options": [
+									"(A) rejects a claim merely because of the motives or position of the person who made it, rather than addressing the evidence for the claim.",
+									"(B) fails to consider that a city's unemployment rate can be affected by national economic conditions.",
+									"(C) assumes without justification that the mayor's policies had no effect on unemployment.",
+									"(D) relies on unemployment statistics that may have been gathered improperly.",
+									"(E) treats an effect as though it were a cause."
+								],
+								"answer": "A"
+							},
+							"traps": [
+								"True-but-off-target: a valid criticism of the topic (national economy) that is not the arguer's logical flaw.",
+								"Overstated conclusion: treating 'the claim should be dismissed' as 'the opposite is proven' (choice C).",
+								"Naming a fallacy the argument never commits (bad data, cause/effect reversal) just because it sounds like standard CR language."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "gmat-di",
+			"name": "Data Insights",
+			"short": "DI",
+			"questions": 20,
+			"marks": 20,
+			"timeMinutes": 45,
+			"format": "Five formats mixing quant, verbal & data literacy. Now weighed EQUALLY into the total score — the signature Focus Edition section.",
+			"topics": [
+				{
+					"id": "gmat-di-ds",
+					"name": "Data Sufficiency",
+					"weightPct": 30,
+					"priority": "highest",
+					"subtopics": [
+						{
+							"name": "The answer-choice framework",
+							"frequency": "high",
+							"summary": "Every Data Sufficiency question in the Data Insights section uses the same five fixed answer choices (A-E); your only job is to decide whether the statements give ENOUGH information to answer the stem, never to compute the final answer. Owning the fixed choices and a disciplined order of testing is the whole game.",
+							"formulas": [
+								"A = (1) alone sufficient, (2) alone not; B = (2) alone sufficient, (1) alone not; C = both together sufficient, neither alone; D = each alone sufficient; E = not sufficient even together.",
+								"AD / BCE decision tree: if (1) is sufficient, the answer is A or D; if (1) is not, the answer is B, C, or E."
+							],
+							"keyIdeas": [
+								"Memorize the choices cold so you spend zero time re-reading them: A and B are 'one alone', C is 'need both', D is 'either alone', E is 'neither, even together'.",
+								"Use the AD/BCE grid: test (1) first. Sufficient -> A or D. Not sufficient -> B, C, or E. Then test (2) to land on the exact letter mechanically.",
+								"Evaluate each statement in complete isolation: never let a fact from statement (1) carry into your test of statement (2).",
+								"You only need to know that a unique value (or a definite yes/no) EXISTS - you do not need to find it. Stop the instant sufficiency is decided."
+							],
+							"example": {
+								"q": "What is the value of x? (1) 3x - 7 = 11 (2) x^2 - 8x + 12 = 0",
+								"solution": "Statement (1): 3x - 7 = 11 -> 3x = 18 -> x = 6, exactly one value -> SUFFICIENT (so the answer is A or D). Statement (2): x^2 - 8x + 12 = 0 -> (x - 2)(x - 6) = 0 -> x = 2 or x = 6, two possible values -> NOT sufficient. (1) sufficient, (2) not -> answer A."
+							},
+							"traps": [
+								"Seeing statement (1) work and picking D without ever testing (2) alone (or the reverse).",
+								"Mixing up A and B: statement (1) is always the first statement listed - keep the order straight.",
+								"Treating 'has an equation' as 'is sufficient': a quadratic usually yields two solutions and is often insufficient for a value question."
+							]
+						},
+						{
+							"name": "Value questions",
+							"frequency": "high",
+							"summary": "The stem asks for a specific quantity ('What is the value of ...?'). A statement is sufficient ONLY if it narrows the target to exactly one possible value; if two or more legal values survive, it is insufficient.",
+							"formulas": [
+								"Average (arithmetic mean) = (sum of terms) / (number of terms), so knowing the sum alone is enough for the mean.",
+								"To pin n unknowns you generally need n independent linear equations; a single quadratic or |absolute-value| equation often leaves 2 candidate values."
+							],
+							"keyIdeas": [
+								"Solve for the EXACT expression the stem asks for - you can often determine x + y (or a ratio) without ever finding x and y individually.",
+								"One value = sufficient; a range or two-plus values = insufficient. Prove insufficiency by producing two different legal values.",
+								"Mine the stem for hidden constraints (positive, integer, nonzero) that can collapse two candidates down to one and flip a statement to sufficient."
+							],
+							"example": {
+								"q": "What is the value of x + y? (1) 2x + 2y = 20 (2) x - y = 4",
+								"solution": "Statement (1): 2x + 2y = 20 -> divide by 2 -> x + y = 10. The stem asks only for x + y, which is fixed at 10 even though x and y individually are unknown -> SUFFICIENT (answer A or D). Statement (2): x - y = 4 gives no handle on x + y (e.g. x=5, y=1 -> x+y=6; x=6, y=2 -> x+y=8) -> NOT sufficient. (1) sufficient, (2) not -> answer A."
+							},
+							"traps": [
+								"Rejecting statement (1) because you 'can't find x and y separately' - you don't need them, only the requested combination x + y.",
+								"Counting a quadratic or an absolute-value equation as one value when it actually delivers two.",
+								"Assuming two unknowns always require two equations; a single proportional equation can hand you the requested combined value alone."
+							]
+						},
+						{
+							"name": "Yes/No questions",
+							"frequency": "high",
+							"summary": "The stem asks a yes/no question ('Is n even?', 'Is x > 0?'). A statement is sufficient when it forces a single definite answer for EVERY allowed case - always YES or always NO. A definite NO is exactly as sufficient as a definite YES; only 'sometimes yes, sometimes no' is insufficient.",
+							"formulas": [
+								"Odd power keeps the sign: x^3 > 0 <=> x > 0; even power hides it: x^2 > 0 only tells you x != 0.",
+								"even x anything = even; odd x odd = odd; even + even = even, odd + odd = even, even + odd = odd."
+							],
+							"keyIdeas": [
+								"Sufficiency means a CONSISTENT answer, not a positive one - a statement that guarantees 'No' every time is fully sufficient.",
+								"Run the two-case test: try to make the answer YES with one legal value and NO with another. If you succeed, that statement is insufficient.",
+								"Plug in strategic numbers - 0, 1, a fraction, and a negative - to expose statements that only behave for 'nice' positive integers."
+							],
+							"example": {
+								"q": "Is x > 5? (1) x^2 > 25 (2) x < 2",
+								"solution": "Statement (1): x^2 > 25 -> x > 5 OR x < -5. So x could be 6 (Yes) or -6 (No) -> sometimes yes, sometimes no -> NOT sufficient. Statement (2): x < 2 means x can never exceed 5, so the answer is a definite 'No' in every case -> a consistent answer -> SUFFICIENT. (1) not sufficient, (2) sufficient -> answer B."
+							},
+							"traps": [
+								"Thinking a statement that always yields 'No' is insufficient - a consistent NO answers the question just as well as YES.",
+								"Forgetting the negative branch of a square root or even power (x^2 > 25 also allows x < -5).",
+								"Testing only positive integers and missing the fraction or negative that flips the answer."
+							]
+						},
+						{
+							"name": "C-trap & sufficiency pitfalls",
+							"frequency": "high",
+							"summary": "The C-trap is the single most common DS mistake: you pick C (both statements together) because combining feels safe, when one statement alone was already sufficient (A, B, or D) - or when even together they stay insufficient (E). The cure is disciplined isolation: fully test each statement alone before you ever combine.",
+							"keyIdeas": [
+								"Finish the question 'is (1) alone enough?' and then 'is (2) alone enough?' BEFORE combining - combining is the last resort, not the default move.",
+								"Choose C only after proving BOTH that neither statement alone works AND that together they pin a unique value or definite yes/no.",
+								"Watch the mirror E-trap: two insufficient statements combined are not automatically sufficient - confirm that together they eliminate every other case.",
+								"A statement can look 'incomplete' yet already be sufficient; seemingly-needed information in the other statement is often just bait for C."
+							],
+							"example": {
+								"q": "What is the two-digit positive integer n? (1) The sum of the digits of n is 9. (2) n is a multiple of 9 between 40 and 50.",
+								"solution": "Statement (1): digit sum 9 -> n could be 18, 27, 36, 45, 54, 63, 72, 81, or 90 -> many values -> NOT sufficient. Statement (2): multiples of 9 between 40 and 50 -> only 45 -> exactly one value -> SUFFICIENT ALONE. Since (2) already fixes n = 45, statement (1) adds nothing you actually need. (1) not sufficient, (2) sufficient -> answer B. The C-trap is to pair the 'digit-sum' clue with the 'range' clue and pick C, but statement (2) stands on its own."
+							},
+							"traps": [
+								"Defaulting to C because using both statements 'obviously' answers the question, without ever checking each one alone (the classic C-trap).",
+								"Picking E when the combined statements do resolve it, or picking C when combined statements still leave two cases (should be E).",
+								"Letting a fact from statement (1) leak into your evaluation of statement (2), making (2) look sufficient when by itself it is not."
+							]
+						}
+					]
+				},
+				{
+					"id": "gmat-di-msr",
+					"name": "Multi-Source Reasoning",
+					"weightPct": 20,
+					"priority": "high",
+					"subtopics": [
+						{
+							"name": "Navigating multiple sources/tabs",
+							"frequency": "high",
+							"summary": "Every Multi-Source Reasoning set opens with 2-3 tabbed sources (emails, memos, tables, charts) that you switch between; this skill is finding WHERE each fact lives before you start computing. On test day one MSR set drives roughly 3 of the 20 Data Insights questions, so fast, accurate tab navigation is the gate to all of them.",
+							"keyIdeas": [
+								"First pass: read all tabs once to build a mental index of what each tab holds (labels, units, dates) — do NOT try to answer yet.",
+								"Note which tab carries which VARIABLE (sales vs. staffing vs. dates); most trap answers are the right number pulled from the wrong tab.",
+								"Many questions are a two-step lookup: use tab A to select an item, then read tab B for the attribute you actually need."
+							],
+							"example": {
+								"q": "MSR set with three tabs. Tab 1 [Q2 Sales, $]: Store A 120,000; Store B 90,000; Store C 150,000. Tab 2 [Staffing, salespeople]: Store A 6; Store B 5; Store C 8. Tab 3 [Memo]: 'Store C launches a new product line in September.' Question: How many salespeople work at the store that had the highest Q2 sales? (A) 5 (B) 6 (C) 8 (D) 15 (E) 150,000",
+								"solution": "Two-step, two-tab lookup. Step 1 — on Tab 1 the highest Q2 sales is Store C at 150,000. Step 2 — cross to Tab 2 and read Store C's staffing: 8. Answer (C). No arithmetic is needed; the whole task is knowing that 'sales' lives on Tab 1 and 'salespeople' lives on Tab 2."
+							},
+							"traps": [
+								"Pulling the number from the store you happened to read first, or grabbing the largest staffing figure (8) or largest sales figure without cross-referencing.",
+								"Answer (E) 150,000 baits anyone who forgets the question asked for people, not dollars — a wrong-tab/wrong-unit answer."
+							]
+						},
+						{
+							"name": "Cross-source inference",
+							"frequency": "high",
+							"summary": "The heart of MSR: draw a conclusion that no single tab states, by combining a rule from one source with data split across the others. The GMAT rewards the reader who realizes eligibility, cause, or a category depends on facts that are deliberately scattered across tabs.",
+							"keyIdeas": [
+								"Locate the governing RULE or definition first (often an email/memo tab), then check each candidate against every clause of that rule.",
+								"A conclusion is only supported if ALL required conditions are met using data from the relevant tabs — one failed clause disqualifies a candidate.",
+								"Beware 'partial match' items that satisfy the condition you can see on one tab but fail a condition hidden on another."
+							],
+							"example": {
+								"q": "MSR set with three tabs. Tab 1 [Grant policy]: A proposal is funded only if BOTH (a) its budget is under $50,000 AND (b) its lead researcher has at least 5 years of postdoctoral experience. Tab 2 [Proposals]: P — budget $45,000, lead Dr. Lee; Q — budget $60,000, lead Dr. Ortiz; R — budget $30,000, lead Dr. Chen. Tab 3 [Researchers, postdoc years]: Dr. Lee 3; Dr. Ortiz 8; Dr. Chen 6. Question: Which proposal(s) qualify for funding? (A) P only (B) R only (C) P and R (D) Q and R (E) None",
+								"solution": "Apply both clauses of the Tab 1 rule using Tab 2 (budget) and Tab 3 (experience). P: budget $45k < $50k passes (a), but Dr. Lee has 3 years < 5 — fails (b). Q: budget $60k is not under $50k — fails (a) immediately. R: budget $30k < $50k passes (a), and Dr. Chen has 6 years ≥ 5 — passes (b). Only R meets both conditions. Answer (B). The verdict on R exists in no single tab: it requires the rule, the budget, and the experience together."
+							},
+							"traps": [
+								"Choosing P because its budget alone looks fine — you must also check the experience tab, where it fails.",
+								"Answer (C) P and R rewards checking only the budget clause and ignoring clause (b) entirely."
+							]
+						},
+						{
+							"name": "Quantitative synthesis",
+							"frequency": "medium",
+							"summary": "MSR questions that require gathering numbers from two or three tabs and running one calculation (totals, profit, percent change, per-unit rates). The math is deliberately simple; the difficulty is collecting every relevant figure — including a cost or adjustment buried on a separate tab.",
+							"formulas": [
+								"Profit = (Price − Unit cost) × Units − Fixed costs",
+								"Percent change = (New − Old) / Old × 100",
+								"Weighted total = Σ (value_i × count_i)"
+							],
+							"keyIdeas": [
+								"List every number the formula needs, then hunt each one across the tabs before computing — the last input is often on the tab you'd skip.",
+								"Watch for a one-off adjustment (flat fee, shipping, tax, a single-region rule) that applies to only part of the data.",
+								"Keep units consistent (per-unit vs. total, monthly vs. annual) when values come from different sources."
+							],
+							"example": {
+								"q": "MSR set with three tabs. Tab 1 [Pricing]: the product sells for $80 per unit; unit cost is $50. Tab 2 [Units sold]: East region 2,000 units; West region 1,500 units. Tab 3 [Logistics note]: a flat $10,000 shipping charge applies to the East region only; West ships free. Question: What is the company's total profit across both regions? (A) $45,000 (B) $50,000 (C) $85,000 (D) $95,000 (E) $105,000",
+								"solution": "Margin per unit = $80 − $50 = $30 (Tab 1). East gross = 2,000 × $30 = $60,000, minus the $10,000 East-only shipping from Tab 3 = $50,000. West gross = 1,500 × $30 = $45,000, no shipping. Total profit = $50,000 + $45,000 = $95,000. Answer (D)."
+							},
+							"traps": [
+								"Answer (E) $105,000 is the total profit if you forget the $10,000 shipping charge on Tab 3 — the classic 'missed a tab' trap.",
+								"Applying the shipping charge to both regions (or per-unit instead of as a flat fee) yields other wrong values engineered into the options."
+							]
+						},
+						{
+							"name": "True/False & yes-no sets",
+							"frequency": "high",
+							"summary": "The most common MSR question shape: three separate statements, each answered Yes/No (or True/False), and scored all-or-nothing — you must get all three correct to earn the point. Each statement is evaluated independently against a definition on one tab plus data on the others.",
+							"formulas": [
+								"Threshold test: benefit if metric > cutoff (e.g., Net benefit = discount rate × spend − annual fee; 'worth it' when > 0)"
+							],
+							"keyIdeas": [
+								"Treat each statement as its own mini-question — a Yes on one tells you nothing about the others.",
+								"Anchor to the exact wording: 'worth it', 'at least', 'exceeds' each set a precise threshold you test against the tab data.",
+								"Because it is all-or-nothing, double-check the statement you feel most sure about — one careless miss costs the whole item."
+							],
+							"example": {
+								"q": "MSR set with three tabs. Tab 1 [Membership tiers]: Silver — $100 annual fee, 5% purchase discount; Gold — $250 fee, 12% discount; Platinum — $500 fee, 20% discount. Tab 2 [Annual spend]: Customer 1 spends $2,000; Customer 2 spends $3,000; Customer 3 spends $1,000. Tab 3 [Rule]: a tier is 'worth it' for a customer only if the discount it saves that year exceeds its annual fee. For each statement, select Yes or No. (S1) For Customer 1, Gold membership is worth it. (S2) For Customer 2, Gold membership is worth it. (S3) For Customer 3, Silver membership is worth it.",
+								"solution": "Apply the Tab 3 rule (discount saved > fee) with fees from Tab 1 and spend from Tab 2. S1: Gold saves 12% × $2,000 = $240, versus the $250 fee; $240 < $250, so NOT worth it → No. S2: Gold saves 12% × $3,000 = $360, versus $250; $360 > $250 → Yes. S3: Silver saves 5% × $1,000 = $50, versus the $100 fee; $50 < $100 → No. Answers: S1 No, S2 Yes, S3 No."
+							},
+							"traps": [
+								"Assuming a higher discount rate always wins — S1 fails because the 12% Gold discount ($240) doesn't clear the $250 fee, a near-miss engineered to catch quick eyeballing.",
+								"Carrying a Yes/No verdict from one customer to another; each statement uses different spend and must be recomputed.",
+								"Forgetting the all-or-nothing scoring and skipping a full check on the statement that 'looks obvious'."
+							]
+						}
+					]
+				},
+				{
+					"id": "gmat-di-table",
+					"name": "Table Analysis",
+					"weightPct": 15,
+					"priority": "high",
+					"subtopics": [
+						{
+							"name": "Sorting & reading tables",
+							"frequency": "high",
+							"summary": "The core Table Analysis skill: a small spreadsheet-style table with a sort drop-down is shown, and you re-sort by a chosen column to check position/threshold claims. Every TA item on the GMAT gives three True/False (or Yes/No) statements and awards credit only if all three are answered correctly.",
+							"keyIdeas": [
+								"Actually use the sort drop-down on the exact column a statement names rather than eyeballing the given order — misreading row order is the number-one error.",
+								"Read each statement literally: words like 'third row', 'more than', 'at least', 'highest' define exactly what makes it true.",
+								"Evaluate the three statements independently; there is no partial credit, so re-check each before submitting."
+							],
+							"example": {
+								"q": "Table Analysis. A sortable table (re-sort by any column with the drop-down) lists six regional sales offices. Columns: Office | Units Sold | Revenue ($000) | Employees.\nAustin, 420, 1,260, 14\nBoston, 310, 1,085, 10\nDenver, 500, 1,400, 20\nFresno, 280, 700, 8\nMiami, 360, 1,170, 12\nSeattle, 450, 1,575, 15\nFor each statement select True or False.\n(1) When the table is sorted by Units Sold from highest to lowest, Seattle is in the third row.\n(2) The office with the highest Revenue also employs the most people.\n(3) When the table is sorted by Revenue from lowest to highest, the office in the first row sold fewer than 300 units.",
+								"solution": "(1) Sort Units Sold descending: Denver 500, Seattle 450, Austin 420, Miami 360, Boston 310, Fresno 280. Seattle is 2nd, not 3rd -> FALSE. (2) Highest Revenue = Seattle ($1,575k); most Employees = Denver (20). Different offices -> FALSE. (3) Sort Revenue ascending: Fresno 700, Boston 1,085, Miami 1,170, Austin 1,260, Denver 1,400, Seattle 1,575. First row = Fresno, which sold 280 units < 300 -> TRUE. Answers: False, False, True."
+							},
+							"traps": [
+								"Confusing ascending with descending: after a highest-to-lowest sort the first row holds the maximum, not the minimum.",
+								"Assuming the leader in one column also leads another (highest revenue is not necessarily the most employees)."
+							]
+						},
+						{
+							"name": "Descriptive statistics from tables",
+							"frequency": "high",
+							"summary": "A frequent Table Analysis twist: statements ask you to compare the median, mean, or range of a numeric column. The GMAT loves the median because sorting the column makes the middle value instant, while the mean requires actually summing.",
+							"formulas": [
+								"mean = (sum of the values) / n",
+								"median = the middle value when the column is sorted (odd n); the average of the two middle values (even n)",
+								"range = maximum value - minimum value"
+							],
+							"keyIdeas": [
+								"Sort the relevant column first; for an odd count the median is simply the middle row, needing no arithmetic.",
+								"For 'mean vs median' you often don't need the exact mean — a few large high-end values pull the mean above the median (right skew) and vice versa.",
+								"Compute only what a statement asks: once the column is sorted, range = top value minus bottom value is immediate."
+							],
+							"example": {
+								"q": "Table Analysis. A sortable table lists seven employees. Columns: Employee | Age | Salary ($000) | Years of Service.\nA, 28, 52, 3\nB, 34, 61, 6\nC, 41, 70, 12\nD, 45, 88, 15\nE, 52, 95, 20\nF, 38, 66, 9\nG, 30, 58, 4\nFor each statement select True or False.\n(1) The median Age of the seven employees is greater than their mean Age.\n(2) The mean Salary is greater than the median Salary.\n(3) The range of Years of Service is more than twice the median Years of Service.",
+								"solution": "(1) Ages sorted: 28, 30, 34, 38, 41, 45, 52 -> median = 38. Mean = 268/7 = 38.3. 38 is not greater than 38.3 -> FALSE. (2) Salaries sorted: 52, 58, 61, 66, 70, 88, 95 -> median = 66. Mean = 490/7 = 70. 70 > 66 -> TRUE. (3) Years sorted: 3, 4, 6, 9, 12, 15, 20 -> median = 9, range = 20 - 3 = 17. Twice the median = 18; 17 is not more than 18 -> FALSE. Answers: False, True, False."
+							},
+							"traps": [
+								"Reading the median off the unsorted table order — you must sort the column first or the 'middle' value is meaningless.",
+								"Assuming mean equals median: a nearly symmetric column can still have the mean sitting just above or below the median, so verify rather than assume."
+							]
+						},
+						{
+							"name": "Ratios & proportions in tables",
+							"frequency": "high",
+							"summary": "Table Analysis statements routinely require a derived quantity — a percentage, a per-unit figure, a profit margin, or the ratio between two columns — computed for specific rows or for column totals. The arithmetic is light; the difficulty is choosing the right rows and the right base.",
+							"formulas": [
+								"percentage = (part / whole) x 100",
+								"per-unit value = total / quantity",
+								"profit margin = (Revenue - Cost) / Revenue",
+								"a ratio a:b is compared to a threshold by evaluating a/b as a decimal"
+							],
+							"keyIdeas": [
+								"Build the derived quantity (margin, per-unit, share) only for the rows a statement actually compares, not for the whole table.",
+								"For a 'ratio of totals' statement, sum each column first and then divide — do not average the per-row ratios.",
+								"Convert a target ratio to a decimal so you can compare directly (3:4 = 0.75)."
+							],
+							"example": {
+								"q": "Table Analysis. A sortable table lists five product lines. Columns: Product | Revenue ($M) | Cost ($M) | Units Sold (thousands).\nP, 120, 90, 40\nQ, 80, 50, 25\nR, 150, 120, 60\nS, 60, 36, 15\nT, 200, 130, 50\nFor each statement select True or False.\n(1) Product S has the highest profit margin, where profit margin = (Revenue - Cost) / Revenue.\n(2) For the five products combined, the ratio of total Cost to total Revenue is less than 3 : 4.\n(3) Product R earns more revenue per unit sold than Product Q.",
+								"solution": "(1) Margins: P = 30/120 = 25%; Q = 30/80 = 37.5%; R = 30/150 = 20%; S = 24/60 = 40%; T = 70/200 = 35%. S at 40% is the highest -> TRUE. (2) Total Revenue = 120+80+150+60+200 = 610; total Cost = 90+50+120+36+130 = 426. 426/610 = 0.70; 3:4 = 0.75. 0.70 < 0.75 -> TRUE. (3) Revenue per unit (Revenue in $M / Units in thousands gives $ per unit): R = 150/60 = $2,500; Q = 80/25 = $3,200. R < Q -> FALSE. Answers: True, True, False."
+							},
+							"traps": [
+								"Averaging the per-row percentages instead of using totals: total cost / total revenue is not the mean of the individual margins.",
+								"Mismatched units: with Revenue in $M and Units in thousands the per-unit figure lands in dollars, so keep the scale straight before comparing."
+							]
+						}
+					]
+				},
+				{
+					"id": "gmat-di-graphics",
+					"name": "Graphics Interpretation",
+					"weightPct": 15,
+					"priority": "high",
+					"subtopics": [
+						{
+							"name": "Reading charts & graphs",
+							"frequency": "high",
+							"summary": "Graphics Interpretation shows a bar chart, line graph, pie chart, histogram, or bubble chart and asks you to complete sentences from drop-down menus by reading values off the graphic. The GMAT rarely wants a pixel-perfect reading — it tests whether you can compute rates, percent changes, totals, and comparisons from what the axes, legend, and units actually say.",
+							"formulas": [
+								"Percent change = (new − old) / old × 100%",
+								"Rate of change (slope) between two points = (y₂ − y₁) / (x₂ − x₁)",
+								"Average (mean) = sum of values / number of values",
+								"Percent of total = (part / whole) × 100%"
+							],
+							"keyIdeas": [
+								"Read the axis titles, units, and scale FIRST (thousands? percent? does the axis start at zero?) before reading any value — most GI errors are unit or scale misreads, not arithmetic.",
+								"For 'greatest increase/decrease' blanks, first decide whether it asks for absolute change (Δ in units) or percentage change — they frequently point to different bars.",
+								"Estimate to the nearest gridline rather than obsessing over exact pixels: the drop-down options are spaced far enough apart that a clean read picks the answer."
+							],
+							"example": {
+								"q": "A line graph shows one company's quarterly revenue (in $ millions): Q1 = 20, Q2 = 25, Q3 = 45, Q4 = 75. Complete the statements. (a) The quarter with the greatest percentage increase over the previous quarter was [Q2 / Q3 / Q4]. (b) That percentage increase was closest to [25% / 67% / 80% / 125%].",
+								"solution": "Compute each quarter-over-quarter percent change. Q2: (25 − 20)/20 = 25%. Q3: (45 − 25)/25 = 80%. Q4: (75 − 45)/45 ≈ 66.7%. The largest is Q3 at 80%, even though Q4 has the biggest raw jump (+$30M vs Q3's +$20M). Blank (a) = Q3; blank (b) = 80%."
+							},
+							"traps": [
+								"Confusing the largest absolute jump (Q4, +$30M) with the largest percentage jump (Q3, +80%) — the credited blank asks for percent.",
+								"Overlooking that the y-axis is in millions, or misreading a broken / non-zero baseline that visually exaggerates the differences between bars."
+							]
+						},
+						{
+							"name": "Scatterplots & correlation",
+							"frequency": "high",
+							"summary": "The single most common Graphics Interpretation graphic: a scatterplot of paired data, usually with a line of best fit (trend/regression line). Drop-downs ask you to describe the direction and strength of the correlation and to read or predict a value from the trend line.",
+							"formulas": [
+								"Correlation coefficient r lies in [−1, +1]; the sign of r equals the direction of the best-fit line's slope.",
+								"|r| near 1 = strong (points hug the line); |r| near 0 = weak or no correlation (points scattered).",
+								"Predicted value from the line of best fit: ŷ = m·x + b, with m = (y₂ − y₁)/(x₂ − x₁) taken from two clear points ON the line.",
+								"Positive correlation: y tends to rise as x rises; negative correlation: y tends to fall as x rises."
+							],
+							"keyIdeas": [
+								"Read direction from the slope of the point cloud / best-fit line (up-to-the-right = positive, down-to-the-right = negative) and strength from how tightly the points cluster around it.",
+								"To predict a value, read two clean points off the LINE (not off a scattered dot), compute the slope, and plug in your x — don't eyeball a single dot near that x.",
+								"Correlation is not causation, and the trend only holds inside the plotted range; be suspicious of blanks that ask you to extrapolate beyond the data."
+							],
+							"example": {
+								"q": "A scatterplot plots 12 cities' average annual temperature (°C) on the x-axis (5 to 30) against annual household heating cost ($) on the y-axis (200 to 1,600). The points form a tight downward-sloping band, and a line of best fit passes through the points (5, 1,400) and (30, 400). Complete the statements. (a) The correlation between temperature and heating cost is best described as [strong positive / weak positive / strong negative / no correlation]. (b) Based on the line of best fit, a city averaging 20 °C has a predicted heating cost closest to [$600 / $700 / $800 / $900].",
+								"solution": "The band slopes down to the right and the points hug the line, so the correlation is strong negative (blank a). Slope of the best-fit line = (400 − 1,400)/(30 − 5) = −1,000/25 = −40 $ per °C. At x = 20: ŷ = 1,400 + (−40)(20 − 5) = 1,400 − 600 = $800 (blank b)."
+							},
+							"traps": [
+								"Calling a tight downward band 'weak' because the dollar values are large, or mislabeling the sign — a downward slope is NEGATIVE correlation regardless of magnitude.",
+								"Predicting off a nearby scattered dot instead of the best-fit line, or extrapolating the line outside the plotted 5–30 °C range."
+							]
+						},
+						{
+							"name": "Drop-down completion logic",
+							"frequency": "high",
+							"summary": "Every Graphics Interpretation item is a sentence (usually one or two of them) with drop-down blanks you fill from fixed menus. This subtopic is the format mechanic: parse the sentence's logic, answer each blank from the graphic, and remember the item is all-or-nothing — every blank must be correct for the question to count, with no partial credit.",
+							"formulas": [
+								"Percent of whole = (part / whole) × 100%",
+								"Difference of two categories = value_A − value_B (read each off the graphic, then subtract)"
+							],
+							"keyIdeas": [
+								"Treat each blank as its own read of the graph, but keep the sentence internally consistent — if blank 1 is a percentage and blank 2 is 'that amount in dollars,' blank 2 must match the CORRECT blank 1, not your first guess.",
+								"Plug each drop-down option back into the sentence and test it against the graphic; wrong options are usually real numbers from the chart that answer a different question.",
+								"Because both blanks must be right for any credit, verify the 'easy' blank too before you commit — a careless second blank sinks a correctly reasoned first one."
+							],
+							"example": {
+								"q": "A pie chart divides a $200,000 marketing budget: Digital 40%, TV 25%, Print 15%, Events 12%, Other 8%. Complete the statement: 'The two largest categories together account for [50% / 55% / 65% / 80%] of the budget, which is [$100,000 / $110,000 / $130,000 / $160,000].'",
+								"solution": "The two largest slices are Digital (40%) and TV (25%), summing to 65% → blank 1 = 65%. Then 65% × $200,000 = $130,000 → blank 2 = $130,000. Blank 2 must be consistent with the correct blank 1: the trap value $100,000 is 50% of the budget, which pairs only with a wrong first answer."
+							},
+							"traps": [
+								"Picking a dollar value that is consistent with a WRONG percentage (50% → $100,000) — since both blanks are scored together, they must agree with each other and with the chart.",
+								"Adding the wrong two slices — 'largest' means largest by value (Digital 40% + TV 25% = 65%), not two categories that merely look adjacent on the chart (e.g., Digital 40% + Print 15% = 55%)."
+							]
+						}
+					]
+				},
+				{
+					"id": "gmat-di-twopart",
+					"name": "Two-Part Analysis",
+					"weightPct": 20,
+					"priority": "high",
+					"subtopics": [
+						{
+							"name": "Quantitative two-part",
+							"frequency": "high",
+							"summary": "The most common Two-Part Analysis flavor: a word problem with two unknowns (often a system of equations, a rate/mixture, or a ratio) presented as a two-column table where you pick one value per column from a shared option list. The two columns are usually the two quantities you must solve for (e.g., 'number of adult tickets' and 'number of child tickets'), and only one combination satisfies all the given information.",
+							"formulas": [
+								"Two linear equations in two unknowns: solve by substitution or elimination.",
+								"If a + b = S and pa + qb = T, then b = (T - pS)/(q - p) and a = S - b.",
+								"Always sanity-check the pair against BOTH original equations before selecting."
+							],
+							"keyIdeas": [
+								"Translate the prompt into two equations, solve once, then map each solved value to the correct column heading — do not re-derive per column.",
+								"Because you select independently in each column, the answer set is a single ordered pair; find it algebraically rather than testing every option.",
+								"Note the column labels precisely (which price/rate/group each column refers to) — that mapping is where most errors happen.",
+								"If algebra is messy, back-solve: plug candidate values from the shared list into the two conditions."
+							],
+							"example": {
+								"q": "At a fundraiser, adult tickets cost $12 each and child tickets cost $5 each. A total of 30 tickets were sold for total revenue of $248. In the table, select the number of Adult tickets sold and the number of Child tickets sold, consistent with this information. Make exactly one selection in each column; the same option list is used for both columns.\nColumn 1 — Adult tickets sold. Column 2 — Child tickets sold.\nShared options: 8, 12, 14, 16, 18, 22.",
+								"solution": "Let a = adult tickets, c = child tickets. Then a + c = 30 and 12a + 5c = 248. Substitute c = 30 - a: 12a + 5(30 - a) = 248 -> 12a + 150 - 5a = 248 -> 7a = 98 -> a = 14, so c = 16. Check: 12(14) + 5(16) = 168 + 80 = 248 and 14 + 16 = 30 ✓. Column 1 (Adult) = 14; Column 2 (Child) = 16."
+							},
+							"traps": [
+								"Column-swap trap: if you accidentally solve 5a + 12c = 248 (prices reversed) you get a = 16, c = 14 — both values are on the list, so 16/14 is engineered to look right if you mislabel the columns.",
+								"Distractor values (e.g., 8, 12, 18, 22) satisfy only ONE of the two equations — a value that gives the right total but wrong revenue passes a lazy check.",
+								"Nothing forbids picking the same number in both columns; do not assume the two answers must differ."
+							]
+						},
+						{
+							"name": "Verbal & logical two-part",
+							"frequency": "medium",
+							"summary": "A logic/reading version of Two-Part Analysis: given a short argument or a two-sided debate, you select one statement per column from a shared list, where the columns are opposing or complementary roles (e.g., 'most strengthens Position A' vs 'most strengthens Position B', or 'conclusion' vs 'supporting premise'). It is Critical-Reasoning logic delivered in the two-column format — no grammar or Sentence Correction.",
+							"keyIdeas": [
+								"Read the two column headings first and label each as a direction (support / oppose / assume / conclude) before touching the options.",
+								"For each option decide which side it helps, if any — most items are irrelevant filler designed to eat time; discard them fast.",
+								"Pick the SINGLE strongest fit per column: prefer options that are decisive and specific over ones that are hedged ('some', 'mild') or merely about the company's general track record.",
+								"The two answers are independent selections, so an option that could serve one column should be tested against the other heading too."
+							],
+							"example": {
+								"q": "Two analysts disagree about whether Company X should launch Product Y. Analyst 1 argues it should; Analyst 2 argues it should not. Using the shared list below, select one statement that, if true, most strongly supports LAUNCHING Product Y (Column 1) and one statement that, if true, most strongly supports NOT launching Product Y (Column 2). Make exactly one selection in each column.\nShared options:\n(A) Independent market research shows that demand for Product Y's category is growing rapidly.\n(B) A well-funded competitor is about to release a product that industry experts consider clearly superior to Product Y.\n(C) Company X has successfully launched several products over the past decade.\n(D) Product Y will be sold in the same stores that already carry Company X's current products.\n(E) A few consumers have expressed mild interest in Product Y.\n(F) Company X's current products are profitable.\nColumn 1 — Most strongly supports launching. Column 2 — Most strongly supports NOT launching.",
+								"solution": "Column 1 = (A): rapidly growing category demand is a direct, specific reason the launch would succeed. (C) is about the company's past record, not Product Y's prospects; (E) is too weak ('a few', 'mild'); (D) and (F) are neutral background — so (A) is the strongest pro-launch pick. Column 2 = (B): a clearly superior competing product about to capture the same market is a decisive reason the launch would fail. No other option argues against launching. Column 1 = (A); Column 2 = (B)."
+							},
+							"traps": [
+								"Track-record trap: (C) 'has launched products successfully before' feels supportive but says nothing about THIS product's market — it is a classic wrong pick for Column 1.",
+								"Strength trap: hedged options like (E) ('a few consumers, mild interest') are deliberately weaker than the credited answer; the GMAT rewards the more decisive statement.",
+								"Neutral filler (D, F) is included only to consume reading time — an option that is merely true and on-topic is not the same as one that supports the stated side."
+							]
+						},
+						{
+							"name": "Optimization & trade-off",
+							"frequency": "medium",
+							"summary": "A Two-Part Analysis type where a budget or total constraint links two quantities, and the two columns ask for extreme values (e.g., 'maximum number of A' and 'maximum number of B') or a max/min pair. The core idea is the trade-off: to maximize one item you must minimize the other, subject to floor/ceiling constraints like 'at least k of each'.",
+							"formulas": [
+								"To maximize one quantity under a shared budget/total, set every other quantity to its minimum allowed value.",
+								"Max whole units of an item costing p within remaining budget R: floor(R / p).",
+								"Remaining budget after fixing the other item = Total budget − (min count of other item × its price)."
+							],
+							"keyIdeas": [
+								"Optimize each column separately: for 'max of one', push the other to its smallest legal value, then spend the leftover.",
+								"Respect ALL constraints (minimum counts, integer counts, total budget) — the binding constraint is usually the 'at least k of each' floor, not just the budget.",
+								"Take the floor for whole items; leftover budget that can't buy a full extra unit is simply unused.",
+								"Re-verify the extreme pair satisfies every constraint at once — an answer that maxes one column may violate a minimum on the other."
+							],
+							"example": {
+								"q": "A researcher has a budget of $600 to buy two types of equipment: type A costs $40 each and type B costs $90 each. She must buy at least 3 of each type, and equipment is bought only in whole units. Using the shared list, select the greatest possible number of type A she can buy (Column 1) and the greatest possible number of type B she can buy (Column 2). Each column is optimized on its own. Make exactly one selection in each column.\nShared options: 3, 4, 5, 6, 7, 8.\nColumn 1 — Max type A. Column 2 — Max type B.",
+								"solution": "Max type A (Column 1): minimize B at its floor, B = 3, costing 3 × 90 = 270. Remaining = 600 − 270 = 330. floor(330 / 40) = 8 (8 × 40 = 320 ≤ 330; 9 × 40 = 360 > 330). So max A = 8, and A = 8 ≥ 3 ✓. Max type B (Column 2): minimize A at its floor, A = 3, costing 3 × 40 = 120. Remaining = 600 − 120 = 480. floor(480 / 90) = 5 (5 × 90 = 450 ≤ 480; 6 × 90 = 540 > 480). So max B = 5, and B = 5 ≥ 3 ✓. Column 1 = 8; Column 2 = 5."
+							},
+							"traps": [
+								"Ignoring the 'at least 3 of each' floor: dropping the other item to 0 gives max B = floor(600/90) = 6 — that is why 6 is on the list, but B = 6 forces A ≤ 1, violating A ≥ 3, so 6 is the trap answer.",
+								"Rounding up instead of taking the floor: leftover cash that can't buy a whole extra unit does not add one.",
+								"Optimizing both columns simultaneously — the columns are independent extremes, not a single feasible purchase, so don't try to make one basket satisfy both maxes at once."
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"scoring": {
+		"note": "Focus Edition total is 205-805 in 10-point steps; each section (QR, VR, DI) is scored 60-90 and the three weigh EQUALLY into the total. Focus scores are NOT directly comparable to old-GMAT 200-800 numbers — use GMAC's official concordance. Total percentiles are from the official GMAC concordance (published Jul 2025); section percentiles are reputable secondary (Target Test Prep), ±1-2 pts.",
+		"totalRange": {
+			"min": 205,
+			"max": 805,
+			"step": 10
+		},
+		"sectionRange": {
+			"min": 60,
+			"max": 90,
+			"step": 1,
+			"note": "Each of QR / VR / DI scored on this scale; equally weighted into the total"
+		},
+		"meanTotal": {
+			"value": 546,
+			"range": "approx 546-556",
+			"sectionMeans": {
+				"quant": 78.05,
+				"verbal": 79.3,
+				"di": 74.5
+			},
+			"note": "GMAC-cited global mean total is commonly reported at ~546 (early Focus-Edition data, ~Jan 2024). Some 2024-2025 secondary sources reverse-engineer the global mean at ~554-556 over the Jul 2020-Jun 2025 population (>530k-596k test-takers). GMAC has not prominently published a single headline mean for the Focus Edition, so treat as ~546-556 (uncertain). Section means (~Quant 78, Verbal 79, DI 74-75) are more consistently cited. US test-takers score slightly below the global mean; India/China slightly above. No official country-level Focus means published."
+		},
+		"totalPercentiles": [
+			{
+				"score": 805,
+				"percentile": 100.0
+			},
+			{
+				"score": 795,
+				"percentile": 100.0
+			},
+			{
+				"score": 785,
+				"percentile": 100.0
+			},
+			{
+				"score": 775,
+				"percentile": 100.0
+			},
+			{
+				"score": 765,
+				"percentile": 99.9
+			},
+			{
+				"score": 755,
+				"percentile": 99.9
+			},
+			{
+				"score": 745,
+				"percentile": 99.7
+			},
+			{
+				"score": 735,
+				"percentile": 99.5
+			},
+			{
+				"score": 725,
+				"percentile": 99.1
+			},
+			{
+				"score": 715,
+				"percentile": 98.8
+			},
+			{
+				"score": 705,
+				"percentile": 98.0
+			},
+			{
+				"score": 695,
+				"percentile": 97.4
+			},
+			{
+				"score": 685,
+				"percentile": 95.8
+			},
+			{
+				"score": 675,
+				"percentile": 94.8
+			},
+			{
+				"score": 665,
+				"percentile": 92.1
+			},
+			{
+				"score": 655,
+				"percentile": 90.5
+			},
+			{
+				"score": 645,
+				"percentile": 86.7
+			},
+			{
+				"score": 635,
+				"percentile": 81.9
+			},
+			{
+				"score": 625,
+				"percentile": 79.2
+			},
+			{
+				"score": 615,
+				"percentile": 76.4
+			},
+			{
+				"score": 605,
+				"percentile": 70.3
+			},
+			{
+				"score": 595,
+				"percentile": 67.1
+			},
+			{
+				"score": 585,
+				"percentile": 60.6
+			},
+			{
+				"score": 575,
+				"percentile": 57.4
+			},
+			{
+				"score": 565,
+				"percentile": 50.9
+			},
+			{
+				"score": 555,
+				"percentile": 47.8
+			},
+			{
+				"score": 545,
+				"percentile": 41.9
+			},
+			{
+				"score": 535,
+				"percentile": 39.2
+			},
+			{
+				"score": 525,
+				"percentile": 34.0
+			},
+			{
+				"score": 515,
+				"percentile": 31.5
+			},
+			{
+				"score": 505,
+				"percentile": 27.1
+			},
+			{
+				"score": 495,
+				"percentile": 25.1
+			},
+			{
+				"score": 485,
+				"percentile": 21.3
+			},
+			{
+				"score": 475,
+				"percentile": 19.7
+			},
+			{
+				"score": 465,
+				"percentile": 16.6
+			},
+			{
+				"score": 455,
+				"percentile": 15.2
+			},
+			{
+				"score": 445,
+				"percentile": 12.7
+			},
+			{
+				"score": 435,
+				"percentile": 11.6
+			},
+			{
+				"score": 425,
+				"percentile": 9.6
+			},
+			{
+				"score": 415,
+				"percentile": 8.7
+			},
+			{
+				"score": 405,
+				"percentile": 7.1
+			},
+			{
+				"score": 395,
+				"percentile": 6.4
+			},
+			{
+				"score": 385,
+				"percentile": 5.2
+			},
+			{
+				"score": 375,
+				"percentile": 4.7
+			},
+			{
+				"score": 365,
+				"percentile": 3.8
+			},
+			{
+				"score": 355,
+				"percentile": 3.4
+			},
+			{
+				"score": 345,
+				"percentile": 2.7
+			},
+			{
+				"score": 335,
+				"percentile": 2.4
+			},
+			{
+				"score": 325,
+				"percentile": 1.9
+			},
+			{
+				"score": 315,
+				"percentile": 1.7
+			},
+			{
+				"score": 305,
+				"percentile": 1.3
+			},
+			{
+				"score": 295,
+				"percentile": 1.1
+			},
+			{
+				"score": 285,
+				"percentile": 0.8
+			},
+			{
+				"score": 275,
+				"percentile": 0.7
+			},
+			{
+				"score": 265,
+				"percentile": 0.5
+			},
+			{
+				"score": 255,
+				"percentile": 0.4
+			},
+			{
+				"score": 245,
+				"percentile": 0.3
+			},
+			{
+				"score": 235,
+				"percentile": 0.3
+			},
+			{
+				"score": 225,
+				"percentile": 0.2
+			},
+			{
+				"score": 215,
+				"percentile": 0.2
+			},
+			{
+				"score": 205,
+				"percentile": 0.1
+			}
+		],
+		"sectionPercentiles": {
+			"note": "Section scaled scores run 60-90 in 1-point steps. The SAME scaled score maps to DIFFERENT percentiles per section — Quant percentiles run markedly LOWER than Verbal/DI for a given score (Quant distribution is compressed high). Points below are from Target Test Prep's GMAT Focus section charts (reflecting GMAC section data, 2024-2025). Treat as reputable secondary, ~+/-1-2 pts.",
+			"quant": [
+				{
+					"score": 90,
+					"percentile": 100
+				},
+				{
+					"score": 88,
+					"percentile": 96
+				},
+				{
+					"score": 86,
+					"percentile": 91
+				},
+				{
+					"score": 84,
+					"percentile": 85
+				},
+				{
+					"score": 82,
+					"percentile": 75
+				},
+				{
+					"score": 80,
+					"percentile": 64
+				},
+				{
+					"score": 78,
+					"percentile": 50
+				},
+				{
+					"score": 75,
+					"percentile": 32
+				},
+				{
+					"score": 70,
+					"percentile": 13
+				}
+			],
+			"quantMean": 78,
+			"verbal": [
+				{
+					"score": 90,
+					"percentile": 100
+				},
+				{
+					"score": 88,
+					"percentile": 99
+				},
+				{
+					"score": 86,
+					"percentile": 96
+				},
+				{
+					"score": 84,
+					"percentile": 89
+				},
+				{
+					"score": 82,
+					"percentile": 74
+				},
+				{
+					"score": 80,
+					"percentile": 56
+				},
+				{
+					"score": 78,
+					"percentile": 38
+				},
+				{
+					"score": 75,
+					"percentile": 18
+				},
+				{
+					"score": 70,
+					"percentile": 4
+				}
+			],
+			"verbalMean": 79,
+			"di": [
+				{
+					"score": 90,
+					"percentile": 100
+				},
+				{
+					"score": 88,
+					"percentile": 99
+				},
+				{
+					"score": 86,
+					"percentile": 99
+				},
+				{
+					"score": 84,
+					"percentile": 97
+				},
+				{
+					"score": 82,
+					"percentile": 93
+				},
+				{
+					"score": 80,
+					"percentile": 83
+				},
+				{
+					"score": 78,
+					"percentile": 69
+				},
+				{
+					"score": 75,
+					"percentile": 47
+				},
+				{
+					"score": 70,
+					"percentile": 21
+				}
+			],
+			"diMean": 74,
+			"keyTakeaway": "e.g. an 84 = 85th %ile in Quant but 89th in Verbal and 97th in Data Insights; an 82 = 75th (Q) / 74th (V) / 93rd (DI). Adcoms see all three section percentiles individually."
+		},
+		"targetScores": [
+			{
+				"school": "ISB (PGP)",
+				"focusScore": 669,
+				"note": "Class of 2026 average Focus score 669; admitted range ~555-765; competitive threshold ~655, strong ~685+. Source: ISB class profile via CrackVerbal/MIM-Essay."
+			},
+			{
+				"school": "Harvard (HBS)",
+				"focusScore": 685,
+				"note": "Class of 2027 average on Focus scale ~685 (≈ old-GMAT 730, 95.8th %ile). Source: Magoosh 2026 top-programs roundup / HBS profile."
+			},
+			{
+				"school": "Stanford GSB",
+				"focusScore": 689,
+				"note": "Class of 2027 ~689 (median/avg on Focus scale; Stanford historically highest, old-GMAT ~738). Source: Magoosh."
+			},
+			{
+				"school": "Wharton",
+				"focusScore": 676,
+				"note": "Class of 2027 ~676 on Focus scale (≈ old-GMAT ~728). Source: Magoosh."
+			},
+			{
+				"school": "Kellogg",
+				"focusScore": 687,
+				"note": "Class of 2027 median ~687 on Focus scale (one of the highest reported). Source: Magoosh."
+			},
+			{
+				"school": "INSEAD",
+				"focusScore": 655,
+				"note": "REVERSE-ENGINEERED/CONVERTED: INSEAD reports classic ~710 average; concordance maps ~710 to Focus ~655 (90.5th %ile). INSEAD may still publish classic. Source: TTP/MIM-Essay + GMAC concordance."
+			},
+			{
+				"school": "London Business School (LBS)",
+				"focusScore": 655,
+				"note": "REVERSE-ENGINEERED/CONVERTED: LBS reports classic ~700-708 average; concordance maps to Focus ~645-655. LBS threshold sits slightly above ISB. Source: admissions-consultant data (LilacBuds/Menlo) + GMAC concordance."
+			},
+			{
+				"school": "Competitive general benchmark (= old GMAT 700)",
+				"focusScore": 645,
+				"note": "Old-GMAT 700 concords to Focus 645 (86.7th %ile) — the widely-cited 'new 700' for top-25 competitiveness. Source: GMAC concordance."
+			},
+			{
+				"school": "Elite general benchmark (= old GMAT 730)",
+				"focusScore": 685,
+				"note": "Old-GMAT 730 concords to Focus 685 (95.8th %ile) — typical M7 average. M7 Class-of-2027 averages cluster ~670-690 on Focus. Source: GMAC concordance + Magoosh."
+			}
+		],
+		"selectionNote": "Schools read the total score, the three section scores, AND percentiles. Data Insights now carries a third of the weight, so a lopsided QR-only profile is weaker than it looks.",
+		"concordanceNote": "VERIFIED from the official GMAC 'GMAT Score Concordance Table — Total Score Sorted by Percentile Ranking' PDF (©2025 GMAC, Published July 2025, data period Jul 1 2020–Jun 30 2025). Total scores run 205-805 in 10-point steps. Values rounded to nearest tenth. Concordance to old GMAT (200-800): 805/795/785/775≈800, 685≈730, 655≈700-710, 645≈700, 605≈650, 555≈600, 545≈580-590.",
+		"dataFreshness": "Official GMAC concordance/percentiles published July 2025; data period July 1, 2020 - June 30, 2025. Percentiles refresh annually in Q3.",
+		"feeReference": {
+			"usTestCenter": "USD 275",
+			"online": "USD 300 (worldwide, incl. US and India)",
+			"indiaINR": "Approx INR 24,780 test-center / INR 27,036 online (USD-pegged conversion; sources vary ~INR 23,000-25,600 test-center depending on FX and card charges)",
+			"note": "GMAC prices are set per country in local currency; USD figures shown are the US/most-markets standard. Standard split is USD 275 at a test center vs USD 300 online (online carries a ~USD 25 premium). Registration includes up to 5 free score reports; each extra score report is USD 35. Reschedule fees USD 50/100/150 and cancellation fees USD 165/190/220 apply by proximity to the appointment. Regional variation exists — a few markets differ from the US price."
+		},
+		"sources": [
+			"https://www.gmac.com/-/media/mbasite/gmat-focus-edition/assets-or-collateral/score-concordance-tables.pdf",
+			"https://www.mba.com/exams/gmat-exam/scores/understanding-your-score",
+			"https://www.mba.com/exams/gmat-exam/faqs",
+			"https://www.gmac.com/gmat-other-assessments/about-the-gmat-focus-edition/exam-scores",
+			"https://gmat.targettestprep.com/gmat_focus_score_chart_and_calculator",
+			"https://e-gmat.com/blogs/gmat-scores-percentiles-score-chart-calculator/",
+			"https://magoosh.com/gmat/average-gmat-scores/",
+			"https://magoosh.com/gmat/gmat-focus-edition-key-changes/",
+			"https://www.jamboreeindia.com/know-how/gmat-focus-exam-fees-in-india-registration-and-rescheduling",
+			"https://www.manyagroup.com/blog/gmat/gmat-registration-fees/",
+			"https://www.crackverbal.com/resources/gmat-score-isb-indian-school-of-business/",
+			"https://www.mim-essay.com/isb-mba-gmat",
+			"https://www.mim-essay.com/insead-mba-gmat",
+			"https://blog.targettestprep.com/insead-mba-gmat-score/",
+			"https://lilacbuds.com/blog/average-gmat-focus-scores-for-top-5-us-and-european-colleges/"
+		]
+	},
+	"strategy": {
+		"note": "The Focus Edition rewards accuracy and steady pacing over raw speed: it is adaptive, has no negative marking, and lets you edit up to 3 answers per section. Because Data Insights is now a full third of the score, treat it as a first-class section, not an afterthought.",
+		"phases": [
+			{
+				"id": "foundation",
+				"name": "Foundation",
+				"months": "1-2",
+				"weeklyHours": 15,
+				"focus": "Content review: Quant (arithmetic/algebra/word problems/stats — NO geometry), Verbal (RC + CR logic), and learn the five Data Insights formats. Take a diagnostic official mock early."
+			},
+			{
+				"id": "practice",
+				"name": "Practice",
+				"months": "2-3",
+				"weeklyHours": 18,
+				"focus": "Official Guide + question-bank drilling by type; build a DS answer-grid habit; log every error by type and difficulty; timed section practice."
+			},
+			{
+				"id": "mocks",
+				"name": "Mocks + Review",
+				"months": "1-2",
+				"weeklyHours": 20,
+				"focus": "Full-length official-style mocks under real conditions; deep error-log review; refine section order and per-question pacing (~2 min/Q); target weak type until stable."
+			}
+		],
+		"dailyHours": {
+			"fullTime": "4-6",
+			"working": "1.5-3"
+		},
+		"pacing": {
+			"quant": "~2:08 per question (21 Q / 45 min)",
+			"verbal": "~1:57 per question (23 Q / 45 min)",
+			"di": "~2:15 per question (20 Q / 45 min)",
+			"rule": "Never leave a question blank — a wrong answer costs nothing but an unanswered one is scored wrong and the adaptive engine punishes trailing blanks. Guess and move on."
+		},
+		"mocks": {
+			"total": "6-10 full-length",
+			"cadence": "1 diagnostic up front, then 1 every 1-2 weeks, 2-3 in the final fortnight",
+			"rule": "Use the official GMAC practice exams for the truest score read; review each mock at least as long as you took to sit it"
+		},
+		"sectionTips": {
+			"quant": "Content is narrower than CAT/GRE (no geometry, no DS) but the answer choices are engineered around your most likely mistake — slow down, translate the words precisely, and check units and 'must be true'. Backsolving from the options and smart number-picking are high-value.",
+			"verbal": "Only RC and CR. For CR, name the question type first (assumption/strengthen/weaken/etc.), find the conclusion and the gap, then attack. For RC, map structure over memorizing detail. No grammar/Sentence Correction to study anymore.",
+			"di": "The score differentiator, and a third of your total. Master the Data Sufficiency answer grid cold, practice reading multi-tab and table/graph data fast, and drill Two-Part and Graphics formats — they feel unfamiliar but are learnable and repay practice heavily.",
+			"editFeature": "Bookmark anything you're unsure of; if time remains at a section's end, spend it changing at most 3 flagged answers. Don't burn the whole buffer hunting for edits — bank a small cushion, review your 2-3 shakiest bookmarks, done.",
+			"sectionOrder": "You choose the order of the three sections. Pick a consistent order in practice (many start with their strongest to bank confidence, or with DI while fresh) and keep it for the real test."
+		},
+		"commonMistakes": [
+			"Neglecting Data Insights — it is now a full third of the score, not a bonus section",
+			"Studying retired content: Sentence Correction, geometry, or the AWA essay no longer exist on the exam",
+			"Leaving questions unanswered at the end of a section (scored wrong + adaptive penalty) instead of guessing",
+			"Chasing speed over accuracy on an adaptive test where early accuracy sets your difficulty band",
+			"Misusing the edit feature — wasting time hunting edits instead of banking a cushion and fixing only the 2-3 shakiest answers",
+			"Treating a Focus score like an old-GMAT score — 645 Focus is not '645 old'; always map via GMAC's concordance",
+			"Under-practicing the Data Sufficiency answer grid, then misapplying it (especially the C-trap) under time pressure"
+		]
+	},
+	"resources": {
+		"youtube": [
+			{
+				"name": "GMAT Ninja (GMAT Ninja Tutoring)",
+				"strength": "Free playlists across Quant, Verbal (RC/CR) and Data Insights; clear, official-question walkthroughs — widely rated the best free video explanations."
+			},
+			{
+				"name": "GMAT Club",
+				"strength": "Huge library (1,800+ videos) plus free live sessions with top instructors on strategy, timing and hard question types."
+			},
+			{
+				"name": "Target Test Prep (TTP)",
+				"strength": "Conceptual mini-lessons and blog-linked videos; especially strong, structured Quant and Data Insights content."
+			},
+			{
+				"name": "Experts' Global",
+				"strength": "Large set of free, sequenced video lessons covering the full GMAT Focus curriculum end to end."
+			},
+			{
+				"name": "GMAT Official / GMAC (mba.com)",
+				"strength": "The authoritative source for exam format, scoring, policy changes and official prep walkthroughs — verify all rumors here first."
+			},
+			{
+				"name": "Manhattan Prep GMAT",
+				"strength": "Free ~one-hour prep sessions (roughly twice a month) focused on strategy and worked official problems."
+			},
+			{
+				"name": "e-GMAT",
+				"strength": "Free webinars and frameworks aimed at non-native speakers; strong Verbal (CR/RC) and Data Insights methods."
+			},
+			{
+				"name": "GMATPrepNow (Brent Hanneson)",
+				"strength": "Free, comprehensive lesson videos across all topics with a low-cost, high-quality philosophy."
+			},
+			{
+				"name": "Magoosh GMAT",
+				"strength": "One of the largest free GMAT video libraries (1,500+ videos) covering concepts and practice."
+			}
+		],
+		"mocks": [
+			{
+				"name": "GMAC Official Practice Exams 1 & 2 (Free) — Official Starter Kit",
+				"detail": "Two full-length computer-adaptive exams plus ~70 sample questions, free with no registration or payment. Runs the same adaptive algorithm and official 205-805 scale as test day, so scores are the most realistic available. This is the single most trustworthy free mock — take one early as a baseline and save one for late in prep.",
+				"url": "https://www.mba.com/exams/gmat-exam/prep-for-the-exam"
+			},
+			{
+				"name": "GMAC Official Practice Exams 3-6 (paid)",
+				"detail": "Four additional official full-length exams (6 official exams exist in total) sold on mba.com; the best-value paid mocks because they use official questions and scoring.",
+				"url": "https://www.mba.com/gmat-exam-prep"
+			},
+			{
+				"name": "GMAT Club Tests",
+				"detail": "One free full-length adaptive GMAT Focus mock; paid packages add more CATs and a 1,300+ official-style question bank with detailed community explanations. IRT-based engine that adapts from the first question.",
+				"url": "https://gmatclub.com/gmat-focus-tests/"
+			},
+			{
+				"name": "Manhattan Prep (powered by Kaplan) free practice test",
+				"detail": "A free full-length GMAT practice test — email sign-up, no credit card. Note: Manhattan/Kaplan's current free offering routes to the official GMAT Focus practice tests rather than a proprietary CAT, so it overlaps with GMAC's free exams.",
+				"url": "https://www.kaptest.com/gmat/free/gmat-practice-test-options"
+			},
+			{
+				"name": "Target Test Prep (TTP) free trial + free diagnostic",
+				"detail": "5-day free trial of the full self-paced course (4,000+ practice questions, Quant/Verbal/Data Insights) with no auto-billing, plus a standalone free diagnostic test. Good for question volume and topic-level analytics.",
+				"url": "https://gmat.targettestprep.com/free_diagnostic"
+			},
+			{
+				"name": "Experts' Global GMAT practice tests",
+				"detail": "15 full-length GMAT Focus mocks with the first one free. Fixed 64-question format (approx. 7 easy / 31 medium / 26 hard) rather than adaptive — useful for stamina and exposure but calibrate the score against an official mock.",
+				"url": "https://www.expertsglobal.com/gmat-practice-tests"
+			},
+			{
+				"name": "e-GMAT free Focus mock",
+				"detail": "A free GMAT Focus mock to establish a baseline score; part of e-GMAT's Scholaranium/free resources ecosystem.",
+				"url": "https://e-gmat.com/blogs/free-gmat-practice-test-best-gmat-mocks/"
+			}
+		],
+		"reading": [
+			"GMAT Official Guide (latest edition — 2025-2026; the 2024-2025 is also current and cheaper): the flagship book + online question bank, and the ONLY source of real retired official GMAT questions. Non-negotiable core resource.",
+			"GMAT Official Guide Bundle (OG + Quantitative Review + Verbal Review + Data Insights Review + online question bank): ~1,600+ official questions; the three section-specific review books add 200+ Quant, 250+ Verbal and 250+ Data Insights questions NOT in the main OG.",
+			"GMAT Official Guide Data Insights Review: a dedicated book of official DI questions — important because Data Insights is now equally weighted and under-covered by older prep material.",
+			"Manhattan Prep GMAT strategy guides: strong for building underlying concepts and test strategy — buy the current GMAT Focus editions (older sets waste chapters on removed Sentence Correction/geometry).",
+			"Target Test Prep (online course, not a book): the most recommended paid self-study platform — 52 chapters, 1,500+ lessons, 4,000+ questions across Quant, Verbal and Data Insights; best for structured Quant/DI improvement.",
+			"e-GMAT (online): popular with non-native English speakers for its scaffolded Verbal and Data Insights methods."
+		],
+		"communities": [
+			"GMAT Club (gmatclub.com): the largest GMAT forum — free tests, official-question explanations from experts, error log, timer, decision tracker and B-school threads. Central hub for GMAT Focus discussion.",
+			"r/GMAT (Reddit): active peer community for debriefs, score reports, resource recommendations and moral support; r/GMATpreparation is a related sub for strategies and free resources.",
+			"Beat The GMAT: long-running forum plus independent course/tutor reviews and scholarship listings.",
+			"Manhattan Prep GMAT Forum: instructor-answered Q&A on Official Guide problems and strategy.",
+			"Discord / Telegram study groups: various community-run servers (linked from GMAT Club and r/GMAT) for accountability and real-time study-buddy help."
+		],
+		"sources": [
+			"https://www.mba.com/exams/gmat-exam/prep-for-the-exam",
+			"https://www.mba.com/gmat-exam-prep",
+			"https://www.mba.com/exam-prep/gmat-official-guide-data-insights-2026-2027-ebook-and-online-question-bank",
+			"https://www.gmac.com/gmat-other-assessments/about-the-gmat-focus-edition/exam-prep",
+			"https://gmatclub.com/gmat-focus-tests/",
+			"https://gmatclub.com/forum/all-gmat-practice-tests-overview-free-and-paid-228289.html",
+			"https://www.kaptest.com/gmat/free/gmat-practice-test-options",
+			"https://gmat.targettestprep.com/free_diagnostic",
+			"https://gmat.targettestprep.com/plans",
+			"https://www.expertsglobal.com/gmat-practice-tests",
+			"https://e-gmat.com/blogs/free-gmat-practice-test-best-gmat-mocks/",
+			"https://e-gmat.com/blogs/gmat-official-guide-2025-2026/",
+			"https://www.amazon.com/GMAT-Official-Guide-2024-2025-Bundle/dp/1394260121",
+			"https://www.amazon.com/GMAT-Official-Guide-2024-2025-Question/dp/1394260024",
+			"https://magoosh.com/gmat/gmat-focus-edition-key-changes/",
+			"https://test-ninjas.com/gmat-focus-edition-changes-explained",
+			"https://www.youtube.com/user/GMATNinja",
+			"https://www.youtube.com/@Wizako",
+			"https://forums.feedspot.com/gmat_forums/",
+			"https://www.manhattanprep.com/gmat/forums/",
+			"https://www.reddit.com/r/GMAT/",
+			"https://www.goalisb.com/post/gmat-score-for-isb",
+			"https://www.careerlauncher.com/center/blog/gmat-focus-edition-2025--india-guide-for-top-mba-admissions-18913/"
+		]
+	},
+	"relatedExams": [
+		{
+			"id": "cat",
+			"name": "CAT",
+			"for": "21 IIMs + 1200 Indian B-schools",
+			"note": "Indian, once-a-year, harder quant (incl. geometry); GMAT is global & on-demand"
+		},
+		{
+			"id": "xat",
+			"name": "XAT",
+			"for": "XLRI + 250 schools",
+			"note": "Indian; adds Decision Making + GK; once a year in January"
+		},
+		{
+			"id": "gre",
+			"name": "GRE",
+			"for": "MBA + broader grad programmes",
+			"note": "Also accepted by most B-schools; more vocabulary-heavy, section-adaptive"
+		},
+		{
+			"id": "nmat",
+			"name": "NMAT",
+			"for": "NMIMS + others",
+			"note": "Also by GMAC; multiple attempts, self-scheduled"
+		}
+	]
+}

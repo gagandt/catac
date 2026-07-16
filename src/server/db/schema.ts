@@ -174,12 +174,25 @@ export const planItem = createTable(
 			.integer({ mode: "number" })
 			.notNull()
 			.references(() => plan.id),
-		// Either a whole topic or a specific subtopic can be scheduled.
+		// What this item is: a study block or a mock test.
+		kind: d.text({ length: 8 }).notNull().default("study"), // study | mock
+		// For kind="mock": which tier of mock this is (maps to syllabus depth).
+		//   vision  = topic-level mini-mock  (topicId set)
+		//   subject = section-level mock      (sectionId set)
+		//   global  = full-length, all-sections
+		mockTier: d.text({ length: 8 }), // vision | subject | global | null
+		// Either a whole topic or a specific subtopic can be scheduled. A subject
+		// mock scopes to a section; a global mock scopes to nothing (title only).
 		topicId: d.text().references(() => topic.id),
 		subtopicId: d.text().references(() => subtopic.id),
+		sectionId: d.text().references(() => section.id),
+		// Human label — required for mock items (which carry no topic name).
+		title: d.text({ length: 256 }),
 		plannedStart: d.text({ length: 10 }), // ISO date
 		plannedEnd: d.text({ length: 10 }),
 		allocatedHours: d.real(),
+		// User-set emphasis, surfaced on the board. normal | high.
+		priority: d.text({ length: 8 }).notNull().default("normal"),
 		orderIndex: d.integer({ mode: "number" }).notNull().default(0),
 	}),
 	(t) => [index("plan_item_plan_idx").on(t.planId)],

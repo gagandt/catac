@@ -1,8 +1,7 @@
 "use client";
 
-import { Fragment, type ReactNode, useEffect, useState } from "react";
-
 import Link from "next/link";
+import { Fragment, type ReactNode, useEffect, useState } from "react";
 
 import { SkillCta } from "~/app/_components/skill-dialog";
 import { api } from "~/trpc/react";
@@ -156,10 +155,7 @@ export function SyllabusTracker({
 		setWrap((w) => {
 			const nextWrap = !w;
 			try {
-				localStorage.setItem(
-					"catac-syllabus-wrap",
-					nextWrap ? "on" : "off",
-				);
+				localStorage.setItem("catac-syllabus-wrap", nextWrap ? "on" : "off");
 			} catch {
 				// Storage disabled: still applies for this session.
 			}
@@ -195,15 +191,26 @@ export function SyllabusTracker({
 			<div className="container flex flex-col gap-8 px-4 py-12">
 				<div className="flex flex-col gap-1">
 					<div className="flex items-center justify-between">
-						<Link className="text-sm text-(--ink)/60 hover:text-(--ink)" href="/">
+						<Link
+							className="text-(--ink)/60 text-sm hover:text-(--ink)"
+							href="/"
+						>
 							← all exams
 						</Link>
-						<Link
-							className="text-sm text-(--ink)/60 hover:text-(--ink)"
-							href={`/exam/${examId}/mocks`}
-						>
-							mocks →
-						</Link>
+						<div className="flex items-center gap-4">
+							<Link
+								className="text-(--ink)/60 text-sm hover:text-(--ink)"
+								href={`/exam/${examId}/plan`}
+							>
+								plan →
+							</Link>
+							<Link
+								className="text-(--ink)/60 text-sm hover:text-(--ink)"
+								href={`/exam/${examId}/mocks`}
+							>
+								mocks →
+							</Link>
+						</div>
 					</div>
 					<h1 className="font-extrabold text-4xl tracking-tight">{examName}</h1>
 					<p className="text-(--ink)/70">{examFullName}</p>
@@ -241,14 +248,14 @@ export function SyllabusTracker({
 
 				{/* One state-driven nudge → the right Claude Code skill. */}
 				<div className="flex flex-wrap items-center gap-3">
-					<SkillCta command={rec.command} label={rec.label} blurb={rec.blurb} />
-					<span className="text-sm text-(--ink)/40">
+					<SkillCta blurb={rec.blurb} command={rec.command} label={rec.label} />
+					<span className="text-(--ink)/40 text-sm">
 						Actions run in Claude Code — this dashboard shows the result.
 					</span>
 				</div>
 
 				<div className="flex flex-wrap items-center justify-between gap-3">
-					<div className="inline-flex rounded-lg bg-(--ink)/5 p-0.5 text-sm ring-1 ring-(--ink)/10">
+					<div className="inline-flex rounded-lg bg-(--ink)/5 p-0.5 text-sm ring-(--ink)/10 ring-1">
 						{(["chips", "table"] as const).map((v) => (
 							<button
 								aria-pressed={view === v}
@@ -266,13 +273,13 @@ export function SyllabusTracker({
 						))}
 					</div>
 					{view === "chips" ? (
-						<p className="text-sm text-(--ink)/50">
+						<p className="text-(--ink)/50 text-sm">
 							Tap a subtopic to advance: todo → learning → practiced → mastered.
 						</p>
 					) : (
 						<button
 							aria-pressed={!wrap}
-							className="inline-flex items-center gap-2 rounded-lg bg-(--ink)/5 px-3 py-1.5 text-sm text-(--ink)/70 ring-1 ring-(--ink)/10 transition hover:bg-(--ink)/10"
+							className="inline-flex items-center gap-2 rounded-lg bg-(--ink)/5 px-3 py-1.5 text-(--ink)/70 text-sm ring-(--ink)/10 ring-1 transition hover:bg-(--ink)/10"
 							onClick={toggleWrap}
 							type="button"
 						>
@@ -293,69 +300,71 @@ export function SyllabusTracker({
 				</div>
 
 				{view === "chips" && (
-				<div className="flex flex-col gap-6">
-					{syllabus.data?.map((section) => (
-						<section className="rounded-xl bg-(--ink)/5 p-5" key={section.id}>
-							<div className="mb-3 flex items-baseline justify-between">
-								<h2 className="font-bold text-2xl">{section.name}</h2>
-								<span className="text-sm text-(--ink)/50">
-									{section.questions ?? "?"} Q · {section.marks ?? "?"} marks
-								</span>
-							</div>
-							<div className="flex flex-col gap-4">
-								{section.topics.map((topic) => (
-									<div key={topic.id}>
-										<div className="flex items-baseline gap-2">
-											<h3 className="font-semibold text-lg">{topic.name}</h3>
-											{topic.weightPct != null && (
-												<span className="text-(--accent) text-sm">
-													~{topic.weightPct}%
-												</span>
-											)}
-										</div>
-										<ul className="mt-2 flex flex-wrap gap-2">
-											{topic.subtopics.map((sub) => {
-												const st = statusById.get(sub.id) ?? "not_started";
-												const mat = sub.materialJson;
-												return (
-													<li
-														className={`flex items-stretch overflow-hidden rounded-md ${STATUS_STYLE[st]}`}
-														key={sub.id}
-													>
-														<button
-															className="px-2 py-1 text-left text-sm transition disabled:opacity-60"
-															disabled={setProgress.isPending}
-															onClick={() =>
-																setProgress.mutate({
-																	subtopicId: sub.id,
-																	status: next(st),
-																})
-															}
-															title={`${sub.name} — ${STATUS_LABEL[st]} (click to advance)`}
-															type="button"
+					<div className="flex flex-col gap-6">
+						{syllabus.data?.map((section) => (
+							<section className="rounded-xl bg-(--ink)/5 p-5" key={section.id}>
+								<div className="mb-3 flex items-baseline justify-between">
+									<h2 className="font-bold text-2xl">{section.name}</h2>
+									<span className="text-(--ink)/50 text-sm">
+										{section.questions ?? "?"} Q · {section.marks ?? "?"} marks
+									</span>
+								</div>
+								<div className="flex flex-col gap-4">
+									{section.topics.map((topic) => (
+										<div key={topic.id}>
+											<div className="flex items-baseline gap-2">
+												<h3 className="font-semibold text-lg">{topic.name}</h3>
+												{topic.weightPct != null && (
+													<span className="text-(--accent) text-sm">
+														~{topic.weightPct}%
+													</span>
+												)}
+											</div>
+											<ul className="mt-2 flex flex-wrap gap-2">
+												{topic.subtopics.map((sub) => {
+													const st = statusById.get(sub.id) ?? "not_started";
+													const mat = sub.materialJson;
+													return (
+														<li
+															className={`flex items-stretch overflow-hidden rounded-md ${STATUS_STYLE[st]}`}
+															key={sub.id}
 														>
-															{sub.name}
-														</button>
-														{mat && (
 															<button
-																className="border-(--ink)/15 border-l px-1.5 text-xs opacity-70 transition hover:bg-(--ink)/20 hover:opacity-100"
-																onClick={() => setMaterial({ name: sub.name, data: mat })}
-																title="Study material"
+																className="px-2 py-1 text-left text-sm transition disabled:opacity-60"
+																disabled={setProgress.isPending}
+																onClick={() =>
+																	setProgress.mutate({
+																		subtopicId: sub.id,
+																		status: next(st),
+																	})
+																}
+																title={`${sub.name} — ${STATUS_LABEL[st]} (click to advance)`}
 																type="button"
 															>
-																ⓘ
+																{sub.name}
 															</button>
-														)}
-													</li>
-												);
-											})}
-										</ul>
-									</div>
-								))}
-							</div>
-						</section>
-					))}
-				</div>
+															{mat && (
+																<button
+																	className="border-(--ink)/15 border-l px-1.5 text-xs opacity-70 transition hover:bg-(--ink)/20 hover:opacity-100"
+																	onClick={() =>
+																		setMaterial({ name: sub.name, data: mat })
+																	}
+																	title="Study material"
+																	type="button"
+																>
+																	ⓘ
+																</button>
+															)}
+														</li>
+													);
+												})}
+											</ul>
+										</div>
+									))}
+								</div>
+							</section>
+						))}
+					</div>
 				)}
 
 				{view === "table" && (
@@ -391,16 +400,16 @@ export function SyllabusTracker({
 			</div>
 			{material && (
 				<MaterialModal
-					name={material.name}
 					data={material.data}
+					name={material.name}
 					onClose={() => setMaterial(null)}
 				/>
 			)}
 			{promptTarget && (
 				<PromptGenerator
 					examName={examName}
-					target={promptTarget}
 					onClose={() => setPromptTarget(null)}
+					target={promptTarget}
 				/>
 			)}
 		</main>
@@ -479,7 +488,7 @@ function SyllabusTable({
 				>
 					<div className="flex items-baseline justify-between px-5 pt-5 pb-1">
 						<h2 className="font-bold text-2xl">{section.name}</h2>
-						<span className="text-sm text-(--ink)/50">
+						<span className="text-(--ink)/50 text-sm">
 							{section.questions ?? "?"} Q · {section.marks ?? "?"} marks
 						</span>
 					</div>
@@ -593,7 +602,7 @@ function SyllabusTable({
 																className={`h-2 w-2 shrink-0 rounded-full ${STATUS_DOT[st]}`}
 															/>
 															<select
-																className="min-w-0 rounded-md bg-(--ink)/5 px-2 py-1 text-(--ink) ring-1 ring-(--ink)/10 transition hover:bg-(--ink)/10 disabled:opacity-60"
+																className="min-w-0 rounded-md bg-(--ink)/5 px-2 py-1 text-(--ink) ring-(--ink)/10 ring-1 transition hover:bg-(--ink)/10 disabled:opacity-60"
 																disabled={pending}
 																onChange={(e) =>
 																	onSet(sub.id, e.target.value as Status)
@@ -632,7 +641,7 @@ function SyllabusTable({
 												</tr>
 												{isOpen && (
 													<tr>
-														<td colSpan={5} className="px-5 pt-1 pb-4">
+														<td className="px-5 pt-1 pb-4" colSpan={5}>
 															<div className="grid gap-4 rounded-lg bg-(--ink)/5 p-4 sm:grid-cols-2">
 																<div>
 																	<div className="mb-1 text-(--ink)/40 text-xs uppercase tracking-wide">
@@ -710,9 +719,7 @@ function TodoList({
 						disabled={disabled}
 						onChange={() =>
 							onChange(
-								todos.map((x) =>
-									x.id === t.id ? { ...x, done: !x.done } : x,
-								),
+								todos.map((x) => (x.id === t.id ? { ...x, done: !x.done } : x)),
 							)
 						}
 						type="checkbox"
@@ -736,7 +743,7 @@ function TodoList({
 			))}
 			<div className="mt-1 flex items-center gap-2">
 				<input
-					className="min-w-0 flex-1 rounded-md bg-(--ink)/5 px-2 py-1 text-(--ink) text-sm ring-1 ring-(--ink)/10 outline-none transition placeholder:text-(--ink)/30 focus:ring-(--accent)/50"
+					className="min-w-0 flex-1 rounded-md bg-(--ink)/5 px-2 py-1 text-(--ink) text-sm outline-none ring-(--ink)/10 ring-1 transition placeholder:text-(--ink)/30 focus:ring-(--accent)/50"
 					disabled={disabled}
 					onChange={(e) => setDraft(e.target.value)}
 					onKeyDown={(e) => {
@@ -792,7 +799,7 @@ function CommentCell({
 		return (
 			<textarea
 				autoFocus
-				className="w-full resize-none rounded-md bg-(--ink)/5 px-2 py-1 text-(--ink) ring-1 ring-(--accent)/50 outline-none"
+				className="w-full resize-none rounded-md bg-(--ink)/5 px-2 py-1 text-(--ink) outline-none ring-(--accent)/50 ring-1"
 				disabled={disabled}
 				onBlur={commit}
 				onChange={(e) => setDraft(e.target.value)}
@@ -815,7 +822,7 @@ function CommentCell({
 		<button
 			className={`w-full rounded-md px-2 py-1 text-left transition hover:bg-(--ink)/5 ${
 				note ? "text-(--ink)/80" : "text-(--ink)/30"
-			} ${wrap ? "break-words whitespace-pre-wrap" : "truncate"}`}
+			} ${wrap ? "whitespace-pre-wrap break-words" : "truncate"}`}
 			onClick={() => setEditing(true)}
 			title={note || "Add comment"}
 			type="button"
@@ -1009,7 +1016,7 @@ function PromptGenerator({
 		>
 			<div
 				aria-modal="true"
-				className="max-h-[85vh] w-full max-w-xl overflow-y-auto rounded-2xl bg-(--surface) p-6 text-(--ink) shadow-2xl ring-1 ring-(--ink)/10"
+				className="max-h-[85vh] w-full max-w-xl overflow-y-auto rounded-2xl bg-(--surface) p-6 text-(--ink) shadow-2xl ring-(--ink)/10 ring-1"
 				onClick={(e) => e.stopPropagation()}
 				role="dialog"
 			>
@@ -1035,7 +1042,7 @@ function PromptGenerator({
 								{field.label}
 							</span>
 							<select
-								className="rounded-md bg-(--ink)/5 px-2 py-1.5 text-(--ink) text-sm ring-1 ring-(--ink)/10 transition hover:bg-(--ink)/10 focus:ring-(--accent)/50"
+								className="rounded-md bg-(--ink)/5 px-2 py-1.5 text-(--ink) text-sm ring-(--ink)/10 ring-1 transition hover:bg-(--ink)/10 focus:ring-(--accent)/50"
 								onChange={(e) => update(field.key, e.target.value)}
 								value={settings[field.key]}
 							>
@@ -1063,14 +1070,14 @@ function PromptGenerator({
 						</button>
 					</div>
 					<textarea
-						className="h-40 w-full resize-none rounded-lg bg-(--inset) p-3 text-(--ink)/90 text-sm ring-1 ring-(--ink)/10 outline-none focus:ring-(--accent)/50"
+						className="h-40 w-full resize-none rounded-lg bg-(--inset) p-3 text-(--ink)/90 text-sm outline-none ring-(--ink)/10 ring-1 focus:ring-(--accent)/50"
 						onChange={(e) => setDraft(e.target.value)}
 						value={draft}
 					/>
 					<p className="mt-2 text-(--ink)/40 text-xs">
 						Paste into Claude Code (or any assistant). Tweak the text above
-						before copying if you like — your selector choices are saved for next
-						time.
+						before copying if you like — your selector choices are saved for
+						next time.
 					</p>
 				</div>
 			</div>
@@ -1137,18 +1144,18 @@ function MaterialModal({
 			role="presentation"
 		>
 			<div
-				className="max-h-[85vh] w-full max-w-lg overflow-y-auto rounded-2xl bg-(--surface) p-6 text-(--ink) shadow-2xl ring-1 ring-(--ink)/10"
+				aria-modal="true"
+				className="max-h-[85vh] w-full max-w-lg overflow-y-auto rounded-2xl bg-(--surface) p-6 text-(--ink) shadow-2xl ring-(--ink)/10 ring-1"
 				onClick={(e) => e.stopPropagation()}
 				role="dialog"
-				aria-modal="true"
 			>
 				<div className="flex items-start justify-between gap-4">
 					<h2 className="font-bold text-xl">{name}</h2>
 					<button
-						type="button"
-						onClick={onClose}
-						className="text-(--ink)/50 hover:text-(--ink)"
 						aria-label="Close"
+						className="text-(--ink)/50 hover:text-(--ink)"
+						onClick={onClose}
+						type="button"
 					>
 						✕
 					</button>
@@ -1165,7 +1172,7 @@ function MaterialModal({
 				)}
 
 				{data.summary && (
-					<p className="mt-3 text-sm text-(--ink)/80">{data.summary}</p>
+					<p className="mt-3 text-(--ink)/80 text-sm">{data.summary}</p>
 				)}
 
 				{data.formulas && data.formulas.length > 0 && (
@@ -1173,8 +1180,8 @@ function MaterialModal({
 						<ul className="flex flex-col gap-1">
 							{data.formulas.map((f) => (
 								<li
-									key={f}
 									className="rounded bg-(--inset) px-2 py-1 font-mono text-(--accent-light) text-sm"
+									key={f}
 								>
 									{f}
 								</li>
@@ -1185,7 +1192,7 @@ function MaterialModal({
 
 				{data.keyIdeas && data.keyIdeas.length > 0 && (
 					<Section title="Key ideas">
-						<ul className="list-disc pl-5 text-sm text-(--ink)/80">
+						<ul className="list-disc pl-5 text-(--ink)/80 text-sm">
 							{data.keyIdeas.map((k) => (
 								<li key={k}>{k}</li>
 							))}
@@ -1195,7 +1202,7 @@ function MaterialModal({
 
 				{data.example && (
 					<Section title="Worked example">
-						<p className="text-sm text-(--ink)/80">{data.example.q}</p>
+						<p className="text-(--ink)/80 text-sm">{data.example.q}</p>
 						<p className="mt-1 rounded bg-(--ok-bg) px-2 py-1 text-(--ok-fg) text-sm">
 							{data.example.solution}
 						</p>
@@ -1225,13 +1232,7 @@ function MaterialModal({
 	);
 }
 
-function Section({
-	title,
-	children,
-}: {
-	title: string;
-	children: ReactNode;
-}) {
+function Section({ title, children }: { title: string; children: ReactNode }) {
 	return (
 		<div className="mt-4">
 			<h3 className="mb-1 font-semibold text-(--ink)/50 text-xs uppercase tracking-wide">
@@ -1266,7 +1267,7 @@ function PracticeItem({
 	return (
 		<div className="rounded-lg bg-(--inset) p-3">
 			<div className="flex items-baseline justify-between gap-2">
-				<p className="text-sm text-(--ink)/85">
+				<p className="text-(--ink)/85 text-sm">
 					<span className="text-(--ink)/40">Q{n}. </span>
 					{pq.q}
 				</p>
@@ -1277,16 +1278,16 @@ function PracticeItem({
 				)}
 			</div>
 			{pq.options && pq.options.length > 0 && (
-				<ul className="mt-2 flex flex-col gap-1 text-sm text-(--ink)/70">
+				<ul className="mt-2 flex flex-col gap-1 text-(--ink)/70 text-sm">
 					{pq.options.map((o) => (
 						<li key={o}>• {o}</li>
 					))}
 				</ul>
 			)}
 			<button
-				type="button"
-				onClick={() => setShow((v) => !v)}
 				className="mt-2 text-(--accent-light) text-xs hover:underline"
+				onClick={() => setShow((v) => !v)}
+				type="button"
 			>
 				{show ? "hide answer" : "show answer"}
 			</button>
